@@ -1,94 +1,95 @@
-import type { Config } from "tailwindcss"
+/* eslint-disable @typescript-eslint/no-use-before-define */
+/* eslint-disable global-require */
+/* eslint-disable import/no-extraneous-dependencies */
+import type { Config } from 'tailwindcss';
 
 const {
   default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
+} = require('tailwindcss/lib/util/flattenColorPalette');
 
 const config = {
-  darkMode: ["class"],
+  darkMode: ['class'],
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
   ],
-  prefix: "",
+  prefix: '',
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: '2rem',
       screens: {
-        "2xl": "1400px",
+        '2xl': '1400px',
       },
     },
     extend: {
+      boxShadow: {
+        input: '0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)',
+      },
       fontSize: {
-        MainHeading: "36px",
-        SubHeading: "24px",
-        Paragraph: "16px",
-        CardHeading: "20px",
-        buttonText: "16px",
+        MainHeading: '36px',
+        SubHeading: '24px',
+        Paragraph: '16px',
+        CardHeading: '20px',
+        buttonText: '16px',
       },
       lineHeight: {
-        MainHeading: "40px",
-        SubHeading: "32px",
-        Paragraph: "24px",
-        CardHeading: "28px",
-        buttonText: "24px",
+        MainHeading: '40px',
+        SubHeading: '32px',
+        Paragraph: '24px',
+        CardHeading: '28px',
+        buttonText: '24px',
       },
       fontWeight: {
-        MainHeading: "800",
-        SubHeading: "700",
-        Paragraph: "400",
-        CardHeading: "600",
-        buttonText: "500",
+        MainHeading: '800',
+        SubHeading: '700',
+        Paragraph: '400',
+        CardHeading: '600',
+        buttonText: '500',
       },
       colors: {
-        MainHeading: "#f7c100",
-        SubHeading: "#254736",
-        black: "#00000",
-        white: "#fff",
-        yellow: "#f7c100",
-        gray: "#254736"
+        MainHeading: '#f7c100',
+        SubHeading: '#254736',
+        black: '#00000',
+        white: '#fff',
+        yellow: '#f7c100',
+        gray: '#254736',
       },
 
       keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
+        'accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
         },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
         },
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), addVariablesForColors],
-} satisfies Config
+  plugins: [require('tailwindcss-animate'), addVariablesForColors],
+} satisfies Config;
 
 export default config;
 
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
 function addVariablesForColors({ addBase, theme }: any) {
-  let allColors = flattenColorPalette(theme("colors"));
-  let newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  const allColors = flattenColorPalette(theme('colors'));
+  const newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val]),
   );
 
   addBase({
-    ":root": newVars,
+    ':root': newVars,
   });
 }
-
-
-
-
-
 
 // necessary colors for the shadcn library if required
 
@@ -125,7 +126,6 @@ function addVariablesForColors({ addBase, theme }: any) {
 //   DEFAULT: "hsl(var(--card))",
 //   foreground: "hsl(var(--card-foreground))",
 // },
-
 
 // borderRadius: {
 //   lg: "var(--radius)",
