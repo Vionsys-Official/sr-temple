@@ -9,7 +9,7 @@ function Hero() {
         <Image src={Front} alt="" className="md:h-full w-full opacity-50 h-[40vh]" />
       </div>
       <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <h1 className="md:text-6xl text-3xl font-extrabold text-white">We are building for tomorrow.</h1>
+        <h1 className="md:text-6xl text-3xl font-extrabold text-white">Honoring tradition, building for the future.</h1>
       </div>
     </div>
   );
