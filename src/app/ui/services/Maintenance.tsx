@@ -5,7 +5,7 @@ function Maintenance() {
   return (
     <div className="bg-amber-50 py-4">
       <div className="container mx-auto">
-        <h2 className="text-MainHeading text-center mb-4">
+        <h2 className="text-MainHeading_sm md:text-MainHeading font-bold text-center mb-4">
           Maintenance & Renovation
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4">

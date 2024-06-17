@@ -1,3 +1,6 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
 
@@ -15,8 +18,18 @@ function Herosection() {
         />
         <div className="absolute inset-0 flex justify-center items-center">
           <div className="flex flex-col px-4 text-center">
-            <div className="max-w-5xl p-6 rounded-lg bg-black bg-opacity-70 shadow-lg">
-              <h2 className="mb-4 font-extrabold text-yellow text-3xl md:text-5xl">
+            <motion.div
+              initial={{ opacity: 0, y: -100 }} // X:100
+              whileInView={{ opacity: 1, y: 1 }} // y:100
+              transition={{
+                delay: 0.2,
+                scale: { type: 'spring', stiffness: 30 },
+                opacity: { duration: 0.6 },
+                ease: 'easeInOut',
+              }}
+              className="max-w-5xl p-6 rounded-lg bg-black bg-opacity-70"
+            >
+              <h2 className="mb-4 font-extrabold text-MainHeading_sm md:text-MainHeading">
                 Our Services
               </h2>
               <p className="text-white text-xl md:text-2xl leading-relaxed">
@@ -25,7 +38,7 @@ function Herosection() {
                 team is dedicated to providing high-quality, reliable, and cost-effective
                 solutions tailored to your needs.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

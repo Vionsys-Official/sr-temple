@@ -8,9 +8,9 @@ import {
 
 function Commitment() {
   return (
-    <div className="bg-gray-100 py-8">
+    <div className="bg-gray-100 pt-4">
       <div className="container mx-auto">
-        <h2 className="text-MainHeading text-center mb-8">Our Commitment</h2>
+        <h2 className="text-MainHeading font-bold text-center mb-4">Our Commitment</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="bg-white p-6 rounded-lg shadow text-center transition-transform transform hover:scale-105 hover:bg-amber-50">
             <FaCheckCircle className="h-6 w-6 text-SubHeading mx-auto mb-3" />
