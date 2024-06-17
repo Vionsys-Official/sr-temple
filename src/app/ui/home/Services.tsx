@@ -1,65 +1,80 @@
+'use client';
+
 import Image from 'next/image';
 import React from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { LuConstruction } from 'react-icons/lu';
+import service from '@/data/HomeService';
 import Service from '../../../../public/assets/home/Service.jpg';
 
 function Services() {
-  const service = [
-    {
-      id: 1,
-      title: 'Planning and Measurement Services',
-      description: 'Expert planning and precise measurement services tailored for temples ensuring thoughtful design and layout.',
-    },
-    {
-      id: 2,
-      title: 'Valuation and Estimation Services',
-      description: 'Delivering precise property and asset valuations, cost assessments for construction projects ensuring transparent and accurate budgets.',
-    },
-    {
-      id: 3,
-      title: '2D, 3D & Vastu Shastra Plan Drawing',
-      description: 'Specialized in creating 2D and 3D architectural plans infused with Vastu Shastra principles ensuring harmony and functionality.',
-    },
-    {
-      id: 4,
-      title: 'Temple Construction Services',
-      description: 'Managing construction projects from inception to completion with precision, adherence to cultural and architectural standards.',
-    },
-    {
-      id: 5,
-      title: 'Consultancy Services',
-      description: 'Expertise guidance in temple architecture, construction and renovation ensuring adherence to cultural and spiritual norms.',
-    },
-    {
-      id: 6,
-      title: 'Maintenance & Renovation Services',
-      description: 'Comprehensive upkeep and effective enhancement of temples ensuring longevity and aesthetic appeal.',
-    },
-  ];
-
   return (
     <div>
       <div className="px-4 py-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-6">
         <div className="grid gap-5 row-gap-8 lg:grid-cols-2">
           <div className="flex flex-col justify-center">
             <div className="max-w-xl md:mb-6 flex flex-col items-center justify-center">
-              <h2 className="tracking-tight md:text-MainHeading md:font-MainHeading text-MainHeading_sm font-MainHeading_sm">
+              <motion.h2
+                initial={{ opacity: 0, x: 100 }} // X:100
+                whileInView={{ opacity: 1, x: 1 }} // y:100
+                transition={{
+                  delay: 0.2,
+                  scale: { type: 'spring', stiffness: 30 },
+                  opacity: { duration: 0.6 },
+                  ease: 'easeInOut',
+                }}
+                className="tracking-tight md:text-MainHeading md:font-MainHeading text-MainHeading_sm font-MainHeading_sm text-center"
+              >
                 Services We Deliver
-              </h2>
-              <h6 className="md:text-SubHeading text-SubHeading_sm md:font-SubHeading font-SubHeading_sm text-center">Building temples, fostering spirituality</h6>
-              <p className="md:text-Paragraph md:font-Paragraph font-Paragraph_sm flex flex-col text-center py-3 mb-5">
+              </motion.h2>
+              <motion.h6
+                initial={{ opacity: 0, x: -100 }} // X:100
+                whileInView={{ opacity: 1, x: 1 }} // y:100
+                transition={{
+                  delay: 0.2,
+                  scale: { type: 'spring', stiffness: 30 },
+                  opacity: { duration: 0.6 },
+                  ease: 'easeInOut',
+                }}
+                className="md:text-SubHeading text-SubHeading_sm md:font-SubHeading font-SubHeading_sm text-center"
+              >
+                Building temples, fostering spirituality
+              </motion.h6>
+              <motion.p
+                initial={{ opacity: 0, x: 100 }} // X:100
+                whileInView={{ opacity: 1, x: 1 }} // y:100
+                transition={{
+                  delay: 0.2,
+                  scale: { type: 'spring', stiffness: 30 },
+                  opacity: { duration: 0.6 },
+                  ease: 'easeInOut',
+                }}
+                className="md:text-Paragraph md:font-Paragraph font-Paragraph_sm flex flex-col text-center py-3 mb-5"
+              >
                 We offer a range of services highlighted on our homepage. From building and
                 restoring temples with care and precision to managing everything from design to
                 construction ensuring each temple honors its spiritual and cultural significance,
                 we are committed to quality and respect in every project. Here are some of our
                 services; to learn more, visit:
-              </p>
+              </motion.p>
 
-              <Link href="/services">
-                <Button type="submit" variant="outline" className="px-4 py-1 bg-yellow hover:bg-[#deb01d] text-black rounded-md text-buttonText font-buttonText">Explore Services</Button>
-              </Link>
+              <motion.div
+                initial={{ opacity: 0, y: 100 }} // X:100
+                whileInView={{ opacity: 1, y: 1 }} // y:100
+                transition={{
+                  delay: 0.2,
+                  scale: { type: 'spring', stiffness: 30 },
+                  opacity: { duration: 0.6 },
+                  ease: 'easeInOut',
+                }}
+                className="flex flex-col justify-center items-center"
+              >
+                <Link href="/services">
+                  <Button type="submit" variant="outline" className="px-4 py-1 bg-yellow hover:bg-[#deb01d] text-black rounded-md text-buttonText font-buttonText">Explore Services</Button>
+                </Link>
+              </motion.div>
             </div>
           </div>
           <div>

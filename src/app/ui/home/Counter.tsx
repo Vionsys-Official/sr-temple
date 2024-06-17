@@ -1,5 +1,6 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react';
 import { AiTwotoneIdcard, AiOutlineUsergroupAdd } from 'react-icons/ai';
 import { CgAdidas } from 'react-icons/cg';
@@ -98,15 +99,48 @@ function SocialProofCounter() {
     <div className="px-4 py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-10">
       {/* first section */}
       <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-4xl md:mb-12">
-        <h2 className="max-w-lg md:text-MainHeading md:font-MainHeading text-MainHeading_sm font-MainHeading_sm tracking-tight md:mx-auto text-center">
+        <motion.h2
+          initial={{ opacity: 0, x: -100 }} // X:100
+          whileInView={{ opacity: 1, x: 1 }} // y:100
+          transition={{
+            delay: 0.2,
+            scale: { type: 'spring', stiffness: 30 },
+            opacity: { duration: 0.6 },
+            ease: 'easeInOut',
+          }}
+          className="max-w-lg md:text-MainHeading md:font-MainHeading text-MainHeading_sm font-MainHeading_sm tracking-tight md:mx-auto text-center"
+        >
           Who we are
-        </h2>
-        <h6 className="md:text-SubHeading text-SubHeading_sm md:font-SubHeading font-SubHeading_sm text-center"> SR Temple Construction Company: Crafting Sacred Spaces Since 2011</h6>
-        <p className="md:text-Paragraph md:font-Paragraph font-Paragraph_sm py-3 text-center">
+        </motion.h2>
+        <motion.h6
+          initial={{ opacity: 0, x: 100 }} // X:100
+          whileInView={{ opacity: 1, x: 1 }} // y:100
+          transition={{
+            delay: 0.2,
+            scale: { type: 'spring', stiffness: 30 },
+            opacity: { duration: 0.6 },
+            ease: 'easeInOut',
+          }}
+          className="md:text-SubHeading text-SubHeading_sm md:font-SubHeading font-SubHeading_sm text-center"
+        >
+          {' '}
+          SR Temple Construction Company: Crafting Sacred Spaces Since 2011
+        </motion.h6>
+        <motion.p
+          initial={{ opacity: 0, x: -100 }} // X:100
+          whileInView={{ opacity: 1, x: 1 }} // y:100
+          transition={{
+            delay: 0.2,
+            scale: { type: 'spring', stiffness: 30 },
+            opacity: { duration: 0.6 },
+            ease: 'easeInOut',
+          }}
+          className="md:text-Paragraph md:font-Paragraph font-Paragraph_sm py-3 text-center"
+        >
           At SR Temple Construction Company, we specialize in designing and building temples that
           blend architectural brilliance with spiritual sanctity. Since our establishment in 2011,
           we have been dedicated to providing the best temple construction solutions across India.
-        </p>
+        </motion.p>
       </div>
       <div className="">
         <section
