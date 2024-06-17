@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import React from 'react';
-import c1 from '../../../../public/assets/home/choose us/c1.jpg';
 import c2 from '../../../../public/assets/home/choose us/c2.jpg';
 import c3 from '../../../../public/assets/home/choose us/c3.jpg';
 
@@ -39,20 +38,20 @@ export function Choose() {
   ];
 
   return (
-    <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-x lg:px-8 lg:py-20">
-      <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-        <h2 className="max-w-lg text-3xl mb-6 text-MainHeading font-MainHeading md:mx-auto">
+    <div className="py-16 mt-10 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl lg:px-8 lg:py-20">
+      <div className="max-w-xl mb-10 md:mx-auto lg:max-w-2xl md:mb-12">
+        <h2 className="max-w-lg text-3xl text-MainHeading font-MainHeading font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto whitespace-nowrap">
           Why Choose SR Temple Construction
         </h2>
       </div>
-      <div className="grid max-w-screen-2xl  text-xl gap-5 lg:grid-cols-2 sm:mx-auto">
+      <div className="grid gap-10 lg:grid-cols-2 sm:mx-auto">
         <div className="flex flex-col justify-center">
           {choose.map((item) => (
-            <div key={item.id} className="flex mb-9">
+            <div key={item.id} className="flex mb-8">
               <div className="mr-4">
-                <div className="flex items-center justify-center w-10 h-10 mb-3 rounded-full bg-indigo-50">
+                <div className="flex items-center justify-center w-12 h-12 mb-3 rounded-full bg-yellow-50">
                   <svg
-                    className="w-6 h-6"
+                    className="w-6 h-6 text-yellow-600"
                     stroke="currentColor"
                     viewBox="0 0 52 52"
                   >
@@ -67,44 +66,35 @@ export function Choose() {
                 </div>
               </div>
               <div>
-                <h6 className="mb-2 text-2xl text-SubHeading font-SubHeading leading-5">
+                <h6 className="mb-2 text-xl text-SubHeading font-SubHeading  leading-5 text-gray-900">
                   {item.title}
                 </h6>
-                <p className="text-xl text-Paragraph font-Paragraph py-3 text-gray-800">
+                <p className="text-base text-Paragraph font-Paragraph text-gray-800">
                   {item.description}
                 </p>
-                <hr className="w-full my-6 border-gray-300" />
+                <hr className="w-full my-4 border-gray-300" />
               </div>
             </div>
           ))}
         </div>
-        <div className="grid grid-col-1 gap-2">
+        <div className="grid gap-2">
           <Image
-            className="object-cover w-full h-56 col-span-2 rounded shadow-lg"
-            src={c1}
-            alt=""
-            layout="responsive"
-            width={500}
-            height={80}
-          />
-          <Image
-            className="object-cover w-full h-48 rounded shadow-lg"
+            className="object-cover w-full h-48 rounded-lg shadow-lg"
             src={c2}
-            alt=""
+            alt="Construction image 2"
             layout="responsive"
             width={500}
             height={600}
           />
           <Image
-            className="object-cover w-full h-48 rounded shadow-lg"
+            className="object-cover w-full h-48 rounded-lg shadow-lg"
             src={c3}
-            alt=""
+            alt="Construction image 3"
             layout="responsive"
             width={500}
             height={600}
           />
         </div>
-
       </div>
     </div>
   );
