@@ -4,7 +4,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import fadein from '@/utils/varients';
+import fadein from '@/utils/variants';
 
 function ChooseUs() {
   return (

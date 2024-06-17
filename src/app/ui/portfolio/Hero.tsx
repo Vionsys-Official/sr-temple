@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Mob from '@/../public/assets/portfolio/Mob.jpg';
 import { motion } from 'framer-motion';
-import fadein from '@/utils/varients';
+import fadein from '@/utils/variants';
 
 function Hero() {
   return (
