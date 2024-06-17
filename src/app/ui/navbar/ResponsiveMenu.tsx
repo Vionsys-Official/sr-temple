@@ -25,7 +25,7 @@ const ResponsiveMenu: React.FC<Props> = ({ showMenu, closeMenu }) => {
     return (
         <div className={`${showMenu ? 'top-14 md:hidden' : 'hidden'} fixed w-full overflow-x-hidden z-50 bg-white h-[50vh] flex items-center justify-center py-6 border-b shadow-md`}>
             <NavigationMenu>
-                <NavigationMenuList className="flex flex-col gap-4">
+                <NavigationMenuList className="flex flex-col md:gap-4 gap-2">
                     {/* Home section */}
                     <NavigationMenuItem>
                         <Link href="/" passHref>
