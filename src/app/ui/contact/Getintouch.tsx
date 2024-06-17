@@ -34,7 +34,7 @@ function GetInTouch() {
               <div className="flex flex-col justify-center items-center text-center w-full">
                 <Image src={email} alt="icon" className="w-12 h-12 mb-4" />
                 <span className="font-CardHeading text-CardHeading">Email</span>
-                <p className="line-clamp-3 text-Paragraph font-Paragraph mt-2">
+                <p className="line-clamp-4 text-Paragraph font-Paragraph mt-2">
                   Sunil.rathod@srtempleconstructions.com
                   govind.rathodsae@gmail.com
                 </p>
