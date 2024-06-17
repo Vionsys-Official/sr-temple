@@ -1,5 +1,5 @@
+
 import React from 'react';
-// eslint-disable-next-line import/no-named-as-default
 import Hero from '@/app/ui/about/hero';
 import Features from '@/app/ui/about/features';
 import Choose from '@/app/ui/about/Choose';
@@ -10,7 +10,6 @@ const Page: React.FC = () => (
     <Hero />
     <Features />
     <Choose />
-
   </div>
 
 );

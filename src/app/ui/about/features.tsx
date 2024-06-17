@@ -1,18 +1,106 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable max-len */
-/* eslint-disable react/jsx-no-comment-textnodes */
+import React from 'react'
+
+const features = () => {
+  return (
+    <div className="px-4 py-16 mx-auto mt-10 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 bg-yellow lg:py-20">
+    <div className="flex flex-col mb-6 lg:flex-row md:mb-10">
+      <div className="lg:w-1/2">
+        <h2 className="max-w-md mb-6 font-sans text-3xl font-bold tracking-tight text-gray sm:text-4xl sm:leading-none xl:max-w-lg">
+        Presenting Our Key Features: 
+        </h2>
+      </div>
+      <div className="lg:w-1/2">
+        <p className="text-base text-gray md:text-lg">
+        At SR Temple Construction, we take pride in our meticulous attention to detail, ensuring that every project reflects our dedication to excellence and our clients' visions.
+        </p>
+      </div>
+    </div>
+    <div className="grid gap-8 row-gap-10 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="max-w-md">
+        <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
+          <svg
+            className="w-12 h-12 text-deep-purple-accent-400"
+            stroke="currentColor"
+            viewBox="0 0 52 52"
+          >
+            <polygon
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              fill="none"
+              points="29 13 14 29 25 29 23 39 38 23 27 23"
+            />
+          </svg>
+        </div>
+        <h6 className="mb-2 font-semibold leading-5">Years of service</h6>
+        <p className="mb-3 text-sm text-gray-900">
+          Designing and constructing temples with meticulous craftsmanship since 2011
+        </p>
+      </div>
+      <div className="max-w-md">
+        <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
+          <svg
+            className="w-12 h-12 text-deep-purple-accent-400"
+            stroke="currentColor"
+            viewBox="0 0 52 52"
+          >
+            <polygon
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              fill="none"
+              points="29 13 14 29 25 29 23 39 38 23 27 23"
+            />
+          </svg>
+        </div>
+        <h6 className="mb-2 font-semibold leading-5">Area of work</h6>
+        <p className="mb-3 text-sm text-gray-900">
+        Working all over India and we give best designs in market.
+        </p>
+      </div>
+      <div className="max-w-md">
+        <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
+          <svg
+            className="w-12 h-12 text-deep-purple-accent-400"
+            stroke="currentColor"
+            viewBox="0 0 52 52"
+          >
+            <polygon
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              fill="none"
+              points="29 13 14 29 25 29 23 39 38 23 27 23"
+            />
+          </svg>
+        </div>
+        <h6 className="mb-2 font-semibold leading-5">Cost</h6>
+        <p className="mb-3 text-sm text-gray-900">
+        Providing best final result with minimum cost.
+        </p>
+      </div>
+    </div>
+  </div>
+  )
+}
+
+export default features
+
+
+
+
+/*<section>
 import React from 'react';
 
 const features = () => (
-  <div className="flex flex-wrap justify-center mt-20">
-    <div className="w-screen text-center text-MainHeading font-bold text-gray">
-      <h1 className="md:mb-5"> Have a Look at our Features</h1>
-      <p className="text-Paragraph mb-10">At SR Temple Construction, we take pride in our meticulous attention to detail, ensuring that every project reflects our dedication to excellence and our clients' visions.</p>
+  <div className="flex flex-wrap justify-center mt-5 mb-5 h-[80vh]">
+    <div className="w-screen text-center text-MainHeading mt-5">
+      <h1 className="md:mb-5 font-bold text-gray"> Have a Look at our Features</h1>
+      <p className="text-base mb-5 text-gray pt-5">At SR Temple Construction, we take pride in our meticulous attention to detail, ensuring that every project reflects our dedication to excellence and our clients' visions.</p>
     </div>
 
-    <div className="p-4 max-w-sm ">
-      <div className="flex rounded-lg h-full dark:bg-gray-800 bg-yellow hover:bg-gray p-8 flex-col">
+    <div className="p-5 max-w-sm ">
+      <div className="flex rounded-lg h-full dark:bg-gray-800 bg-gray hover:bg-gray p-8 flex-col">
         <div className="flex items-center mb-3">
           <div
             className="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full dark:bg-indigo-500 bg-indigo-500 text-white flex-shrink-0"
@@ -29,18 +117,18 @@ const features = () => (
               <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
             </svg>
           </div>
-          <h2 className="text-white dark:text-white text-lg font-medium">Feature 1</h2>
+          <h2 className="text-white dark:text-white text-lg font-medium">Years of service</h2>
         </div>
         <div className="flex flex-col justify-between flex-grow">
           <p className="leading-relaxed text-base text-white dark:text-gray-300">
-            Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.
+          Designing and building temple since 2011
           </p>
         </div>
       </div>
     </div>
 
     <div className="p-4 max-w-sm">
-      <div className="flex rounded-lg h-full dark:bg-gray-800 bg-yellow  hover:bg-gray p-8 flex-col">
+      <div className="flex rounded-lg h-full bg-gray hover:bg-gray p-8 flex-col">
         <div className="flex items-center mb-3">
           <div
             className="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full dark:bg-indigo-500 bg-indigo-500 text-white flex-shrink-0"
@@ -57,17 +145,17 @@ const features = () => (
               <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
             </svg>
           </div>
-          <h2 className="text-white dark:text-white text-lg font-medium">Feature 2</h2>
+          <h2 className="text-white dark:text-white text-lg font-medium">Area of work</h2>
         </div>
         <div className="flex flex-col justify-between flex-grow">
           <p className="leading-relaxed text-base text-white dark:text-gray-300 pb-10 ">
-            Lorem ipsum dolor sit amet. In quos laboriosam non neque eveniet 33 nihil molestias. Rem perspiciatis iure ut laborum inventore et maxime amet.
+          Working all over India and we give best designs in market
           </p>
         </div>
       </div>
     </div>
     <div className="p-4 max-w-sm">
-      <div className="flex rounded-lg h-full dark:bg-gray-800 bg-yellow  hover:bg-gray p-8 flex-col">
+      <div className="flex rounded-lg h-full bg-gray  hover:bg-gray p-8 flex-col">
         <div className="flex items-center mb-3">
           <div
             className="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full dark:bg-indigo-500 bg-indigo-500 text-white flex-shrink-0"
@@ -84,11 +172,11 @@ const features = () => (
               <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
             </svg>
           </div>
-          <h2 className="text-white dark:text-white text-lg font-medium">Feature 2</h2>
+          <h2 className="text-white dark:text-white text-lg font-medium">Cost</h2>
         </div>
         <div className="flex flex-col justify-between flex-grow">
           <p className="leading-relaxed text-base text-white dark:text-gray-300">
-            Lorem ipsum dolor sit amet. In quos laboriosam non neque eveniet 33 nihil molestias. Rem perspiciatis iure ut laborum inventore et maxime amet.
+          Providing best final result with minimum cost
           </p>
         </div>
       </div>
@@ -98,3 +186,4 @@ const features = () => (
 );
 
 export default features;
+</section>*/
