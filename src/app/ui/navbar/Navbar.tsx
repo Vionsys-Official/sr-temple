@@ -86,9 +86,9 @@ function Navbar() {
   }
   return (
     <div>
-      <div className={'fixed z-50 w-full flex p-2 justify-between items-center bg-white ${visible ? "top-0 shadow-md shadow-gray" : "-top-full"'}>
+      <div className={'fixed z-50 w-full flex md:p-2 p-4 justify-between items-center bg-white ${visible ? "top-0 shadow-md shadow-gray" : "-top-full"'}>
         {/* Logo  */}
-        <div className="md:px-8 px-2 ">
+        <div className="md:px-8 px-2  ">
           <Link href="/">
             <Image
               src={LogoImage}
@@ -103,7 +103,7 @@ function Navbar() {
               {/* Home Page */}
               <NavigationMenuItem>
                 <Link href="/" legacyBehavior passHref>
-                  <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-lg text-Paragraph hover:bg-slate-100`} onClick={closeMenu}>
+                  <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-2xl hover:bg-slate-100`} onClick={closeMenu}>
                     Home
                   </NavigationMenuLink>
                 </Link>
@@ -112,7 +112,7 @@ function Navbar() {
               {/* about Page */}
               <NavigationMenuItem>
                 <Link href="/about" legacyBehavior passHref>
-                  <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-lg text-Paragraph hover:bg-slate-100`} onClick={closeMenu}>
+                  <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-Paragraph_sm  hover:bg-slate-100`} onClick={closeMenu}>
                     About Us
                   </NavigationMenuLink>
                 </Link>
@@ -121,7 +121,7 @@ function Navbar() {
               {/* Services */}
               <NavigationMenuItem>
                 <Link href="/services" legacyBehavior passHref>
-                  <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-lg text-Paragraph hover:bg-slate-100`} onClick={closeMenu}>
+                  <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-Paragraph_sm hover:bg-slate-100`} onClick={closeMenu}>
                     Services
                   </NavigationMenuLink>
                 </Link>
@@ -130,7 +130,7 @@ function Navbar() {
               {/* portfolio */}
               <NavigationMenuItem>
                 <Link href="/portfolio" legacyBehavior passHref>
-                  <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-lg text-Paragraph hover:bg-slate-100`} onClick={closeMenu}>
+                  <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-Paragraph_sm  hover:bg-slate-100`} onClick={closeMenu}>
                     Portfolio
                   </NavigationMenuLink>
                 </Link>
@@ -139,7 +139,7 @@ function Navbar() {
               {/* Team */}
               <NavigationMenuItem>
                 <Link href="/team" legacyBehavior passHref>
-                  <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-lg text-Paragraph hover:bg-slate-100`} onClick={closeMenu}>
+                  <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-Paragraph_sm hover:bg-slate-100`} onClick={closeMenu}>
                     Team
                   </NavigationMenuLink>
                 </Link>
@@ -148,7 +148,7 @@ function Navbar() {
               {/* Contact us */}
               <NavigationMenuItem>
                 <Link href="/contact" legacyBehavior passHref>
-                  <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-lg text-Paragraph hover:bg-slate-100`} onClick={closeMenu}>
+                  <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-Paragraph_sm  hover:bg-slate-100`} onClick={closeMenu}>
                     Contact Us
                   </NavigationMenuLink>
                 </Link>
