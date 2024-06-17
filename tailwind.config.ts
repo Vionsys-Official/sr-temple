@@ -34,6 +34,11 @@ const config = {
         Paragraph: '16px',
         CardHeading: '20px',
         buttonText: '16px',
+        MainHeading_sm: '34px',
+        SubHeading_sm: '22px',
+        Paragraph_sm: '14px',
+        CardHeading_sm: '18px',
+        buttonText_sm: '14px',
       },
       lineHeight: {
         MainHeading: '40px',
@@ -41,6 +46,11 @@ const config = {
         Paragraph: '24px',
         CardHeading: '28px',
         buttonText: '24px',
+        MainHeading_sm: '38px',
+        SubHeading_sm: '30px',
+        Paragraph_sm: '22px',
+        CardHeading_sm: '26px',
+        buttonText_sm: '22px',
       },
       fontWeight: {
         MainHeading: '800',
@@ -48,10 +58,17 @@ const config = {
         Paragraph: '400',
         CardHeading: '600',
         buttonText: '500',
+        MainHeading_sm: '800',
+        SubHeading_sm: '700',
+        Paragraph_sm: '400',
+        CardHeading_sm: '600',
+        buttonText_sm: '500',
       },
       colors: {
         MainHeading: '#f7c100',
         SubHeading: '#254736',
+        MainHeading_sm: '#f7c100',
+        SubHeading_sm: '#254736',
         black: '#00000',
         white: '#fff',
         yellow: '#f7c100',
@@ -67,8 +84,14 @@ const config = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
         },
+        scroll: {
+          to: {
+            transform: 'translate(calc(-50% - 0.5rem))',
+          },
+        },
       },
       animation: {
+        scroll: 'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
@@ -85,7 +108,6 @@ function addVariablesForColors({ addBase, theme }: any) {
   const newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val]),
   );
-
   addBase({
     ':root': newVars,
   });

@@ -98,11 +98,11 @@ function SocialProofCounter() {
     <div className="px-4 py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-10">
       {/* first section */}
       <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-4xl md:mb-12">
-        <h2 className="max-w-lg text-MainHeading font-MainHeading tracking-tight md:mx-auto">
+        <h2 className="max-w-lg md:text-MainHeading md:font-MainHeading text-MainHeading_sm font-MainHeading_sm tracking-tight md:mx-auto text-center">
           Who we are
         </h2>
-        <h6 className="text-SubHeading font-SubHeading"> SR Temple Construction Company: Crafting Sacred Spaces Since 2011</h6>
-        <p className="text-Paragraph font-Paragraph py-3">
+        <h6 className="md:text-SubHeading text-SubHeading_sm md:font-SubHeading font-SubHeading_sm text-center"> SR Temple Construction Company: Crafting Sacred Spaces Since 2011</h6>
+        <p className="md:text-Paragraph md:font-Paragraph font-Paragraph_sm py-3 text-center">
           At SR Temple Construction Company, we specialize in designing and building temples that
           blend architectural brilliance with spiritual sanctity. Since our establishment in 2011,
           we have been dedicated to providing the best temple construction solutions across India.
@@ -114,11 +114,11 @@ function SocialProofCounter() {
           ref={sectionRef}
         >
           {/* 2nd section */}
-          <div className="flex md:flex-row flex-col gap-6 justify-center items-center">
+          <div className="flex md:flex-row flex-col gap-6 justify-center items-center w-full">
             {arr.map((item) => (
               <div
                 key={item.id}
-                className="relative bg-white flex flex-col gap-4 justify-center items-center border rounded-md shadow-xl shadow-gray2 overflow-hidden group cursor-pointer md:w-56 lg:w-64 w-full h-40 align-content-center transform border-l-4 border-[#f7c100] hover:-translate-y-6 duration-300"
+                className="relative bg-white flex flex-col gap-4 justify-center items-center border rounded-md shadow-xl shadow-gray2 overflow-hidden group cursor-pointer md:w-75 lg:w-80 w-full h-40 align-content-center transform border-l-4 border-[#f7c100] hover:-translate-y-6 duration-300"
               >
                 <div className="relative z-10 bg-golden3 text-[#254736] p-3 rounded-full transition-all duration-500 group-hover:text-white border-l-4 border-[#254736] hover:-translate-y-2 rounded-r">
                   {item.icon}
