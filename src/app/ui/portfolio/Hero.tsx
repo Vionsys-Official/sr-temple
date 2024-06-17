@@ -1,11 +1,11 @@
-import React from "react";
-import Image from "next/image";
-import Mob from "@/../public/assets/portfolio/Mob.jpg";
+import React from 'react';
+import Image from 'next/image';
+import Mob from '@/../public/assets/portfolio/Mob.jpg';
 
 function Hero() {
   return (
     <main className="md:h-[100vh] h-[70vh] md:w-[100vw] bg-yellow overflow-x-hidden flex flex-col md:flex-row justify-evenly items-center">
-      <div className="md:w-[45vw] p-4 pb-4 md:p-0 space-y-3">
+      <div className="relative top-6  md:w-[45vw] p-4 pb-4 md:p-0 md:space-y-3 space-y-1">
         <p className="text-white bg-slate-800 md:w-32 px-3 py-2 rounded-2xl text-center mx-auto md:mx-0">
           Our Projects
         </p>
@@ -20,10 +20,10 @@ function Hero() {
         </h3>
       </div>
 
-      <div className="relative box-shadow: 5px 5px 2.5px 6px rgb(209, 218, 218) shadow-md shadow-slate-500 flex justify-center h-[300px] md:h-[450px] w-[160px] md:w-[250px] border-4 border-black rounded-2xl bg-gray-50">
-        <span className="absolute z-10 border border-black bg-slate-950 w-24 h-3 rounded-br-xl rounded-bl-xl"></span>
-        <span className="absolute -right-2 top-14 border-4 border-black h-7 rounded-md"></span>
-        <span className="absolute -right-2 bottom-36 border-4 border-black h-10 rounded-md"></span>
+      <div className="relative box-shadow: 5px 5px 2.5px 6px rgb(209, 218, 218) shadow-md shadow-slate-500 flex justify-center h-[300px] md:h-[450px] w-[160px] md:w-[250px] border-4 border-black rounded-2xl bg-gray-50 md:top-9">
+        <span className="absolute z-10 border border-black bg-slate-950 w-24 h-3 rounded-br-xl rounded-bl-xl" />
+        <span className="absolute -right-2 top-14 border-4 border-black h-7 rounded-md" />
+        <span className="absolute -right-2 bottom-36 border-4 border-black h-10 rounded-md" />
         <Image
           src={Mob}
           alt="Image not Found"
