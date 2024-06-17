@@ -1,12 +1,23 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
+
+'use client';
+
 import React from 'react';
+import { motion } from 'framer-motion';
+import fadein from '@/utils/varients';
 
 function ChooseUs() {
   return (
     <div className="pt-8 px-4">
-      <h1 className="text-MainHeading font-MainHeading pb-4 text-center">
+      <motion.h1
+        variants={fadein('right', 0.2)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.2 }}
+        className="text-MainHeading font-MainHeading pb-4 text-center"
+      >
         Key Advantages of Choosing Us
-      </h1>
+      </motion.h1>
 
       <div className="flex md:flex-row flex-col md:gap-0 gap-4  justify-evenly items-center">
         <div className=" overflow-hidden relative transition-all  duration-500 hover:translate-y-2 md:w-[27vw] md:h-[50vh] h-[20vh] bg-neutral-50 rounded-lg shadow-xl flex items-center justify-center gap-2 p-4 before:absolute before:w-full hover:before:top-0 before:duration-500 before:-top-1 before:h-1 before:bg-amber-400">

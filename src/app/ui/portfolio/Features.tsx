@@ -1,24 +1,49 @@
 /* eslint-disable react/no-unescaped-entities */
+
+'use client';
+
 import React from 'react';
+import { motion } from 'framer-motion';
+import fadein from '@/utils/varients';
 
 export function Features() {
   return (
     <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 md:py-6">
-      <h1 className="text-MainHeading font-MainHeading py-6 text-center">Our Features</h1>
+      <motion.h1
+        variants={fadein('down', 0.2)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.2 }}
+        className="text-MainHeading font-MainHeading py-6 text-center"
+      >
+        Our Features
+      </motion.h1>
       <div className="flex flex-col mb-6 lg:flex-row md:mb-10 pt-8">
         <div className="lg:w-1/2">
-          <h2 className="max-w-lg mb-6 text-3xl md:text-SubHeading text-center font-SubHeading tracking-tight">
+          <motion.h2
+            variants={fadein('right', 0.2)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.2 }}
+            className="max-w-lg mb-6 text-3xl md:text-SubHeading text-center font-SubHeading tracking-tight"
+          >
             Modern temple construction emphasizes sustainability for
             environmental and cultural preservation.
-          </h2>
+          </motion.h2>
         </div>
         <div className="lg:w-1/2">
-          <p className="text-base  md:text-Paragraph">
+          <motion.p
+            variants={fadein('left', 0.2)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.2 }}
+            className="text-base  md:text-Paragraph"
+          >
             Temple construction today integrates sustainability principles to
             ensure environmental responsibility and long-term preservation of
             cultural heritage. Sustainable practices aim to minimize ecological
             impact, conserve resources, and promote community well-being.
-          </p>
+          </motion.p>
         </div>
       </div>
       <div className="flex md:flex-row flex-col md:gap-12 justify-center gap-6  items-center">
