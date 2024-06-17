@@ -6,11 +6,11 @@ function TemplePlanning() {
     <section>
 
       <div className="p-5 mx-auto sm:p-10 bg-white">
-        <div className="flex flex-col items-center justify-center shadow shadow-slate-300 max-w-full mx-auto overflow-hidden rounded">
+        <div className="flex flex-col items-center justify-center shadow bg-slate-400 shadow-slate-300 max-w-full mx-auto overflow-hidden rounded">
           <div className="py-11 w-full bg-sky-900" />
-          <div className="p-6 pb-12 m-4 flex justify-center mx-auto -mt-16 space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md bg-slate-600">
-            <div className="text-white">
-              <h1 className="max-w-full flex justify-center pt-4 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+          <div className="p-6 m-4 flex justify-center mx-auto -mt-16 space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md bg-white shadow-inner">
+            <div className="">
+              <h1 className="max-w-full flex justify-center text-MainHeading_sm font-bold tracking-tight text-gray-900 sm:text-MainHeading sm:leading-none">
                 Temple Construction Services
               </h1>
             </div>
@@ -22,10 +22,10 @@ function TemplePlanning() {
         <div className="grid gap-5 row-gap-10 lg:grid-cols-2">
           <div className="flex flex-col justify-center">
             <div className="max-w-xl mb-6">
-              <h2 className="max-w-full mb-4 font-sans text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl sm:leading-none">
+              <h2 className="max-w-full mb-4 text-MainHeading_sm tracking-tight text-gray-900 sm:text-MainHeading sm:leading-none">
                 Temple Planning and Measurement Services
               </h2>
-              <p className="text-base text-gray-700 md:text-base">
+              <p className="text-Paragraph_sm md:text-Paragraph">
                 Our team of experts provides meticulous planning and measurement
                 services tailored to the unique needs of temple construction. We
                 understand the importance of accurate measurements in creating
