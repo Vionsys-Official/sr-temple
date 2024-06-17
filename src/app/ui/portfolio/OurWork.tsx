@@ -15,6 +15,7 @@ import temple8 from '@/../public/assets/portfolio/temple8.jpg';
 import temple9 from '@/../public/assets/portfolio/temple9.jpg';
 import temple10 from '@/../public/assets/portfolio/temple10.jpg';
 import temple11 from '@/../public/assets/portfolio/temple11.jpg';
+import temple12 from '@/../public/assets/portfolio/temple12.jpg';
 
 export function OurWork() {
   return (
@@ -30,5 +31,5 @@ export default OurWork;
 
 const images = [
   temple1,
-  temple2, temple3, temple4, temple5, temple6, temple6, temple7, temple8, temple9, temple10, temple11,
+  temple2, temple3, temple4, temple5, temple6, temple7, temple8, temple9, temple10, temple11, temple12,
 ];
