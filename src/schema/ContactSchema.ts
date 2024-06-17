@@ -11,9 +11,9 @@ const contactschema = z.object({
     .min(3, { message: 'Lastname must be 3 or more characters long' })
     .max(10, { message: 'Lastname must be 10 or less characters long' }),
   email: z.string().email({ message: 'Invalid email address' }),
-  mobile: z.string()
-    .regex(/^\+\d{1,3}\d{7,15}$/, 'Mobile number must start with a country code and contain only numbers')
-    .transform((val) => val.replace(/\s+/g, '')), // Remove spaces if any
+  mobile: z
+    .string()
+    .min(10, { message: 'Mobile number must be exactly 10 digits and contain only numbers' }),
   subject: z
     .string()
     .min(10, { message: 'Subject must be 10 or more characters long' })
