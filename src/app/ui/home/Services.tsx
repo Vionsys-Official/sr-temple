@@ -41,15 +41,15 @@ function Services() {
 
   return (
     <div>
-      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div className="px-4 py-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-6">
         <div className="grid gap-5 row-gap-8 lg:grid-cols-2">
           <div className="flex flex-col justify-center">
-            <div className="max-w-xl mb-6 flex flex-col items-center justify-center">
-              <h2 className="tracking-tight text-MainHeading font-MainHeading">
+            <div className="max-w-xl md:mb-6 flex flex-col items-center justify-center">
+              <h2 className="tracking-tight md:text-MainHeading md:font-MainHeading text-MainHeading_sm font-MainHeading_sm">
                 Services We Deliver
               </h2>
-              <h6 className="text-SubHeading font-SubHeading">Building temples, fostering spirituality</h6>
-              <p className="text-Paragraph font-Paragraph flex flex-col text-center py-3 mb-5">
+              <h6 className="md:text-SubHeading text-SubHeading_sm md:font-SubHeading font-SubHeading_sm text-center">Building temples, fostering spirituality</h6>
+              <p className="md:text-Paragraph md:font-Paragraph font-Paragraph_sm flex flex-col text-center py-3 mb-5">
                 We offer a range of services highlighted on our homepage. From building and
                 restoring temples with care and precision to managing everything from design to
                 construction ensuring each temple honors its spiritual and cultural significance,
@@ -66,15 +66,15 @@ function Services() {
             <Image src={Service} alt="" className="object-cover w-full h-56 rounded shadow-lg sm:h-96" />
           </div>
         </div>
-        <div className="px-4 py-10 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-10">
-          <div className="grid gap-8 row-gap-5 lg:grid-cols-3">
+        <div className="py-10 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-10">
+          <div className="grid md:gap-8 gap-3 row-gap-5 lg:grid-cols-3">
             {service.map((item) => (
               <div key={item.id} className="relative p-px overflow-hidden transition duration-300 transform border rounded shadow-sm hover:scale-105 group hover:shadow-xl">
                 <div className="absolute bottom-0 left-0 w-full h-1 duration-300 origin-left transform scale-x-0 bg-[#f7c100]  group-hover:scale-x-100" />
                 <div className="absolute bottom-0 left-0 w-1 h-full duration-300 origin-bottom transform scale-y-0 bg-[#f7c100]  group-hover:scale-y-100" />
                 <div className="absolute top-0 left-0 w-full h-1 duration-300 origin-right transform scale-x-0 bg-[#f7c100] group-hover:scale-x-100" />
                 <div className="absolute bottom-0 right-0 w-1 h-full duration-300 origin-top transform scale-y-0 bg-[#f7c100]  group-hover:scale-y-100" />
-                <div className="relative p-4 bg-white rounded-sm">
+                <div className="relative md:p-4 p-1 bg-white rounded-sm">
                   <div className="flex flex-col mb-2 lg:items-center lg:flex-row">
                     <div className="flex items-center justify-center w-12 h-12 mb-4 mr-2 rounded-full bg-indigo-50 lg:mb-0">
                       <LuConstruction size={25} className="text-[#254736]" />
