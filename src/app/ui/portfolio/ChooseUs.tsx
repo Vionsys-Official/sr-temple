@@ -1,64 +1,63 @@
-import React from "react";
+/* eslint-disable @typescript-eslint/no-use-before-define */
+import React from 'react';
 
 function ChooseUs() {
   return (
-    <>
-      <div className="py-8 px-4">
-        <h1 className="md:text-MainHeading font-MainHeading pb-4 text-center">
-          Key Advantages of Choosing Us
-        </h1>
+    <div className="pt-8 px-4">
+      <h1 className="text-MainHeading font-MainHeading pb-4 text-center">
+        Key Advantages of Choosing Us
+      </h1>
 
-        <div className="flex md:flex-row flex-col justify-evenly items-center">
-          <div className=" overflow-hidden relative transition-all duration-500 hover:translate-y-2 md:w-[27vw] md:h-[50vh] h-[20vh] bg-neutral-50 rounded-lg shadow-xl flex items-center justify-center gap-2 p-4 before:absolute before:w-full hover:before:top-0 before:duration-500 before:-top-1 before:h-1 before:bg-amber-400">
-           
-            <div className="flex flex-col justify-center gap-6 items-center text-center w-full">
+      <div className="flex md:flex-row flex-col md:gap-0 gap-4  justify-evenly items-center">
+        <div className=" overflow-hidden relative transition-all  duration-500 hover:translate-y-2 md:w-[27vw] md:h-[50vh] h-[20vh] bg-neutral-50 rounded-lg shadow-xl flex items-center justify-center gap-2 p-4 before:absolute before:w-full hover:before:top-0 before:duration-500 before:-top-1 before:h-1 before:bg-amber-400">
+
+          <div className="flex flex-col justify-center md:gap-6 gap-4 items-center text-center w-full">
             <span>
               <TypeIcon className="font-extrabold" />
             </span>
-              <span className="font-CardHeading text-CardHeading">Design</span>
-              <p className="line-clamp-3 text-Paragraph font-Paragraph mt-2">
-                Our team of experienced architects and designers create visually
-                stunning and structurally sound temple designs.
-              </p>
-            </div>
+            <span className="font-CardHeading text-CardHeading">Design</span>
+            <p className="line-clamp-3 text-Paragraph font-Paragraph mt-2 pb-2">
+              Our team of experienced architects and designers create visually
+              stunning and structurally sound temple designs.
+            </p>
           </div>
+        </div>
 
-          <div className=" overflow-hidden relative transition-all duration-500 hover:translate-y-2 md:w-[27vw] md:h-[50vh] h-[20vh] bg-neutral-50 rounded-lg shadow-xl flex items-center justify-center gap-2 p-4 before:absolute before:w-full hover:before:top-0 before:duration-500 before:-top-1 before:h-1 before:bg-amber-400">
-            <div className="flex flex-col gap-6 justify-center items-center text-center w-full">
-            <span><PlaneIcon className="font-extrabold"/></span>
-              <span className="font-CardHeading text-CardHeading">
-                Planning
-              </span>
-              <p className="line-clamp-3 text-Paragraph font-Paragraph mt-2">
-                We handle all the logistical and regulatory aspects of temple
-                construction, ensuring a smooth and efficient process.
-              </p>
-            </div>
+        <div className=" overflow-hidden relative transition-all duration-500 hover:translate-y-2 md:w-[27vw] md:h-[50vh] h-[20vh] bg-neutral-50 rounded-lg shadow-xl flex items-center justify-center gap-2 p-4 before:absolute before:w-full hover:before:top-0 before:duration-500 before:-top-1 before:h-1 before:bg-amber-400">
+          <div className="flex flex-col md:gap-6 gap-4 justify-center items-center text-center w-full">
+            <span><PlaneIcon className="font-extrabold" /></span>
+            <span className="font-CardHeading text-CardHeading">
+              Planning
+            </span>
+            <p className="line-clamp-3 text-Paragraph font-Paragraph mt-2 pb-2">
+              We handle all the logistical and regulatory aspects of temple
+              construction, ensuring a smooth and efficient process.
+            </p>
           </div>
+        </div>
 
-          <div className=" overflow-hidden relative transition-all duration-500 hover:translate-y-2 md:w-[27vw] md:h-[50vh] h-[20vh] bg-neutral-50 rounded-lg shadow-xl flex items-center justify-center gap-2 p-4 before:absolute before:w-full hover:before:top-0 before:duration-500 before:-top-1 before:h-1 before:bg-amber-400">
-            <div className="flex flex-col justify-center gap-6 items-center text-center w-full">
-              <span><ConstructionIcon /></span>
-              <span className="font-CardHeading text-CardHeading">
-                Construction
-              </span>
-              <p className="line-clamp-3 text-Paragraph font-Paragraph mt-2">
-                Our skilled craftsmen and construction experts bring your temple
-                design to life, using traditional techniques and high-quality
-                materials.
-              </p>
-            </div>
+        <div className=" overflow-hidden relative transition-all duration-500 hover:translate-y-2 md:w-[27vw] md:h-[50vh] h-[20vh] bg-neutral-50 rounded-lg shadow-xl flex items-center justify-center gap-2 p-4 before:absolute before:w-full hover:before:top-0 before:duration-500 before:-top-1 before:h-1 before:bg-amber-400">
+          <div className="flex flex-col justify-center md:gap-6 gap-4 items-center text-center w-full">
+            <span><ConstructionIcon /></span>
+            <span className="font-CardHeading text-CardHeading">
+              Construction
+            </span>
+            <p className="line-clamp-3 text-Paragraph font-Paragraph mt-2 pb-2">
+              Our skilled craftsmen and construction experts bring your temple
+              design to life, using traditional techniques and high-quality
+              materials.
+            </p>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
 export default ChooseUs;
 
 function ConstructionIcon(
-  props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
+  props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>,
 ) {
   return (
     <svg
@@ -86,7 +85,7 @@ function ConstructionIcon(
 }
 
 function PlaneIcon(
-  props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
+  props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>,
 ) {
   return (
     <svg
@@ -107,7 +106,7 @@ function PlaneIcon(
 }
 
 function TypeIcon(
-  props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
+  props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>,
 ) {
   return (
     <svg
