@@ -16,7 +16,7 @@ function Herosection() {
         <div className="absolute inset-0 flex justify-center items-center">
           <div className="flex flex-col px-4 text-center">
             <div className="max-w-5xl p-6 rounded-lg bg-black bg-opacity-70 shadow-lg">
-              <h2 className="mb-4 font-extrabold text-amber-500 text-3xl md:text-5xl">
+              <h2 className="mb-4 font-extrabold text-yellow text-3xl md:text-5xl">
                 Our Services
               </h2>
               <p className="text-white text-xl md:text-2xl leading-relaxed">
