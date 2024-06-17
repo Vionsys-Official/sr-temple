@@ -1,10 +1,18 @@
 import React from 'react';
+// eslint-disable-next-line import/no-named-as-default
+import Hero from '@/app/ui/about/hero';
+import Features from '@/app/ui/about/features';
+import Choose from '@/app/ui/about/Choose';
 
-const page = () => (
+// eslint-disable-next-line react/function-component-definition
+const Page: React.FC = () => (
   <div>
-    About
+    <Hero />
+    <Features />
+    <Choose />
 
   </div>
+
 );
 
-export default page;
+export default Page;
