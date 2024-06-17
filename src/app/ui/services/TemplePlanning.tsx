@@ -18,11 +18,11 @@ function TemplePlanning() {
         </div>
       </div>
 
-      <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+      <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 lg:px-8">
         <div className="grid gap-5 row-gap-10 lg:grid-cols-2">
           <div className="flex flex-col justify-center">
             <div className="max-w-xl mb-6">
-              <h2 className="max-w-full mb-4 text-MainHeading_sm tracking-tight text-gray-900 sm:text-MainHeading sm:leading-none">
+              <h2 className="max-w-full mb-4 text-MainHeading_sm font-bold tracking-tight text-gray-900 sm:text-MainHeading sm:leading-none">
                 Temple Planning and Measurement Services
               </h2>
               <p className="text-Paragraph_sm md:text-Paragraph">
@@ -35,7 +35,7 @@ function TemplePlanning() {
                 requirements.
               </p>
             </div>
-            <p className="mb-4 text-sm font-bold tracking-widest uppercase">
+            <p className="mb-4 text-sm font-bold text-gray tracking-widest uppercase">
               Features
             </p>
             <div className="grid space-y-3 sm:gap-2 sm:grid-cols-2 sm:space-y-0">

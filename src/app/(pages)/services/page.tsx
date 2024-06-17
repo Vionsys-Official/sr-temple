@@ -5,13 +5,15 @@ import TemplePlanning from '@/app/ui/services/TemplePlanning';
 import ValuationSection from '@/app/ui/services/ValuationSection';
 import ContactUs from '@/app/ui/portfolio/ContactUs';
 import React from 'react';
+import Maintenance from '@/app/ui/services/Maintenance';
 
 const page = () => (
-  <main className="pt-12 md:pt-16">
+  <main className="pt-12 md:pt-16 overflow-hidden">
     <Herosection />
     <TemplePlanning />
     <ValuationSection />
     <ExecutionSection />
+    <Maintenance />
     <Commitment />
     <ContactUs />
   </main>

@@ -1,5 +1,8 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 function ExecutionSection() {
   return (
@@ -16,8 +19,18 @@ function ExecutionSection() {
             />
           </div>
           <div className="flex flex-col items-center justify-center">
-            <div className="md:px-10 p-2 mb-6">
-              <h2 className="max-w-full mb-4 text-MainHeading_sm tracking-tight text-gray-900 sm:text-MainHeading sm:leading-none">
+            <motion.div
+              initial={{ opacity: 0, x: -100 }} // X:100
+              whileInView={{ opacity: 1, x: 1 }} // y:100
+              transition={{
+                delay: 0.2,
+                scale: { type: 'spring', stiffness: 30 },
+                opacity: { duration: 1 },
+                ease: 'easeInOut',
+              }}
+              className="md:px-10 p-2 mb-6"
+            >
+              <h2 className="max-w-full mb-4 text-MainHeading_sm font-bold tracking-tight text-gray-900 sm:text-MainHeading sm:leading-none">
                 2D, 3D & Vastu Shastra Plan Drawing Services
               </h2>
               <p className="text-Paragraph_sm md:text-Paragraph">
@@ -29,7 +42,7 @@ function ExecutionSection() {
                 comprehensive drawings provide a clear blueprint for your temple
                 construction project.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
@@ -38,8 +51,18 @@ function ExecutionSection() {
         <div className="grid gap-5 row-gap-10 lg:grid-cols-2">
 
           <div className="flex flex-col items-center justify-center md:border-r border-yellow">
-            <div className="md:px-10 p-2 mb-6">
-              <h2 className="max-w-full mb-4 text-MainHeading_sm tracking-tight text-gray-900 sm:text-MainHeading sm:leading-none">
+            <motion.div
+              initial={{ opacity: 0, x: 100 }} // X:100
+              whileInView={{ opacity: 1, x: 1 }} // y:100
+              transition={{
+                delay: 0.2,
+                scale: { type: 'spring', stiffness: 30 },
+                opacity: { duration: 1 },
+                ease: 'easeInOut',
+              }}
+              className="md:px-10 p-2 mb-6"
+            >
+              <h2 className="max-w-full mb-4 text-MainHeading_sm font-bold tracking-tight text-gray-900 sm:text-MainHeading sm:leading-none">
                 Temple Execution Construction Services
               </h2>
               <p className="text-Paragraph_sm md:text-Paragraph">
@@ -50,7 +73,7 @@ function ExecutionSection() {
                 is dedicated to creating temples that are both structurally sound and
                 spiritually uplifting.
               </p>
-            </div>
+            </motion.div>
           </div>
 
           <div className="flex justify-center items-center">
@@ -77,8 +100,18 @@ function ExecutionSection() {
             />
           </div>
           <div className="flex flex-col items-center justify-center">
-            <div className="md:px-10 p-2 mb-6">
-              <h2 className="max-w-full mb-4 text-MainHeading_sm tracking-tight text-gray-900 sm:text-MainHeading sm:leading-none">
+            <motion.div
+              initial={{ opacity: 0, x: -100 }} // X:100
+              whileInView={{ opacity: 1, x: 1 }} // y:100
+              transition={{
+                delay: 0.2,
+                scale: { type: 'spring', stiffness: 30 },
+                opacity: { duration: 1 },
+                ease: 'easeInOut',
+              }}
+              className="md:px-10 p-2 mb-6"
+            >
+              <h2 className="max-w-full mb-4 text-MainHeading_sm font-bold tracking-tight text-gray-900 sm:text-MainHeading sm:leading-none">
                 Consultancy Services
               </h2>
               <p className="text-Paragraph_sm md:text-Paragraph">
@@ -89,7 +122,7 @@ function ExecutionSection() {
                 helping you achieve your vision while adhering to the highest standards
                 of quality and tradition.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
