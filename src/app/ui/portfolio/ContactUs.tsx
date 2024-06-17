@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import React from 'react';
 import { motion } from 'framer-motion';
-import fadein from '@/utils/varients';
+import fadein from '@/utils/variants';
 
 function ContactUs() {
   return (
