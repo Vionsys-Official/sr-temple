@@ -5,7 +5,7 @@ import contacthero from '../../../../public/assets/contact/contacthero.jpg';
 
 function Hero() {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden pt-10">
       <div className="w-full">
         <div className="md:h-[100vh] h-[70vh] flex justify-center items-center relative overflow-hidden bg-slate-900">
           <Image
@@ -15,7 +15,7 @@ function Hero() {
             quality={100}
           />
           <div className="absolute">
-            <h1 className="text-amber-500 text-5xl font-MainHeading text-center ">
+            <h1 className="text-amber-400 text-5xl font-MainHeading text-center ">
               Schedule a Service
             </h1>
             <p className="text-3xl font-semibold text-white text-center px-2">Contact us today and lets build something extraordinary together.</p>

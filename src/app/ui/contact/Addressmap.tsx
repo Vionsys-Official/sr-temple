@@ -3,7 +3,7 @@ import React from 'react';
 
 function Addressmap() {
   return (
-    <section className="h-full w-full px-2">
+    <section className="h-full w-full md:px-2 px-4">
       <iframe
         className="w-full border"
         title="map"
