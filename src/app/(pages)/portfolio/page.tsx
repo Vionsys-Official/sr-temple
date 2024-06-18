@@ -6,7 +6,7 @@ import { OurWork } from '@/app/ui/portfolio/OurWork';
 import React from 'react';
 
 const page = () => (
-  <main className="overflow-x-hidden">
+  <main className="overflow-x-hidden py-12">
     <Hero />
     <ChooseUs />
     <Features />
