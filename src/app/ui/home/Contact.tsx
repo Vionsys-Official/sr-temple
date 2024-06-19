@@ -21,7 +21,7 @@ function Contact() {
             }}
             className="md:text-MainHeading md:font-MainHeading text-MainHeading_sm font-MainHeading_sm text-center md:mx-auto md:py-3"
           >
-            Interested in collaborating with us?
+            Interested in Collaborating with Us?
           </motion.h2>
           <motion.h6
             initial={{ opacity: 0, x: -100 }} // X:100
