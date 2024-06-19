@@ -1,18 +1,21 @@
+'use client';
+
 import React from 'react';
 import { IoMdCheckmarkCircleOutline } from 'react-icons/io';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import TempleImage from '../../../../public/assets/team/TempleImage.jpg';
 
 function Section3() {
   return (
-    <section>
+    <section className="overflow-hidden">
       <div className="container flex flex-col px-10 py-10 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center">
         {/* Text content */}
         <div className="w-full lg:w-1/2">
           <div className="lg:max-w-lg">
-            <h1 className="text-3xl font-semibold tracking-wide text-gray-800 lg:text-4xl">
+            <h1 className="text-MainHeading_sm text-[#000000] font-semibold tracking-wide text-gray-800">
               Expert Team in
-              <span className=" mx-1 font-extrabold text-MainHeading  relative inline-block stroke-current">
+              <span className=" mx-1 font-semibold text-MainHeading_sm  relative inline-block stroke-current">
                 Temple
                 <svg
                   className="absolute -bottom-0.5 w-full max-h-1.5  text-gray"
@@ -33,30 +36,95 @@ function Section3() {
 
             <div className="grid gap-6 mt-8 sm:grid-cols-2">
               {/* Feature list */}
-              <div className="flex items-center text-gray-800">
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{
+                  delay: 0.2,
+                  scale: { type: 'spring', stiffness: 30 },
+                  opacity: { duration: 0.6 },
+                  ease: 'easeInOut',
+                }}
+                className="flex items-center text-gray-800"
+              >
                 <IoMdCheckmarkCircleOutline className="text-gray" />
                 <span className="mx-3">Over a Decade of Experience</span>
-              </div>
-              <div className="flex items-center text-gray-800">
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{
+                  delay: 0.2,
+                  scale: { type: 'spring', stiffness: 30 },
+                  opacity: { duration: 0.6 },
+                  ease: 'easeInOut',
+                }}
+                className="flex items-center text-gray-800"
+              >
                 <IoMdCheckmarkCircleOutline className="text-gray" />
                 <span className="mx-3">Nationwide Reach and Service</span>
-              </div>
-              <div className="flex items-center text-gray-800">
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{
+                  delay: 0.2,
+                  scale: { type: 'spring', stiffness: 30 },
+                  opacity: { duration: 0.6 },
+                  ease: 'easeInOut',
+                }}
+                className="flex items-center text-gray-800"
+              >
                 <IoMdCheckmarkCircleOutline className="text-gray" />
                 <span className="mx-3">Innovative Temple Designs</span>
-              </div>
-              <div className="flex items-center text-gray-800">
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{
+                  delay: 0.2,
+                  scale: { type: 'spring', stiffness: 30 },
+                  opacity: { duration: 0.6 },
+                  ease: 'easeInOut',
+                }}
+                className="flex items-center text-gray-800"
+              >
                 <IoMdCheckmarkCircleOutline className="text-gray" />
                 <span className="mx-3">High-Quality Craftsmanship</span>
-              </div>
-              <div className="flex items-center text-gray-800">
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{
+                  delay: 0.2,
+                  scale: { type: 'spring', stiffness: 30 },
+                  opacity: { duration: 0.6 },
+                  ease: 'easeInOut',
+                }}
+                className="flex items-center text-gray-800"
+              >
                 <IoMdCheckmarkCircleOutline className="text-gray" />
                 <span className="mx-3">Blend of Tradition and Modernity</span>
-              </div>
-              <div className="flex items-center text-gray-800">
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{
+                  delay: 0.2,
+                  scale: { type: 'spring', stiffness: 30 },
+                  opacity: { duration: 0.6 },
+                  ease: 'easeInOut',
+                }}
+                className="flex items-center text-gray-800"
+              >
                 <IoMdCheckmarkCircleOutline className="text-gray" />
                 <span className="mx-3">Dedicated Project Managers</span>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
