@@ -21,11 +21,11 @@ function ExecutionSection() {
           <div className="flex flex-col items-center justify-center">
             <motion.div
               initial={{ opacity: 0, x: -100 }} // X:100
-              whileInView={{ opacity: 1, x: 1 }} // y:100
+              whileInView={{ opacity: 1, x: 0 }} // y:100
               transition={{
                 delay: 0.2,
-                scale: { type: 'spring', stiffness: 30 },
-                opacity: { duration: 1 },
+                x: { type: 'spring', stiffness: 30 },
+                opacity: { duration: 0.6 },
                 ease: 'easeInOut',
               }}
               className="md:px-10 p-2 mb-6"
@@ -53,11 +53,11 @@ function ExecutionSection() {
           <div className="flex flex-col items-center justify-center md:border-r border-yellow">
             <motion.div
               initial={{ opacity: 0, x: 100 }} // X:100
-              whileInView={{ opacity: 1, x: 1 }} // y:100
+              whileInView={{ opacity: 1, x: 0 }} // y:100
               transition={{
                 delay: 0.2,
-                scale: { type: 'spring', stiffness: 30 },
-                opacity: { duration: 1 },
+                x: { type: 'spring', stiffness: 30 },
+                opacity: { duration: 0.6 },
                 ease: 'easeInOut',
               }}
               className="md:px-10 p-2 mb-6"
@@ -102,11 +102,11 @@ function ExecutionSection() {
           <div className="flex flex-col items-center justify-center">
             <motion.div
               initial={{ opacity: 0, x: -100 }} // X:100
-              whileInView={{ opacity: 1, x: 1 }} // y:100
+              whileInView={{ opacity: 1, x: 0 }} // y:100
               transition={{
                 delay: 0.2,
-                scale: { type: 'spring', stiffness: 30 },
-                opacity: { duration: 1 },
+                x: { type: 'spring', stiffness: 30 },
+                opacity: { duration: 0.6 },
                 ease: 'easeInOut',
               }}
               className="md:px-10 p-2 mb-6"
