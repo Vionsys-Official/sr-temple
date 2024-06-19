@@ -12,7 +12,7 @@ function Hero() {
         className="md:pt-16 pt-12 text-white relative md:h-[130vh]"
       >
         <div className="bg-[#000] bg-cover bg-center bg-no-repeat">
-          <Image src={Front} alt="" className="md:h-full w-full opacity-50 h-[50vh]" />
+          <Image src={Front} alt="" className="md:h-full w-full opacity-40 h-[50vh]" />
         </div>
         <div className="md:px-4 mx-auto absolute inset-0 flex flex-col justify-center items-center">
           <div className="grid grid-cols-12 gap-6 md:pt-36">

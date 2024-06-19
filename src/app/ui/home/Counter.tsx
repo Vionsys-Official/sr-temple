@@ -110,7 +110,7 @@ function SocialProofCounter() {
           }}
           className="max-w-lg md:text-MainHeading md:font-MainHeading text-MainHeading_sm font-MainHeading_sm tracking-tight md:mx-auto text-center"
         >
-          Who we are
+          Who We Are
         </motion.h2>
         <motion.h6
           initial={{ opacity: 0, x: 100 }} // X:100

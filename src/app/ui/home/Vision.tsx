@@ -18,10 +18,12 @@ function Vision() {
               opacity: { duration: 0.6 },
               ease: 'easeInOut',
             }}
-            className="flex items-center md:mb-6 mb-3 lg:w-1/3 lg:mb-0"
+            className="flex items-center justify-center md:mb-6 mb-3 lg:w-1/3 lg:mb-0 py-6"
           >
-            <div className="flex items-center justify-center md:mb-6 w-14 h-14 mr-5 rounded-full bg-indigo-50 sm:w-24 sm:h-24 xl:mr-15 xl:w-24 xl:h-24">
-              <FaBullseye size={60} />
+            <div className="flex flex-col justify-center items-center">
+              <div className="flex items-center justify-center w-14 h-14 mr-5 rounded-full bg-indigo-50 sm:w-24 sm:h-24 xl:mr-15 xl:w-24 xl:h-24">
+                <FaBullseye size={60} />
+              </div>
             </div>
             <h3
               className="md:text-4xl text-3xl font-extrabold text-[#254736]"
@@ -40,7 +42,7 @@ function Vision() {
             }}
             className="lg:w-2/3"
           >
-            <p className="md:text-Paragraph md:font-Paragraph font-Paragraph_sm mb-3 text-center">
+            <p className="md:text-Paragraph md:font-Paragraph font-Paragraph_sm mb-3 text-justify">
               To be the leading temple construction company in India, recognized for our dedication
               to quality, customer satisfaction and innovative designs that reflect the rich
               cultural heritage of our country.

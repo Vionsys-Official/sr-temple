@@ -9,7 +9,7 @@ import Choose from './ui/home/Choose';
 import Hero from './ui/home/Hero';
 
 const page: FC = () => (
-  <div>
+  <div className="overflow-x">
     <Hero />
     <Counter />
     <Vision />
