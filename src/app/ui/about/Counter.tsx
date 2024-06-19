@@ -1,10 +1,9 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
-import { GiByzantinTemple } from "react-icons/gi";
-import { IoMdHappy } from "react-icons/io";
-import { FaUserClock } from "react-icons/fa";
-import { FaPeopleCarry } from "react-icons/fa";
+import { GiByzantinTemple } from 'react-icons/gi';
+import { IoMdHappy } from 'react-icons/io';
+import { FaUserClock, FaPeopleCarry } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 interface CountUpProps {
@@ -72,11 +71,11 @@ function SocialProofCounter() {
       heading: 'Hours Of Support',
     },
     {
-        id: 4,
-        icon: <FaPeopleCarry size={35} />,
-        count: 150,
-        heading: 'Workers',
-      },
+      id: 4,
+      icon: <FaPeopleCarry size={35} />,
+      count: 150,
+      heading: 'Workers',
+    },
   ];
 
   const [isVisible, setIsVisible] = useState<boolean>(false);
@@ -104,7 +103,7 @@ function SocialProofCounter() {
   }, []);
 
   return (
-    <div className="px-4 py-2 mx-auto my-3 sm:max-w-full md:max-w-full lg:max-w-screen-xl md:px-4 lg:px-8 lg:py-3 lg:mb-3">
+    <div className="px-4 py-2 mx-auto sm:max-w-full md:max-w-full md:px-4">
       {/* first section */}
       <motion.div
         initial={{ opacity: 0, y: 100 }} // X:100
@@ -114,9 +113,11 @@ function SocialProofCounter() {
           scale: { type: 'spring', stiffness: 30 },
           opacity: { duration: 0.6 },
           ease: 'easeOut',
-        }} className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-4xl md:mb-10">
-        <h2 className="md:max-w-lg text-center text-MainHeading text-gray font-MainHeading tracking-tight md:mx-auto">
-        All about Clients, Projects, Support and Workers!
+        }}
+        className="max-w-xl md:mx-auto sm:text-center md:my-2"
+      >
+        <h2 className="text-gray pb-2 text-center text-MainHeading_sm font-MainHeading_sm md:text-MainHeading md:text-gray md:font-MainHeading tracking-tight md:mx-auto md:pb-2">
+          All about Clients, Projects, Support and Workers!
         </h2>
       </motion.div>
       <div className="">
@@ -125,7 +126,7 @@ function SocialProofCounter() {
           ref={sectionRef}
         >
           {/* 2nd section */}
-          <div className="flex w-full md:flex-row flex-col gap-6 justify-center items-center">
+          <div className="flex w-full md:flex-row flex-col gap-6 justify-center items-center md:pt-6">
             {arr.map((item) => (
               <div
                 key={item.id}
