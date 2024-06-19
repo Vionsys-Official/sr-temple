@@ -11,7 +11,7 @@ import Twitter from '../../../../public/assets/socialicons/Twitter4.png';
 
 function Footer() {
   return (
-    <footer className="px-4 w-[100vw] overflow-hidden bg-slate-300  z-10 text-black">
+    <footer className="px-4 w-[100vw] overflow-hidden bg-slate-200  z-10 text-black">
       {/* Footer Content */}
       <div className="bg-transparent py-5 overflow-hidden " />
       <div className="flex flex-col gap-4">
