@@ -13,7 +13,7 @@ const contactschema = z.object({
   email: z.string().email({ message: 'Invalid email address' }),
   mobile: z
     .string()
-    .min(10, { message: 'Mobile number must be exactly 10 digits and contain only numbers' }),
+    .min(10, { message: 'Invalid mobile number' }),
   subject: z
     .string()
     .min(10, { message: 'Subject must be 10 or more characters long' })
@@ -21,7 +21,7 @@ const contactschema = z.object({
   message: z
     .string()
     .min(20, { message: 'Message must be 20 or more characters long' })
-    .max(100, { message: 'Message must be 100 or less characters long' }),
+    .max(500, { message: 'Message must be 500 or less characters long' }),
 });
 
 export default contactschema;

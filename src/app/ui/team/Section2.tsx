@@ -1,8 +1,11 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { RiDoubleQuotesL, RiDoubleQuotesR } from 'react-icons/ri';
 import { FaSquarePhone } from 'react-icons/fa6';
+import { motion } from 'framer-motion';
 import ImageTeam from '../../../../public/assets/team/ImageTeam.png';
 
 function section2() {
@@ -22,16 +25,29 @@ function section2() {
               objectFit="cover"
             />
           </div>
-          <h1 className="text-SubHeading font-semibold text-center mt-4 bg-my-team rounded-md">
-            Sunil Ulhas Rathod
-          </h1>
-          <h6 className="text-gray-500 text-center bg-my-team  rounded-md">
-            Owner
-          </h6>
-          <h1 className="text-gray-500 flex items-center justify-center m-2 bg-my-team rounded-md">
-            <FaSquarePhone className="mt-[1px] mr-2" />
-            9834632900
-          </h1>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{
+              delay: 0.2,
+              scale: { type: 'spring', stiffness: 30 },
+              opacity: { duration: 0.6 },
+              ease: 'easeInOut',
+
+            }}
+          >
+            <h1 className="text-SubHeading font-semibold text-center mt-4 bg-my-team rounded-md">
+              Sunil Ulhas Rathod
+            </h1>
+            <h6 className="text-gray-500 text-center bg-my-team rounded-md">
+              Owner
+            </h6>
+            <h1 className="text-gray-500 flex items-center justify-center m-2 bg-my-team rounded-md">
+              <FaSquarePhone className="mt-[1px] mr-2" />
+              9834632900
+            </h1>
+          </motion.div>
+
         </div>
 
         <div className="text-center p-5">
@@ -46,14 +62,15 @@ function section2() {
             <RiDoubleQuotesR className="inline-block  text-gray-400 mb-4" />
           </p>
         </div>
+
         <div className="flex justify-center gap-4">
           <Link href="/contact">
-            <button type="button" className="text-white bg-yellow  font-medium rounded-lg text-sm px-5 py-2.5 ">
+            <button type="button" className="text-white bg-yellow  font-medium rounded-lg text-Paragraph_sm px-5 py-2.5 ">
               Contact us
             </button>
           </Link>
           <Link href="/portfolio">
-            <button type="button" className="text-white bg-gray font-medium rounded-lg text-sm px-5 py-2.5 ">
+            <button type="button" className="text-white bg-gray font-medium rounded-lg text-Paragraph_sm px-5 py-2.5 ">
               Our Work
             </button>
           </Link>
