@@ -5,6 +5,7 @@ import { GiByzantinTemple } from "react-icons/gi";
 import { IoMdHappy } from "react-icons/io";
 import { FaUserClock } from "react-icons/fa";
 import { FaPeopleCarry } from "react-icons/fa";
+import { motion } from 'framer-motion';
 
 interface CountUpProps {
   endProp: number; // Rename end to endProp
@@ -55,19 +56,19 @@ function SocialProofCounter() {
     {
       id: 1,
       icon: <IoMdHappy size={35} />,
-      count: 532,
+      count: 530,
       heading: 'Happy Clients ',
     },
     {
       id: 2,
       icon: <GiByzantinTemple size={35} />,
-      count: 700,
+      count: 450,
       heading: 'Projects',
     },
     {
       id: 3,
       icon: <FaUserClock size={35} />,
-      count: 1463,
+      count: 1460,
       heading: 'Hours Of Support',
     },
     {
@@ -103,20 +104,28 @@ function SocialProofCounter() {
   }, []);
 
   return (
-    <div className="px-4 py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-10">
+    <div className="px-4 py-2 mx-auto my-3 sm:max-w-full md:max-w-full lg:max-w-screen-xl md:px-4 lg:px-8 lg:py-3 lg:mb-3">
       {/* first section */}
-      <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-4xl md:mb-12">
-        <h2 className="max-w-lg text-MainHeading text-gray font-MainHeading tracking-tight md:mx-auto">
+      <motion.div
+        initial={{ opacity: 0, y: 100 }} // X:100
+        whileInView={{ opacity: 1, y: 1 }} // y:100
+        transition={{
+          delay: 0.2,
+          scale: { type: 'spring', stiffness: 30 },
+          opacity: { duration: 0.6 },
+          ease: 'easeOut',
+        }} className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-4xl md:mb-10">
+        <h2 className="md:max-w-lg text-center text-MainHeading text-gray font-MainHeading tracking-tight md:mx-auto">
         All about Clients, Projects, Support and Workers!
         </h2>
-      </div>
+      </motion.div>
       <div className="">
         <section
           className="flex justify-center items-center"
           ref={sectionRef}
         >
           {/* 2nd section */}
-          <div className="flex md:flex-row flex-col gap-6 justify-center items-center">
+          <div className="flex w-full md:flex-row flex-col gap-6 justify-center items-center">
             {arr.map((item) => (
               <div
                 key={item.id}

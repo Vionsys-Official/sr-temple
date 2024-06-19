@@ -1,4 +1,9 @@
+'use client'
+import { motion } from 'framer-motion';
 import React from 'react'
+import { FaCalendarCheck } from "react-icons/fa";
+import { FaGlobeAmericas } from "react-icons/fa";
+import { FaMoneyCheck } from "react-icons/fa6";
 
 const features = () => {
   return (
@@ -10,75 +15,82 @@ const features = () => {
         </h2>
       </div>
       <div className="lg:w-1/2">
-        <p className="text-base text-gray md:text-lg">
+        <motion.p
+        initial={{ opacity: 0, y: 100 }} // X:100
+        whileInView={{ opacity: 1, y: 1 }} // y:100
+        transition={{
+          delay: 0.2,
+          scale: { type: 'spring', stiffness: 30 },
+          opacity: { duration: 0.6 },
+          ease: 'easeInOut',
+        }} className="text-base text-gray md:text-lg">
         At SR Temple Construction, we take pride in our meticulous attention to detail, ensuring that every project reflects our dedication to excellence and our clients' visions.
-        </p>
+        </motion.p>
       </div>
     </div>
     <div className="grid gap-8 row-gap-10 sm:grid-cols-2 lg:grid-cols-4">
-      <div className="max-w-md">
-        <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
-          <svg
-            className="w-12 h-12 text-deep-purple-accent-400"
-            stroke="currentColor"
-            viewBox="0 0 52 52"
-          >
-            <polygon
-              strokeWidth="3"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              fill="none"
-              points="29 13 14 29 25 29 23 39 38 23 27 23"
-            />
-          </svg>
-        </div>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }} // X:100
+        whileInView={{ opacity: 1, y: 1 }} // y:100
+        transition={{
+          delay: 0.2,
+          scale: { type: 'spring', stiffness: 30 },
+          opacity: { duration: 0.6 },
+          ease: 'easeInOut',
+        }} 
+        className="max-w-md">
+
+        <motion.div
+        initial={{ opacity: 0, y: 100 }} // X:100
+        whileInView={{ opacity: 1, y: 1 }} // y:100
+        transition={{
+          delay: 0.2,
+          scale: { type: 'spring', stiffness: 30 },
+          opacity: { duration: 0.6 },
+          ease: 'easeInOut',
+        }} className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
+        <FaCalendarCheck size={30}/>
+
+        </motion.div>
         <h6 className="mb-2 font-semibold leading-5">Years of service</h6>
         <p className="mb-3 text-sm text-gray-900">
           Designing and constructing temples with meticulous craftsmanship since 2011
         </p>
-      </div>
-      <div className="max-w-md">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }} // X:100
+        whileInView={{ opacity: 1, y: 1 }} // y:100
+        transition={{
+          delay: 0.2,
+          scale: { type: 'spring', stiffness: 30 },
+          opacity: { duration: 0.6 },
+          ease: 'easeInOut',
+        }} className="max-w-md">
         <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
-          <svg
-            className="w-12 h-12 text-deep-purple-accent-400"
-            stroke="currentColor"
-            viewBox="0 0 52 52"
-          >
-            <polygon
-              strokeWidth="3"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              fill="none"
-              points="29 13 14 29 25 29 23 39 38 23 27 23"
-            />
-          </svg>
+        <FaGlobeAmericas size={30}/>
         </div>
         <h6 className="mb-2 font-semibold leading-5">Area of work</h6>
         <p className="mb-3 text-sm text-gray-900">
         Working all over India and we give best designs in market.
         </p>
-      </div>
-      <div className="max-w-md">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }} // X:100
+        whileInView={{ opacity: 1, y: 1 }} // y:100
+        transition={{
+          delay: 0.2,
+          scale: { type: 'spring', stiffness: 30 },
+          opacity: { duration: 0.6 },
+          ease: 'easeInOut',
+        }} className="max-w-md">
         <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
-          <svg
-            className="w-12 h-12 text-deep-purple-accent-400"
-            stroke="currentColor"
-            viewBox="0 0 52 52"
-          >
-            <polygon
-              strokeWidth="3"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              fill="none"
-              points="29 13 14 29 25 29 23 39 38 23 27 23"
-            />
-          </svg>
+        <FaMoneyCheck size={30}/>
         </div>
         <h6 className="mb-2 font-semibold leading-5">Cost</h6>
         <p className="mb-3 text-sm text-gray-900">
         Providing best final result with minimum cost.
         </p>
-      </div>
+      </motion.div>
     </div>
   </div>
   )
