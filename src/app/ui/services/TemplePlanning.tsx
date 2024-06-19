@@ -1,5 +1,8 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 function TemplePlanning() {
   return (
@@ -7,7 +10,7 @@ function TemplePlanning() {
 
       <div className="p-5 mx-auto sm:p-10 bg-white">
         <div className="flex flex-col items-center justify-center shadow bg-slate-400 shadow-slate-300 max-w-full mx-auto overflow-hidden rounded">
-          <div className="py-11 w-full bg-sky-900" />
+          <div className="py-11 w-full bg-gray" />
           <div className="p-6 m-4 flex justify-center mx-auto -mt-16 space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md bg-white shadow-inner">
             <div className="">
               <h1 className="max-w-full flex justify-center text-MainHeading_sm font-bold tracking-tight text-gray-900 sm:text-MainHeading sm:leading-none">
@@ -22,10 +25,30 @@ function TemplePlanning() {
         <div className="grid gap-5 row-gap-10 lg:grid-cols-2">
           <div className="flex flex-col justify-center">
             <div className="max-w-xl mb-6">
-              <h2 className="max-w-full mb-4 text-MainHeading_sm font-bold tracking-tight text-gray-900 sm:text-MainHeading sm:leading-none">
+              <motion.h2
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{
+                  delay: 0.2,
+                  x: { type: 'spring', stiffness: 30 },
+                  opacity: { duration: 0.5 },
+                  ease: 'easeInOut',
+                }}
+                className="max-w-full mb-4 text-MainHeading_sm font-bold tracking-tight text-gray-900 sm:text-MainHeading sm:leading-none"
+              >
                 Temple Planning and Measurement Services
-              </h2>
-              <p className="text-Paragraph_sm md:text-Paragraph">
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{
+                  delay: 0.2,
+                  x: { type: 'spring', stiffness: 30 },
+                  opacity: { duration: 0.5 },
+                  ease: 'easeInOut',
+                }}
+                className="text-Paragraph_sm md:text-Paragraph"
+              >
                 Our team of experts provides meticulous planning and measurement
                 services tailored to the unique needs of temple construction. We
                 understand the importance of accurate measurements in creating
@@ -33,12 +56,22 @@ function TemplePlanning() {
                 services ensure that every detail, from site selection to spatial
                 organization, is in perfect alignment with your vision and religious
                 requirements.
-              </p>
+              </motion.p>
             </div>
             <p className="mb-4 text-sm font-bold text-gray tracking-widest uppercase">
               Features
             </p>
-            <div className="grid space-y-3 sm:gap-2 sm:grid-cols-2 sm:space-y-0">
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                delay: 0.2,
+                x: { type: 'spring', stiffness: 30 },
+                opacity: { duration: 0.5 },
+                ease: 'easeInOut',
+              }}
+              className="grid space-y-3 sm:gap-2 sm:grid-cols-2 sm:space-y-0"
+            >
               <ul className="space-y-3">
                 <li className="flex">
                   <span className="mr-1">
@@ -151,7 +184,7 @@ function TemplePlanning() {
                   Cultural and Religious Sensitivity
                 </li>
               </ul>
-            </div>
+            </motion.div>
           </div>
           <div>
             <Image

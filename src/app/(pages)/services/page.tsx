@@ -7,6 +7,10 @@ import ContactUs from '@/app/ui/portfolio/ContactUs';
 import React from 'react';
 import Maintenance from '@/app/ui/services/Maintenance';
 
+export const metadata = {
+  title: 'SRTemple Constructions - Services ',
+};
+
 const page = () => (
   <main className="pt-12 md:pt-16 overflow-hidden">
     <Herosection />
