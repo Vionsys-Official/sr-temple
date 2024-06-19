@@ -5,6 +5,10 @@ import Hero from '@/app/ui/portfolio/Hero';
 import { OurWork } from '@/app/ui/portfolio/OurWork';
 import React from 'react';
 
+export const metadata = {
+  title: 'SRTemple Constructions - Portfolio',
+};
+
 const page = () => (
   <main className="overflow-x-hidden py-12">
     <Hero />
