@@ -7,6 +7,7 @@ import Testimonial from './ui/home/Testimonial';
 import WeWork from './ui/home/WeWork';
 import Choose from './ui/home/Choose';
 import Hero from './ui/home/Hero';
+import Safety from './ui/home/Safety';
 
 const page: FC = () => (
   <div>
@@ -16,6 +17,7 @@ const page: FC = () => (
     <WeWork />
     <Services />
     <Choose />
+    <Safety />
     <Testimonial />
     <Contact />
   </div>
