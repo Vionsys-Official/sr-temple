@@ -12,10 +12,10 @@ function Section3() {
       <div className="container flex flex-col px-10 py-10 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center">
         {/* Text content */}
         <div className="w-full lg:w-1/2">
-          <div className="lg:max-w-lg">
-            <h1 className="text-MainHeading_sm text-[#000000] font-semibold tracking-wide text-gray-800">
+          <div className="p-4">
+            <h1 className="text-[#254736] md:text-4xl text-3xl font-extrabold tracking-wide">
               Expert Team in
-              <span className=" mx-1 font-semibold text-MainHeading_sm  relative inline-block stroke-current">
+              <span className="mx-1 text-MainHeading_sm font-extrabold relative inline-block stroke-current">
                 Temple
                 <svg
                   className="absolute -bottom-0.5 w-full max-h-1.5  text-gray"

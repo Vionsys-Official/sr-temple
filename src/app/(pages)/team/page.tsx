@@ -5,7 +5,7 @@ import Section3 from '@/app/ui/team/Section3';
 import Section4 from '@/app/ui/team/Section4';
 
 export const metadata = {
-  title: 'SRTemple Constructions - Teams Page',
+  title: 'SR Temple Constructions - Teams Page',
 };
 function Page() {
   return (

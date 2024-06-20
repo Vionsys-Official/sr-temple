@@ -65,7 +65,7 @@ function section2() {
 
         <div className="flex justify-center gap-4">
           <Link href="/contact">
-            <button type="button" className="text-white bg-yellow  font-medium rounded-lg text-Paragraph_sm px-5 py-2.5 ">
+            <button type="button" className="text-white bg-yellow font-medium rounded-lg text-Paragraph_sm px-5 py-2.5 ">
               Contact us
             </button>
           </Link>
