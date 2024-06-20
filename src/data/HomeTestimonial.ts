@@ -9,7 +9,7 @@ const testimonials:Testimonial[] = [
     quote:
         'I wanted to construct one temple in my village and I contacted lots of company but I got best response and service from SR temple construction.',
     name: 'Mr. Machindra Pansare,',
-    title: 'Yoola, Nashik',
+    title: 'Yeola, Nashik',
   },
   {
     quote:
@@ -32,7 +32,7 @@ const testimonials:Testimonial[] = [
     quote:
         'The SR temple construction is the best service provider in temple construction. I am super happy with their service.',
     name: 'Mr. Sanjay Enamdar,',
-    title: 'Hydrabad',
+    title: 'Hyderabad',
   },
 ];
 
