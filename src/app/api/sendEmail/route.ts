@@ -28,9 +28,3 @@ export async function POST(request: Request) {
     return Response.json({ message: 'Something went wrong!', success: false, error: error.message }, { status: 500 });
   }
 }
-
-const handlers = {
-  POST,
-};
-
-export default handlers;
