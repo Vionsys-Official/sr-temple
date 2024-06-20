@@ -86,12 +86,12 @@ function Footer() {
                 Our Services
               </h3>
               <div className="grid grid-cols-1 gap-2 md:text-Paragraph text-Paragraph_sm">
-                <Link href=" ">Planning & Measurement Services </Link>
-                <Link href=" ">Valuation & Estimation Services</Link>
-                <Link href=" ">2D,3D & Vastu Shastra Plan Drawing</Link>
-                <Link href=" ">Temple Construction Services</Link>
-                <Link href=" ">Consultancy Sevices</Link>
-                <Link href=" ">Maintenance & Renovation Services</Link>
+                <p>Planning & Measurement Services </p>
+                <p>Valuation & Estimation Services</p>
+                <p>2D, 3D & Vastu Shastra Plan Drawing</p>
+                <p>Temple Construction Services</p>
+                <p>Consultancy Sevices</p>
+                <p>Maintenance & Renovation Services</p>
               </div>
             </div>
             {/* quick links */}
