@@ -20,7 +20,7 @@ import temple12 from '@/../public/assets/portfolio/temple12.jpg';
 export function OurWork() {
   return (
     <main className="overflow-hidden py-8">
-      <h1 className="text-MainHeading font-MainHeading text-center pb-6">Check our Portfolio</h1>
+      <h1 className="text-MainHeading font-MainHeading text-center pb-6">Check Our Portfolio</h1>
       <ParallaxScrollSecond images={images} />
       ;
     </main>

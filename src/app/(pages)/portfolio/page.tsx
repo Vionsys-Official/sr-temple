@@ -10,7 +10,7 @@ export const metadata = {
 };
 
 const page = () => (
-  <main className="overflow-x-hidden py-12">
+  <main className="overflow-x-hidden py-12 md:p-0">
     <Hero />
     <ChooseUs />
     <Features />
