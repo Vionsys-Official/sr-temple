@@ -27,7 +27,7 @@ function ChooseUs() {
               <TypeIcon className="font-extrabold" />
             </span>
             <span className="font-CardHeading text-CardHeading">Design</span>
-            <p className="line-clamp-3 text-Paragraph font-Paragraph mt-2 pb-2">
+            <p className="line-clamp-3 text-Paragraph font-Paragraph pb-2">
               Our team of experienced architects and designers create visually
               stunning and structurally sound temple designs.
             </p>
@@ -40,7 +40,7 @@ function ChooseUs() {
             <span className="font-CardHeading text-CardHeading">
               Planning
             </span>
-            <p className="line-clamp-3 text-Paragraph font-Paragraph mt-2 pb-2">
+            <p className="line-clamp-3 text-Paragraph font-Paragraph pb-2">
               We handle all the logistical and regulatory aspects of temple
               construction, ensuring a smooth and efficient process.
             </p>
@@ -53,8 +53,8 @@ function ChooseUs() {
             <span className="font-CardHeading text-CardHeading">
               Construction
             </span>
-            <p className="line-clamp-3 text-Paragraph font-Paragraph mt-2 pb-2">
-              Our skilled craftsmen and construction experts bring your temple
+            <p className="line-clamp-3 text-Paragraph font-Paragraph pb-2">
+              Our skilled craftsmen bring your temple
               design to life, using traditional techniques and high-quality
               materials.
             </p>
