@@ -7,7 +7,7 @@ import { FaUserClock, FaPeopleCarry } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 interface CountUpProps {
-  endProp: number; // Rename end to endProp
+  endProp: number;
   durationprops: number;
   reset: boolean;
 }
@@ -103,8 +103,8 @@ function CounterSection() {
     <div className="px-4 py-2 mx-auto  sm:max-w-full md:max-w-full lg:max-w-screen-xl md:px-4 lg:px-8 lg:py-3 lg:mb-3">
       {/* first section */}
       <motion.div
-        initial={{ opacity: 0, y: 100 }} // X:100
-        whileInView={{ opacity: 1, y: 1 }} // y:100
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 1 }}
         transition={{
           delay: 0.2,
           scale: { type: 'spring', stiffness: 30 },
