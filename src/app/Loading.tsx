@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Loader() {
+function Loading() {
   return (
     <div className="relative w-24 h-24">
       <div className="absolute w-[30px] h-[30px] top-1/2 left-1/2 bg-[#498467] animate-up" />
@@ -47,4 +47,4 @@ function Loader() {
   );
 }
 
-export default Loader;
+export default Loading;
