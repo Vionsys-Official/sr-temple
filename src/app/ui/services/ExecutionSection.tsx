@@ -28,7 +28,7 @@ function ExecutionSection() {
                 opacity: { duration: 0.6 },
                 ease: 'easeInOut',
               }}
-              className="md:px-10 p-2 mb-6"
+              className="md:px-10 p-2"
             >
               <h2 className="max-w-full mb-4 text-MainHeading_sm font-bold tracking-tight text-gray-900 sm:text-MainHeading sm:leading-none">
                 2D, 3D & Vastu Shastra Plan Drawing Services

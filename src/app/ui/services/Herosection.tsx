@@ -27,7 +27,7 @@ function Herosection() {
                 opacity: { duration: 0.6 },
                 ease: 'easeInOut',
               }}
-              className="max-w-5xl p-6 rounded-lg bg-black bg-opacity-70"
+              className="max-w-5xl md:p-6 rounded-lg bg-black bg-opacity-70"
             >
               <h2 className="mb-4 font-extrabold text-MainHeading_sm md:text-MainHeading">
                 Our Services
