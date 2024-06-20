@@ -5,7 +5,7 @@ import Addressmap from '../../ui/contact/Addressmap';
 import Contactform from '../../ui/contact/Contactform';
 
 export const metadata = {
-  title: 'SRTemple Constructions - Contact Us',
+  title: 'SR Temple Constructions - Contact Us',
 };
 const page = () => (
   <div className="overflow-x-hidden">
