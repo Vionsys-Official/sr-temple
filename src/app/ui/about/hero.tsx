@@ -21,8 +21,8 @@ const Hero: React.FC = () => (
       }}
       className="absolute inset-0 flex flex-col items-center justify-center text-center px-5"
     >
-      <h1 className="font-MainHeading_sm  text-MainHeading_sm md:font-MainHeading md:text-MainHeading border-yellow text-yellow">Get to know About us!</h1>
-      <p className="text-white md:w-[50vw] font-Paragraph md:font-Paragraph md:text-Paragraph text-Paragraph_sm leading-relaxed">
+      <h1 className="md:text-5xl text-3xl font-extrabold border-yellow text-yellow mb-2">Get to know About us!</h1>
+      <p className="text-white md:w-[50vw] md:text-xl text-base leading-relaxed">
         Our SR temple construction Company was established in
         2011 since then we are providing
         the best solution.
