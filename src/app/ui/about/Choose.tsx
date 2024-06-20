@@ -49,7 +49,7 @@ const Choose: React.FC = () => (
           <span className="relative">Get</span>
         </span>
         {' '}
-        to know the reasons you should choose us!
+        to Know the Reasons You Should Choose Us!
       </motion.h2>
       <motion.p
         initial={{ opacity: 0, y: 100 }} // X:100

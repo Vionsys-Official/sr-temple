@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Hero from '@/app/ui/about/hero';
 import Features from '@/app/ui/about/features';
@@ -13,10 +12,10 @@ const Page: React.FC = () => (
     <Hero />
     <Features />
     <Choose />
-    <Counter/>
-    <Testimonials/>
-    <CallToAction/>
-   
+    <Counter />
+    <Testimonials />
+    <CallToAction />
+
   </div>
 
 );
