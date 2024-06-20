@@ -4,7 +4,7 @@ import { FaTools, FaHammer, FaWrench } from 'react-icons/fa';
 function Maintenance() {
   return (
     <div className="bg-amber-50 py-4">
-      <div className="container mx-auto">
+      <div className="container mx-auto text-center">
         <h2 className="text-MainHeading_sm md:text-MainHeading font-bold text-center mb-4">
           Maintenance & Renovation
         </h2>

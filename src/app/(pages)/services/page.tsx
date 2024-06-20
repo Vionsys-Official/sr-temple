@@ -8,7 +8,7 @@ import React from 'react';
 import Maintenance from '@/app/ui/services/Maintenance';
 
 export const metadata = {
-  title: 'SRTemple Constructions - Services ',
+  title: 'SR Temple Constructions - Services ',
 };
 
 const page = () => (
@@ -19,7 +19,9 @@ const page = () => (
     <ExecutionSection />
     <Maintenance />
     <Commitment />
-    <ContactUs />
+    <section className="pt-6 md:pt-0">
+      <ContactUs />
+    </section>
   </main>
 );
 

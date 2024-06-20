@@ -8,7 +8,7 @@ export async function POST(request: Request) {
     // Setup email data
     const mailOptions = {
       from: process.env.GMAIL_USER,
-      to: 'svansh880@gmail.com',
+      to: 'sunil.rathod@srtempleconstructions.com',
       subject: 'SR temple website contact query',
       html: `
         <h2 style="font-weight: bold;">Hello, you have a new contact query from SR-Temple Construction</h2>
@@ -23,7 +23,7 @@ export async function POST(request: Request) {
     // Send mail
     await transporter.sendMail(mailOptions);
 
-    return new Response(JSON.stringify({ message: 'Email sent successfully', success: true }), { status: 200 });
+    return Response.json({ message: 'Email sent successfully', success: true }, { status: 200 });
   } catch (error: any) {
     return Response.json({ message: 'Something went wrong!', success: false, error: error.message }, { status: 500 });
   }
