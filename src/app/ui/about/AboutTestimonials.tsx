@@ -1,4 +1,9 @@
-'use client'
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable react/button-has-type */
+/* eslint-disable max-len */
+
+'use client';
+
 import { motion } from 'framer-motion';
 import React, { useState, useEffect } from 'react';
 
@@ -16,38 +21,39 @@ const testimonials: Testimonial[] = [
     quote: 'I wanted to construct one temple in my village and I contacted lots of company but I got best response and service from SR temple construction.',
     name: 'Mr. Machindra Pansare,',
     title: 'Yoola, Nashik',
-    initials: "1",
+    initials: '1',
   },
   {
     id: 2,
     quote: 'One of the best temple construction companies in India and also highly reliable, innovative and cost-effective.',
     name: 'Mr. Sambhaji Jadhav,',
     title: 'Kolhapur',
-    initials: "2",
+    initials: '2',
   },
   {
     id: 3,
     quote: 'The SR temple construction project will have the best and most experienced workers, engineers and designers.',
     name: 'Sagar Kapadnis,',
     title: 'Pune',
-    initials: "3",
+    initials: '3',
   },
   {
     id: 4,
     quote: 'You are at the right place. Here, your all requirements will get fulfilled promptly in regard to temple construction.',
     name: 'Shubham Kanchar,',
     title: 'Hatnoor',
-    initials: "4",
+    initials: '4',
   },
   {
     id: 5,
     quote: 'The SR temple construction is the best service provider in temple construction. I am super happy with their service.',
     name: 'Mr. Sanjay Enamdar,',
     title: 'Hydrabad',
-    initials: "5",
+    initials: '5',
   },
 ];
 
+// eslint-disable-next-line react/function-component-definition
 const Testimonials: React.FC = () => {
   const [testimonialActive, setTestimonialActive] = useState<number>(1);
 
@@ -60,20 +66,25 @@ const Testimonials: React.FC = () => {
   }, []);
 
   return (
-    <><div>
-      <motion.h1
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.2,
-          scale: { type: 'spring', stiffness: 30 },
-          opacity: { duration: 0.6 },
-          ease: 'easeInOut',
-        }} className='font-extrabold text-4xl text-center text-gray md:mt-16 md:py-5 mt-10'>Testimonials</motion.h1>
-    </div>
-      <div className="my-10 md:my-10 container mx-auto flex flex-col md:flex-row shadow-sm overflow-hidden">
-        <div className="relative w-full py-2 md:py-24 bg-yellow rounded-xl md:w-1/2 flex flex-col item-center justify-center">
-          <div className="absolute top-0 left-0 z-10 grid-gray w-16 h-16 md:w-40 md:h-40 md:ml-20 md:mt-24"></div>
+    <>
+      <div>
+        <motion.h1
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.2,
+            scale: { type: 'spring', stiffness: 30 },
+            opacity: { duration: 0.6 },
+            ease: 'easeInOut',
+          }}
+          className="font-MainHeading_sm md:font-MainHeading text-MainHeading_sm md:text-MainHeading text-center text-gray md:text-gray md:mt-16 md:py-5 mt-4 mb-4"
+        >
+          Testimonials
+        </motion.h1>
+      </div>
+      <div className="my-6 container mx-auto flex flex-col md:flex-row shadow-sm overflow-hidden">
+        <div className="relative w-full py-2 md:py-10 bg-yellow rounded-xl md:w-1/2 flex flex-col item-center justify-center">
+          <div className="absolute top-0 left-0 z-10 grid-gray w-16 h-16 md:w-40 md:h-40 md:ml-20 md:mt-24" />
 
           <motion.div
             initial={{ opacity: 0, y: 100 }}
@@ -84,7 +95,8 @@ const Testimonials: React.FC = () => {
               opacity: { duration: 0.6 },
               ease: 'easeInOut',
             }}
-            className="relative text-2xl md:text-5xl py-2 px-6 md:py-6 md:px-1 md:w-64 md:mx-auto text-gray font-semibold tracking-tight mb-0 z-20">
+            className="text-gray relative text-center text-MainHeading_sm font-MainHeading_sm md:font-MainHeading md:text-MainHeading py-2 px-6 md:py-6 md:w-full md:text-gray tracking-tight mb-0"
+          >
             <span className="md:block">What Our Customers Are Saying!</span>
           </motion.div>
 
@@ -106,7 +118,7 @@ const Testimonials: React.FC = () => {
 
         <div className="bg-gray-100 md:w-1/2">
           <div className="flex flex-col h-full relative">
-          <motion.div
+            <motion.div
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
@@ -115,38 +127,39 @@ const Testimonials: React.FC = () => {
                 opacity: { duration: 0.6 },
                 ease: 'easeInOut',
               }}
-              className="h-full relative z-10">
+              className="h-full relative z-10"
+            >
               {testimonialActive === 1 && (
-                <p className="text-gray serif font-normal italic px-6 py-6 md:px-16 md:py-10 text-xl md:text-2xl">
-                  ' I contacted lots of company but I got best response and service from SR temple construction.'
-                </p>
+              <p className="text-gray font-Paragraph_sm md:font-Paragraph text-Paragraph_sm md:text-Paragraph px-6 py-6 md:px-16 md:py-10">
+                ' I contacted lots of company but I got best response and service from SR temple construction.'
+              </p>
               )}
 
               {testimonialActive === 2 && (
-                <p className="text-gray serif font-normal italic px-6 py-6 md:px-16 md:py-10 text-xl md:text-2xl">
-                  'One of the best temple construction companies in India and also highly reliable and cost-effective.'
-                </p>
+              <p className="text-gray px-6 py-6 md:px-16 md:py-10 font-Paragraph_sm md:font-Paragraph text-Paragraph_sm md:text-Paragraph">
+                'One of the best temple construction companies in India and also highly reliable and cost-effective.'
+              </p>
               )}
 
               {testimonialActive === 3 && (
-                <p className="text-gray serif font-normal italic px-6 py-6 md:px-16 md:py-10 text-xl md:text-2xl">
-                  'The SR temple construction project will have the best and most experienced workers and engineers.'
-                </p>
+              <p className="text-gray px-6 py-6 md:px-16 md:py-10 font-Paragraph_sm md:font-Paragraph text-Paragraph_sm md:text-Paragraph">
+                'The SR temple construction project will have the best and most experienced workers and engineers.'
+              </p>
               )}
               {testimonialActive === 4 && (
-                <p className="text-gray serif font-normal italic px-6 py-6 md:px-16 md:py-10 text-xl md:text-2xl">
-                  'Here, your all requirements will get fulfilled promptly in regard to temple construction.'
-                </p>
+              <p className="text-gray px-6 py-6 md:px-16 md:py-10 font-Paragraph_sm md:font-Paragraph text-Paragraph_sm md:text-Paragraph">
+                'You are at the right place. Here, your all requirements will get fulfilled promptly in regard to temple construction.'
+              </p>
               )}
               {testimonialActive === 5 && (
-                <p className="text-gray serif font-normal italic px-6 py-6 md:px-16 md:py-10 text-xl md:text-2xl">
-                  'I am super happy with their service.'
-                </p>
+              <p className="text-gray px-6 py-6 md:px-16 md:py-10 font-Paragraph_sm md:font-Paragraph text-Paragraph_sm md:text-Paragraph">
+                'The SR temple construction is the best service provider in temple construction. I am super happy with their service.'
+              </p>
               )}
             </motion.div>
 
             <div className="flex my-4 justify-center items-center">
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial) => (
                 <button
                   key={testimonial.id}
                   onClick={() => setTestimonialActive(testimonial.id)}
@@ -170,7 +183,7 @@ const Testimonials: React.FC = () => {
           </div>
         </div>
       </div>
-</>
+    </>
   );
 };
 
