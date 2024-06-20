@@ -8,11 +8,11 @@ import s1 from '../../../../public/assets/home/S1.jpg';
 
 const features = [
   {
-    title: 'Safety Standards and Protocols',
+    title: 'Safety Standards & Protocols',
     content: 'We strictly adhere to local, state, and federal safety regulations, implementing rigorous protocols across all projects to ensure compliance and a safe work environment.',
   },
   {
-    title: 'Safety Certifications and Training',
+    title: 'Safety Certifications & Training',
     content: 'Our team maintains certified safety standards such as OSHA regulations, complemented by ongoing training to stay updated on the latest practices.',
   },
   {
@@ -63,7 +63,7 @@ export default function Safety() {
       >
         Integrated Safety and Client Engagement
       </motion.h6>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl md:px-6 px-2 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-none lg:grid lg:grid-cols-2">
           <div className="mt-2 mb-2 flex items-center justify-center lg:justify-end">
             <Image
@@ -73,10 +73,10 @@ export default function Safety() {
               alt="Construction image 3"
             />
           </div>
-          <div className="mt-4 mr-4 lg:mt-0 lg:max-w-lg lg:ml-8">
+          <div className="mt-4 md:mr-4 lg:mt-0 lg:max-w-lg lg:ml-8">
             <dl className="mt-4 space-y-6 leading-5">
               {features.map((feature) => (
-                <div key={feature.title} className=" pl-9">
+                <div key={feature.title} className="md:pl-9">
                   <motion.div
                     initial={{ opacity: 0, x: -70 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -91,7 +91,7 @@ export default function Safety() {
                       <AiFillSafetyCertificate size={15} className="inline mr-2" />
                       {feature.title}
                     </h6>
-                    <p className=" mt-2 ml-6 md:text-Paragraph text-Paragraph_sm md:font-Paragraph font-Paragraph_sm">
+                    <p className=" mt-2 md:ml-6 ml-4 md:text-Paragraph text-Paragraph_sm md:font-Paragraph font-Paragraph_sm">
                       {feature.content}
                     </p>
                   </motion.div>

@@ -10,7 +10,7 @@ import Hero from './ui/home/Hero';
 import Safety from './ui/home/Safety';
 
 const page: FC = () => (
-  <div className="overflow-x">
+  <div className="overflow-hidden">
     <Hero />
     <Counter />
     <Vision />
