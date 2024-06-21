@@ -40,7 +40,7 @@ const features = () => (
           }}
           className="text-base text-gray md:text-Paragraph text-Paragraph_sm py-2"
         >
-          At SR Temple Construction, we take pride in our meticulous attention to detail, ensuring that every project reflects our dedication to excellence and our clients' visions..
+          At SR Temple Construction, we take pride in our meticulous attention to detail, ensuring that every project reflects our dedication to excellence and our clients' visions.
         </motion.p>
       </div>
     </div>
@@ -92,7 +92,7 @@ const features = () => (
         </div>
         <h6 className="md:mb-2 text-gray md:text-gray md:font-CardHeading font-CardHeading_sm text-CardHeading_sm md:text-CardHeading leading-5">Area of work</h6>
         <p className="md:mb-3 text-gray text-Paragraph_sm md:text-Paragraph font-Paragraph md:font-Paragraph ">
-          Working all over India and we give best designs in market.
+          Working all over India, and we give best designs in market.
         </p>
       </motion.div>
       <motion.div
