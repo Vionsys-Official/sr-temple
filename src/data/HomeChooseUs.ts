@@ -13,7 +13,7 @@ const choose:ChooseUs[] = [
   {
     id: 2,
     title: 'Quality and Craftsmanship',
-    description: 'Our detailed craftsmanship and commitment to excellence ensure superior results with premium materials and precise techniques..',
+    description: 'Our detailed craftsmanship and commitment to excellence ensure superior results with premium materials and precise techniques.',
   },
   {
     id: 3,

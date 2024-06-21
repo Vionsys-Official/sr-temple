@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-boolean-value */
 import React from 'react';
 
 function Addressmap() {
@@ -11,7 +10,7 @@ function Addressmap() {
         width="600"
         height="450"
         style={{ border: 0 }}
-        allowFullScreen={true}
+        allowFullScreen
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
       />

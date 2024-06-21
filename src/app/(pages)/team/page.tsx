@@ -4,6 +4,9 @@ import TeamHeroSetion from '@/app/ui/team/TeamHeroSetion';
 import Section3 from '@/app/ui/team/Section3';
 import Section4 from '@/app/ui/team/Section4';
 
+export const metadata = {
+  title: 'SR Temple Constructions - Teams Page',
+};
 function Page() {
   return (
     <section>

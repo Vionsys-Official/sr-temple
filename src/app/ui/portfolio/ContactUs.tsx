@@ -18,7 +18,7 @@ function ContactUs() {
             viewport={{ once: false, amount: 0.2 }}
             className="font-bold text-Heading-sm md:text-Heading py-2 text-center text-white"
           >
-            Discover what we can do for you.
+            Unlock Your Business Potential with Us!
           </motion.h2>
           <motion.p
             variants={fadein('left', 0.3)}
@@ -27,8 +27,7 @@ function ContactUs() {
             viewport={{ once: false, amount: 0.2 }}
             className="py-2 text-Para-sm md:text-Para text-center text-white"
           >
-            Contact us today to discuss how we can help you to achieve your
-            business goals.
+            Reach out now and embark on a journey to achieve your business aspirations.
           </motion.p>
         </div>
         <div className="flex justify-center items-center">

@@ -10,6 +10,7 @@ import srlogo from '../../../../../public/assets/logo/srlogo.png';
 function HeroSection() {
   return (
     <div className="overflow-hidden">
+      {/* Navbar */}
       <div className="flex items-center justify-between px-6">
         <div className="flex items-center justify-center">
           <div className="flex md:items-center justify-center text-3xl font-bold text-true-gray-800">
@@ -24,7 +25,7 @@ function HeroSection() {
             </div>
           </div>
         </div>
-        <div className="hidden md:flex items-center justify-center ml-44">
+        <div className=" md:flex items-center justify-center md:ml-44">
           <Link
             href="/contact"
             className="mr-5 font-bold text-true-gray-800 bg-amber-400  border rounded-xl px-3 py-2 hover:text-cool-gray-700 transition duration-150 ease-in-out"
@@ -39,6 +40,7 @@ function HeroSection() {
           </Link>
         </div>
       </div>
+      {/* Heading/subheading hero */}
       <div className="w-full">
         <div className="md:h-[90vh] h-[80vh] flex justify-center items-center relative overflow-hidden bg-slate-900">
           <Image
@@ -53,14 +55,15 @@ function HeroSection() {
             transition={{ duration: 0.8 }}
             className="absolute sm:py-5 mx-10 flex py-4 flex-col items-center"
           >
-            <h1 className=" text-white md:text-5xl font-MainHeading text-MainHeading_sm text-center">
+            <h1 className=" text-white md:text-5xl font-extrabold text-3xl text-center">
               Transforming Spiritual Dreams into Architectural Reality
             </h1>
-            <p className="sm:text-xl text-SubHeading_sm font-SubHeading text-yellow text-center px-2 sm:mx-44 mb-4 backdrop-blur-sm">
+            <p className="md:text-xl text-base font-SubHeading text-yellow text-center px-2 sm:mx-44 mb-4 backdrop-blur-sm">
               Creating timeless temples that capture the essence of your
               spiritual journey with unparalleled craftsmanship and attention to
               detail.
             </p>
+            {/* Button */}
             <Link href="/">
               <button
                 type="submit"

@@ -25,6 +25,7 @@ const CallToAction: React.FC = () => (
         ease: 'easeInOut',
       // eslint-disable-next-line react/jsx-max-props-per-line
       }} className="md:w-10/12 w-full text-Paragraph_sm md:text-Paragraph font-Paragraph_sm md:font-Paragraph"
+      // eslint-disable-next-line react/jsx-no-comment-textnodes
       >
         <span className="flex">
         Partner with us to create a temple that seamlessly blends architectural innovation with cultural heritage, integrating cutting-edge eco-friendly practices and inspiring deep spiritual devotion and community connection.

@@ -22,10 +22,12 @@ function Hero() {
             transition={{ duration: 0.8 }}
             className="absolute"
           >
-            <h1 className="text-yellow  md:text-5xl font-MainHeading text-MainHeading_sm text-center ">
+            <h1 className="text-yellow md:text-5xl font-extrabold text-3xl text-center ">
               Schedule a Service
             </h1>
-            <p className="md:text-3xl text-SubHeading_sm  font-semibold text-white text-center px-2">Contact us today and lets build something extraordinary together.</p>
+            <p className="md:text-xl text-base font-SubHeading text-white text-center px-2 py-2">
+              Contact us today and lets build something extraordinary together.
+            </p>
           </motion.div>
         </div>
       </div>
