@@ -95,7 +95,7 @@ function WeWork() {
                   <div>
                     <h4 className="md:text-CardHeading text-CardHeading_sm md:font-CardHeading font-CardHeading_sm mb-4">Traditional Wisdom</h4>
                     <p className="md:text-Paragraph md:font-Paragraph font-Paragraph_sm">
-                      Our approach ensures unparalleled experience, precision, unmatched expertise
+                      Our approach ensures unparalleled experience, precision, unmatched expertise,
                       and exceptional results, bringing your vision to vibrant life.
                     </p>
                   </div>
@@ -109,10 +109,10 @@ function WeWork() {
                     </span>
                   </div>
                   <div>
-                    <h4 className="md:text-CardHeading text-CardHeading_sm md:font-CardHeading font-CardHeading_sm mb-4">Execution & Support:</h4>
+                    <h4 className="md:text-CardHeading text-CardHeading_sm md:font-CardHeading font-CardHeading_sm mb-4">Execution & Support</h4>
                     <p className="md:text-Paragraph md:font-Paragraph font-Paragraph_sm">
                       We ensure impeccable construction execution and offer ongoing maintenance,
-                      renovation and consultancy services.
+                      renovation, and consultancy services.
                     </p>
                   </div>
                 </div>
