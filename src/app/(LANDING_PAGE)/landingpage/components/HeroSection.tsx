@@ -40,7 +40,7 @@ function HeroSection() {
         </div>
       </div>
       <div className="w-full">
-        <div className="md:h-[90vh] h-[70vh] flex justify-center items-center relative overflow-hidden bg-slate-900">
+        <div className="md:h-[90vh] h-[80vh] flex justify-center items-center relative overflow-hidden bg-slate-900">
           <Image
             src={lanhero}
             alt="heroimg"
@@ -51,7 +51,7 @@ function HeroSection() {
             initial={{ opacity: 0, scale: 0.1 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            className="absolute sm:py-5 mx-10 flex flex-col items-center"
+            className="absolute sm:py-5 mx-10 flex py-4 flex-col items-center"
           >
             <h1 className=" text-white md:text-5xl font-MainHeading text-MainHeading_sm text-center">
               Transforming Spiritual Dreams into Architectural Reality

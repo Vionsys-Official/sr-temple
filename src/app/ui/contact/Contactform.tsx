@@ -93,7 +93,7 @@ export default function SignupFormDemo() {
   // main section
     <>
       <Toaster />
-      <section className="h-full w-full xs:py-5">
+      <section className="h-full w-full xs:py-5 md:py-6">
 
         <motion.h1
           variants={fadein('down', 0.5)}

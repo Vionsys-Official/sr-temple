@@ -7,7 +7,7 @@ import WhyChooseUs from './components/WhyChooseUs';
 import ContactUs from './components/ContactUs';
 
 const page = () => (
-  <div>
+  <div className="overflow-x-hidden">
     <HeroSection />
     <OurServices />
     <CounterSection />

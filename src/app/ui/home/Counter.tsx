@@ -2,8 +2,8 @@
 
 import { motion } from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react';
-import { AiTwotoneIdcard, AiOutlineUsergroupAdd } from 'react-icons/ai';
-import { CgAdidas } from 'react-icons/cg';
+import { AiOutlineUsergroupAdd } from 'react-icons/ai';
+import { FaProjectDiagram, FaBriefcase } from 'react-icons/fa';
 
 interface CountUpProps {
   endProp: number; // Rename end to endProp
@@ -53,7 +53,7 @@ function SocialProofCounter() {
   const arr: Item[] = [
     {
       id: 1,
-      icon: <CgAdidas size={35} />,
+      icon: <FaBriefcase size={35} />,
       count: 10,
       heading: 'Years of Experience',
     },
@@ -65,8 +65,8 @@ function SocialProofCounter() {
     },
     {
       id: 3,
-      icon: <AiTwotoneIdcard size={35} />,
-      count: 700,
+      icon: <FaProjectDiagram size={35} />,
+      count: 450,
       heading: 'Completed Projects',
     },
   ];

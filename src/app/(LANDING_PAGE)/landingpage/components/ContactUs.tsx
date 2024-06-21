@@ -100,7 +100,7 @@ function ContactUs() {
                 >
                   Let us know how we can help.
                 </motion.p>
-                <form onSubmit={handleSubmit} className="py-4 space-y-4">
+                <form onSubmit={handleSubmit} className="py-4 space-y-2">
                   <div className="grid w-full gap-y-4 md:gap-x-4 lg:grid-cols-2">
                     <div className="grid w-full items-center gap-1.5">
                       <label
@@ -117,11 +117,13 @@ function ContactUs() {
                         onChange={handleChange}
                         placeholder="First Name"
                       />
-                      {errors.firstname && (
+                      <div className="md:h-5 md:w-64">
+                        {errors.firstname && (
                         <p className="text-red-500 text-xs">
                           {errors.firstname}
                         </p>
-                      )}
+                        )}
+                      </div>
                     </div>
                     <div className="grid w-full items-center gap-1.5">
                       <label
@@ -138,11 +140,13 @@ function ContactUs() {
                         onChange={handleChange}
                         placeholder="Last Name"
                       />
-                      {errors.lastname && (
+                      <div className="md:h-5 md:w-64">
+                        {errors.lastname && (
                         <p className="text-red-500 text-xs">
                           {errors.lastname}
                         </p>
-                      )}
+                        )}
+                      </div>
                     </div>
                   </div>
                   <div className="grid w-full items-center gap-1.5">
@@ -160,9 +164,13 @@ function ContactUs() {
                       onChange={handleChange}
                       placeholder="Email"
                     />
-                    {errors.email && (
-                      <p className="text-red-500 text-xs">{errors.email}</p>
-                    )}
+                    <div className="md:h-5 md:w-64">
+                      {errors.email && (
+                        <p className="text-red-500 text-xs">
+                          {errors.email}
+                        </p>
+                      )}
+                    </div>
                   </div>
                   <div className="grid w-full items-center gap-1.5">
                     <label
@@ -179,9 +187,13 @@ function ContactUs() {
                       onChange={handleChange}
                       placeholder="Phone number"
                     />
-                    {errors.mobile && (
-                      <p className="text-red-500 text-xs">{errors.mobile}</p>
-                    )}
+                    <div className="md:h-5 md:w-64">
+                      {errors.mobile && (
+                        <p className="text-red-500 text-xs">
+                          {errors.mobile}
+                        </p>
+                      )}
+                    </div>
                   </div>
                   <div className="grid w-full items-center gap-1.5">
                     <label
@@ -198,9 +210,13 @@ function ContactUs() {
                       onChange={handleChange}
                       placeholder="Subject"
                     />
-                    {errors.subject && (
-                      <p className="text-red-500 text-xs">{errors.subject}</p>
-                    )}
+                    <div className="md:h-5 md:w-64">
+                      {errors.subject && (
+                        <p className="text-red-500 text-xs">
+                          {errors.subject}
+                        </p>
+                      )}
+                    </div>
                   </div>
                   <div className="grid w-full items-center gap-1.5">
                     <label
@@ -216,9 +232,13 @@ function ContactUs() {
                       onChange={handleChange}
                       placeholder="Message"
                     />
-                    {errors.message && (
-                      <p className="text-red-500 text-xs">{errors.message}</p>
-                    )}
+                    <div className="md:h-5 md:w-64">
+                      {errors.message && (
+                        <p className="text-red-500 text-xs">
+                          {errors.message}
+                        </p>
+                      )}
+                    </div>
                   </div>
                   <button
                     type="submit"
@@ -237,7 +257,7 @@ function ContactUs() {
                 width={1000}
                 src={contact}
                 alt="contact image"
-                className="max-h-full w-full object-cover lg:block"
+                className="max-h-full w-full object-cover lg:block hidden"
               />
               {/* Social Links */}
               <div className="flex justify-center items-center gap-8">
