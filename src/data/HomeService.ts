@@ -28,7 +28,7 @@ const service:Services[] = [
   {
     id: 5,
     title: 'Consultancy Services',
-    description: 'Expertise guidance in temple architecture, construction and renovation ensuring adherence to cultural and spiritual norms.',
+    description: 'Expertise guidance in temple architecture, construction, and renovation ensuring adherence to cultural and spiritual norms.',
   },
   {
     id: 6,
