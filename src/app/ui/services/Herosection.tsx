@@ -29,10 +29,10 @@ function Herosection() {
               }}
               className="max-w-5xl md:p-6 rounded-lg bg-black bg-opacity-70"
             >
-              <h2 className="mb-4 font-extrabold text-MainHeading_sm md:text-MainHeading">
+              <h2 className="mb-4 md:text-5xl text-3xl font-extrabold text-yellow">
                 Our Services
               </h2>
-              <p className="text-white text-xl md:text-2xl leading-relaxed">
+              <p className="text-white md:text-xl text-base leading-relaxed">
                 We offer a comprehensive range of services to ensure your temple
                 construction project is a success from start to finish. Our expert
                 team is dedicated to providing high-quality, reliable, and cost-effective

@@ -5,6 +5,8 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import fadein from '@/utils/variants';
 import temple1 from '@/../public/assets/portfolio/temple1.jpg';
 import temple2 from '@/../public/assets/portfolio/temple2.jpg';
 import temple3 from '@/../public/assets/portfolio/temple3.jpg';
@@ -32,17 +34,37 @@ function PortfolioSection() {
 
   return (
     <section className="w-full py-8 md:py-12 lg:py-12 ">
-      <h1 className="text-MainHeading_sm text-center md:pb-10 font-MainHeading tracking-tighter md:text-MainHeading">Explore Our Achievements</h1>
+      <motion.h1
+        variants={fadein('up', 0.2)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.5 }}
+        className="text-MainHeading_sm text-center md:pb-10 font-MainHeading tracking-tighter md:text-MainHeading"
+      >
+        Explore Our Achievements
+      </motion.h1>
       <div className="flex md:flex-row flex-col  justify-center items-center gap-8 px-8 ">
         {/* Left Section */}
         <div className="space-y-4 md:w-[50%] flex justify-center flex-col items-center">
-          <h2 className="text-SubHeading_sm text-center font-SubHeading tracking-tighter md:text-4xl">
+          <motion.h2
+            variants={fadein('right', 0.2)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            className="text-SubHeading_sm text-center font-SubHeading tracking-tighter md:text-4xl"
+          >
             Our Latest Creations
-          </h2>
-          <p className="max-w-[600px] text-SubHeading_sm text-center md:text-SubHeading lg:text-SubHeading">
+          </motion.h2>
+          <motion.p
+            variants={fadein('right', 0.4)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            className="max-w-[600px] text-SubHeading_sm text-center md:text-SubHeading lg:text-SubHeading"
+          >
             Check out some of our latest projects and see how we can help you
             achieve your goals.
-          </p>
+          </motion.p>
           <Link
             href="/portfolio"
             className="px-4 py-1 bg-yellow hover:bg-[#deb01d] text-[#000] rounded-md text-buttonText font-buttonText"

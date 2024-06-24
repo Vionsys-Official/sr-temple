@@ -27,8 +27,8 @@ function Hero() {
               }}
               className="col-span-12 md:max-w-6xl"
             >
-              <h1 className="md:text-5xl text-3xl font-extrabold text-white text-center mb-6">Honoring tradition, building for the future.</h1>
-              <p className="text-xl leading-normal opacity-90 text-center md:px-28">
+              <h1 className="md:text-5xl text-3xl font-extrabold text-white text-center mb-6 md:px-0 px-1">Honoring tradition, building for the future.</h1>
+              <p className="md:text-xl text-base leading-normal text-center md:px-28">
                 We blend traditional artistry with modern techniques to craft majestic temples.
                 Witness our dedication and craftsmanship in every temple we build.
               </p>

@@ -1,17 +1,28 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable max-len */
+
+'use client';
+
 import React from 'react';
 import { MdLightbulbOutline } from 'react-icons/md';
 import { FaCalculator, FaUserTie, FaLeaf } from 'react-icons/fa';
 import { GiHouse, GiFlexibleStar } from 'react-icons/gi';
+import { motion } from 'framer-motion';
+import fadein from '@/utils/variants';
 
 function WhyChooseUs() {
   return (
     <section>
-      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-8 lg:px-8 lg:py-8">
-        <h1 className="md:text-MainHeading text-MainHeading_sm pb-8 text-center font-MainHeading">
+      <div className="px-4 py-6 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-8 lg:px-8 lg:py-8">
+        <motion.h1
+          variants={fadein('up', 0.2)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.5 }}
+          className="md:text-MainHeading text-MainHeading_sm pb-8 text-center font-MainHeading"
+        >
           See Why We are the Best Choice
-        </h1>
+        </motion.h1>
         <div className="grid row-gap-8 sm:row-gap-0 sm:grid-cols-2 lg:grid-cols-3">
           <div className="p-8 border-slate-400  border-b sm:border-r ">
             <div className="group max-w-md text-center space-y-2 hover:scale-110 ease-in duration-500">
