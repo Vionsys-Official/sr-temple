@@ -6,9 +6,11 @@ import ValuationSection from '@/app/ui/services/ValuationSection';
 import ContactUs from '@/app/ui/portfolio/ContactUs';
 import React from 'react';
 import Maintenance from '@/app/ui/services/Maintenance';
+import { Metadata } from 'next';
 
-export const metadata = {
-  title: 'SR Temple Constructions - Services ',
+export const metadata: Metadata = {
+  title: 'Services',
+  description: 'Discover our comprehensive range of high-quality temple construction services tailored to meet your specific needs. From architectural design and project planning to detailed craftsmanship and finishing touches, our experienced team is committed to delivering excellence at every stage. Explore how we can help bring your vision of a sacred space to life.',
 };
 
 const page = () => (
