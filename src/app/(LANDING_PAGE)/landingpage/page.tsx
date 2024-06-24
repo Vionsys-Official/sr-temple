@@ -6,9 +6,6 @@ import PortfolioSection from './components/PortfolioSection';
 import WhyChooseUs from './components/WhyChooseUs';
 import ContactUs from './components/ContactUs';
 
-export const metadata = {
-  title: 'SR Temple Constructions - LandingPage',
-};
 const page = () => (
   <div className="overflow-x-hidden">
     <HeroSection />
