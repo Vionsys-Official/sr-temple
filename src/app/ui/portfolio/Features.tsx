@@ -8,7 +8,7 @@ import fadein from '@/utils/variants';
 
 export function Features() {
   return (
-    <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 md:py-6">
+    <div className="px-4 py-6 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 md:py-6">
       <motion.h1
         variants={fadein('down', 0.2)}
         initial="hidden"
@@ -25,7 +25,7 @@ export function Features() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: false, amount: 0.2 }}
-            className="max-w-lg mb-6 text-3xl md:text-SubHeading text-center font-SubHeading tracking-tight"
+            className="max-w-lg mb-6 text-SubHeading_sm md:text-SubHeading text-center font-SubHeading tracking-tight"
           >
             Modern temple construction emphasizes sustainability for
             environmental and cultural preservation.
@@ -37,7 +37,7 @@ export function Features() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: false, amount: 0.2 }}
-            className="text-base  md:text-Paragraph"
+            className="text-base text-center  md:text-Paragraph"
           >
             Temple construction today integrates sustainability principles to
             ensure environmental responsibility and long-term preservation of
