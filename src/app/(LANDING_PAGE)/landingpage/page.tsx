@@ -10,7 +10,7 @@ export const metadata = {
   title: 'SR Temple Constructions - LandingPage',
 };
 const page = () => (
-  <div>
+  <div className="overflow-x-hidden">
     <HeroSection />
     <OurServices />
     <CounterSection />
