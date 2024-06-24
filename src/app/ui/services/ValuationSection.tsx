@@ -26,7 +26,7 @@ function ValuationSection() {
               </h2>
             </div>
             <div className="">
-              <p className="mb-4 text-Paragraph_sm font-sans md:text-Paragraph">
+              <p className="mb-4 text-Paragraph_sm md:text-Paragraph">
                 We offer comprehensive valuation services to assess the financial
                 aspects of your temple construction project. Our valuation experts
                 provide detailed cost analysis, helping you understand the investment

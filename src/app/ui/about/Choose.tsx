@@ -21,7 +21,7 @@ const Choose: React.FC = () => (
           opacity: { duration: 0.6 },
           ease: 'easeInOut',
         }}
-        className="max-w-lg mb-6 font-MainHeading_sm md:font-MainHeading text-MainHeading_sm md:text-MainHeading md:text-gray leading-none tracking-tight text-gray md:mx-auto"
+        className="max-w-lg mb-6 font-MainHeading_sm md:font-MainHeading text-MainHeading_sm md:text-MainHeading md:text-gray leading-none tracking-tight text-gray md:mx-auto capitalize"
       >
         <span className="relative inline-block">
           <svg
