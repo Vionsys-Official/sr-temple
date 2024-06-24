@@ -16,7 +16,7 @@ function ContactUs() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: false, amount: 0.2 }}
-            className="font-bold text-Heading-sm md:text-Heading py-2 text-center text-white"
+            className="font-bold text-Heading-sm md:text-Heading py-2 text-center text-white capitalize"
           >
             Unlock Your Business Potential with Us!
           </motion.h2>

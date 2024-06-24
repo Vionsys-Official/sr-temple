@@ -14,7 +14,7 @@ function Section3() {
         <div className="w-full lg:w-1/2">
           <div className="p-4">
             <h1 className="text-[#254736] md:text-4xl text-3xl font-extrabold tracking-wide">
-              Expert Team in
+              Expert Team In
               <span className="mx-1 text-MainHeading_sm font-extrabold relative inline-block stroke-current">
                 Temple
                 <svg

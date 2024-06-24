@@ -153,11 +153,19 @@ function Navbar() {
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <Link href="/contact" legacyBehavior passHref>
+                  <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-Paragraph_sm  hover:bg-slate-100`} onClick={closeMenu}>
+                    English
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
         </div>
         {/* Mobile menu */}
-        <div className="md:hidden block text-4xl cursor-pointer">
+        <div className="md:hidden block text-4xl ">
           {!showMenu ? (
             <HiMenuAlt1 onClick={() => toggleMenu()} />
           ) : (

@@ -116,7 +116,7 @@ function SocialProofCounter() {
         }}
         className="max-w-xl md:mx-auto sm:text-center md:my-2"
       >
-        <h2 className="text-gray pb-2 text-center text-MainHeading_sm font-MainHeading_sm md:text-MainHeading md:text-gray md:font-MainHeading tracking-tight md:mx-auto md:pb-2">
+        <h2 className="text-gray pb-2 text-center text-MainHeading_sm font-MainHeading_sm md:text-MainHeading md:text-gray md:font-MainHeading tracking-tight md:mx-auto md:pb-2 capitalize">
           All about Clients, Projects, Support and Workers!
         </h2>
       </motion.div>
@@ -130,7 +130,7 @@ function SocialProofCounter() {
             {arr.map((item) => (
               <div
                 key={item.id}
-                className="relative bg-white flex flex-col gap-4 justify-center items-center border rounded-md shadow-xl shadow-gray2 overflow-hidden group cursor-pointer md:w-56 lg:w-64 w-full h-40 align-content-center transform border-l-4 border-pink hover:-translate-y-6 duration-300"
+                className="relative bg-white flex flex-col gap-4 justify-center items-center border rounded-md shadow-xl shadow-gray2 overflow-hidden group  md:w-56 lg:w-64 w-full h-40 align-content-center transform border-l-4 border-pink hover:-translate-y-6 duration-300"
               >
                 <div className="relative z-10 bg-yellow text-[#254736] p-3 rounded-full transition-all duration-500 group-hover:text-white border-l-4 border-yellow hover:-translate-y-2 rounded-r">
                   {item.icon}
