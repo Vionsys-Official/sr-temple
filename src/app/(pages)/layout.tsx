@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { GeistSans } from 'geist/font/sans';
 import './globals.css';
 import React from 'react';
+import Footer from '../ui/footer/Footer';
+import Navbar from '../ui/navbar/Navbar';
 
 export const metadata: Metadata = {
   title: 'SRTemple Construction Pvt. Ltd.',
@@ -16,7 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={GeistSans.className}>
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
