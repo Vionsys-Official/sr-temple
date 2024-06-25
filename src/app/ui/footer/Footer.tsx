@@ -82,7 +82,7 @@ function Footer() {
               <div className="bg-white h-full p-4 shadow-lg rounded-lg transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
                 <div className="w-full flex justify-center items-center sm:px-2">
                   <Link href="/about" passHref>
-                    <div className="flex text-center text-gray md:text-SubHeading text-SubHeading_sm font-bold cursor-pointer">
+                    <div className="flex text-center text-gray md:text-SubHeading text-SubHeading_sm font-bold ">
                       SR Temple Construction
                     </div>
                   </Link>
@@ -135,16 +135,16 @@ function Footer() {
               </div>
               <div className="flex gap-4 justify-center px-6 md:py-6 py-2">
                 <Link href="/" passHref>
-                  <Image src={Facebook} alt="Facebook" quality={100} width={40} height={40} className="cursor-pointer" />
+                  <Image src={Facebook} alt="Facebook" quality={100} width={40} height={40} className="" />
                 </Link>
                 <Link href="/" passHref>
-                  <Image src={Instagram} alt="Instagram" quality={100} width={40} height={40} className="cursor-pointer" />
+                  <Image src={Instagram} alt="Instagram" quality={100} width={40} height={40} className="" />
                 </Link>
                 <Link href="/" passHref>
-                  <Image src={LinkedIn} alt="LinkedIn" quality={100} width={40} height={40} className="cursor-pointer" />
+                  <Image src={LinkedIn} alt="LinkedIn" quality={100} width={40} height={40} className="" />
                 </Link>
                 <Link href="/" passHref>
-                  <Image src={Twitter} alt="Twitter" quality={100} width={40} height={40} className="cursor-pointer" />
+                  <Image src={Twitter} alt="Twitter" quality={100} width={40} height={40} className="" />
                 </Link>
               </div>
             </div>
