@@ -22,6 +22,7 @@ import { useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import LogoImage from '../../../../public/assets/logo/srlogo.png';
 import ResponsiveMenu from './ResponsiveMenu';
+import { useLanguage, Language } from '../../../lib/languageContext';
 
 interface ListItemProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   children: string,
@@ -84,6 +85,15 @@ function Navbar() {
   function closeMenu() {
     setShowMenu(false);
   }
+
+  const { language, setLanguage } = useLanguage() || { language: 'english', setLanguage: () => {} };
+
+  const handleLanguageChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    if (setLanguage) {
+      setLanguage(event.target.value as Language);
+    }
+  };
+
   return (
     <div>
       <div className={'fixed z-50 w-full flex md:p-2 p-4 justify-between items-center bg-white ${visible ? "top-0 shadow-md shadow-gray" : "-top-full"'}>
@@ -104,7 +114,7 @@ function Navbar() {
               <NavigationMenuItem>
                 <Link href="/" legacyBehavior passHref>
                   <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-2xl hover:bg-slate-100`} onClick={closeMenu}>
-                    Home
+                    {language === 'english' ? 'Home' : 'होम'}
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -113,7 +123,7 @@ function Navbar() {
               <NavigationMenuItem>
                 <Link href="/about" legacyBehavior passHref>
                   <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-Paragraph_sm  hover:bg-slate-100`} onClick={closeMenu}>
-                    About Us
+                    {language === 'english' ? 'About Us' : 'आमच्याबद्दल'}
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -122,7 +132,7 @@ function Navbar() {
               <NavigationMenuItem>
                 <Link href="/services" legacyBehavior passHref>
                   <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-Paragraph_sm hover:bg-slate-100`} onClick={closeMenu}>
-                    Services
+                    {language === 'english' ? 'Services' : 'सेवा'}
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -131,7 +141,7 @@ function Navbar() {
               <NavigationMenuItem>
                 <Link href="/portfolio" legacyBehavior passHref>
                   <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-Paragraph_sm  hover:bg-slate-100`} onClick={closeMenu}>
-                    Portfolio
+                    {language === 'english' ? 'Portfolio' : 'पोर्टफोलिओ'}
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -140,7 +150,7 @@ function Navbar() {
               <NavigationMenuItem>
                 <Link href="/team" legacyBehavior passHref>
                   <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-Paragraph_sm hover:bg-slate-100`} onClick={closeMenu}>
-                    Team
+                    {language === 'english' ? 'Team' : 'टीम'}
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -149,17 +159,26 @@ function Navbar() {
               <NavigationMenuItem>
                 <Link href="/contact" legacyBehavior passHref>
                   <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-Paragraph_sm  hover:bg-slate-100`} onClick={closeMenu}>
-                    Contact Us
+                    {language === 'english' ? 'Contact Us' : 'संपर्क साधा'}
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
 
+              {/* Language */}
               <NavigationMenuItem>
-                <Link href="/contact" legacyBehavior passHref>
-                  <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-Paragraph_sm  hover:bg-slate-100`} onClick={closeMenu}>
-                    English
-                  </NavigationMenuLink>
-                </Link>
+                <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-Paragraph_sm  hover:bg-slate-100 block w-full p-2 bg-slate-100 border rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm`} onClick={closeMenu}>
+                  <select
+                    id="language"
+                    name="language"
+                    className=""
+                    value={language} // Use value instead of defaultValue
+                    onChange={handleLanguageChange}
+                  >
+                    <option value="english">{language === 'english' ? 'English' : 'इंग्लिश'}</option>
+                    <option value="marathi">{language === 'english' ? 'Marathi' : 'मराठी'}</option>
+                    <option value="hindi">{language === 'english' ? 'Hindi' : 'हिंदी'}</option>
+                  </select>
+                </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>

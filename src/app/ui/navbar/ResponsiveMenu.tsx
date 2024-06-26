@@ -91,6 +91,17 @@ const ResponsiveMenu: React.FC<Props> = ({ showMenu, closeMenu }) => {
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
+
+                    {/* Language */}
+                    <NavigationMenuItem className="w-full flex">
+                        <Link href="/contact" passHref>
+                            <NavigationMenuLink className={navigationMenuTriggerStyle()} onClick={handleClick}>
+                                {' '}
+                                <RiContactsLine className="mr-1" />
+                                Language
+                            </NavigationMenuLink>
+                        </Link>
+                    </NavigationMenuItem>
                 </NavigationMenuList>
             </NavigationMenu>
         </div>

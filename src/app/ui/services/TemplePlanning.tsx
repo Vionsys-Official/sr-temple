@@ -3,8 +3,10 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/lib/languageContext';
 
 function TemplePlanning() {
+  const { language } = useLanguage() || { language: 'english' };
   return (
     <section>
 
@@ -14,7 +16,7 @@ function TemplePlanning() {
           <div className="p-6 m-4 flex justify-center mx-auto -mt-16 space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md bg-white shadow-inner">
             <div className="">
               <h1 className="max-w-full flex justify-center text-MainHeading_sm font-bold tracking-tight text-gray-900 sm:text-MainHeading sm:leading-none">
-                Temple Construction Services
+                {language === 'english' ? 'Temple Construction Services' : 'मंदिर निर्माण सेवा'}
               </h1>
             </div>
           </div>
@@ -36,7 +38,7 @@ function TemplePlanning() {
                 }}
                 className="max-w-full mb-4 text-MainHeading_sm font-bold tracking-tight text-gray-900 sm:text-MainHeading sm:leading-none"
               >
-                Temple Planning and Measurement Services
+                {language === 'english' ? 'Temple Planning and Measurement Services' : 'नियोजन आणि मापन सेवा'}
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, x: 100 }}
@@ -49,17 +51,11 @@ function TemplePlanning() {
                 }}
                 className="text-Paragraph_sm md:text-Paragraph"
               >
-                Our team of experts provides meticulous planning and measurement
-                services tailored to the unique needs of temple construction. We
-                understand the importance of accurate measurements in creating
-                harmonious and aesthetically pleasing structures. Our planning
-                services ensure that every detail, from site selection to spatial
-                organization, is in perfect alignment with your vision and religious
-                requirements.
+                {language === 'english' ? 'Our team of experts provides meticulous planning and measurement services tailored to the unique needs of temple construction. We understand the importance of accurate measurements in creating harmonious and aesthetically pleasing structures. Our planning services ensure that every detail, from site selection to spatial organization, is in perfect alignment with your vision and religious requirements.' : 'आमची तज्ज्ञांची टीम मंदिर बांधणीच्या अनन्य गरजांनुसार सूक्ष्म नियोजन आणि मोजमाप सेवा प्रदान करते. सुसंवादी आणि सौंदर्यदृष्ट्या सुखकारक रचना तयार करण्यासाठी अचूक मोजमापांचे महत्त्व आम्हाला समजते. आमच्या नियोजन सेवा हे सुनिश्चित करतात की प्रत्येक तपशील, स्थान निवडीपासून ते स्थानिक संस्थेपर्यंत, तुमची दृष्टी आणि धार्मिक आवश्यकतांशी संपूर्ण अनुकूल असते.'}
               </motion.p>
             </div>
             <p className="mb-4 text-sm font-bold text-gray tracking-widest uppercase">
-              Features
+              {language === 'english' ? 'Features' : 'वैशिष्ट्ये'}
             </p>
             <motion.div
               initial={{ opacity: 0, x: -100 }}
@@ -89,7 +85,7 @@ function TemplePlanning() {
                       />
                     </svg>
                   </span>
-                  Spatial Design and Layout
+                  {language === 'english' ? 'Spatial Design and Layout' : 'स्थानिक रचना आणि मांडणी'}
                 </li>
                 <li className="flex">
                   <span className="mr-1">
@@ -107,7 +103,7 @@ function TemplePlanning() {
                       />
                     </svg>
                   </span>
-                  Construction Planning
+                  {language === 'english' ? 'Construction Planning' : 'बांधकाम नियोजन'}
                 </li>
                 <li className="flex">
                   <span className="mr-1">
@@ -125,7 +121,7 @@ function TemplePlanning() {
                       />
                     </svg>
                   </span>
-                  Regulatory Compliance
+                  {language === 'english' ? 'Regulatory Compliance' : 'नियामक अनुपालन'}
                 </li>
               </ul>
               <ul className="space-y-3">
@@ -145,7 +141,7 @@ function TemplePlanning() {
                       />
                     </svg>
                   </span>
-                  Project Management
+                  {language === 'english' ? 'Project Management' : 'प्रकल्प व्यवस्थापन'}
                 </li>
                 <li className="flex">
                   <span className="mr-1">
@@ -163,7 +159,7 @@ function TemplePlanning() {
                       />
                     </svg>
                   </span>
-                  Measurement Services
+                  {language === 'english' ? 'Measurement Services' : 'मापन सेवा'}
                 </li>
                 <li className="flex">
                   <span className="mr-1">
@@ -181,7 +177,7 @@ function TemplePlanning() {
                       />
                     </svg>
                   </span>
-                  Cultural and Religious Sensitivity
+                  {language === 'english' ? 'Cultural and Religious Sensitivity' : 'सांस्कृतिक आणि धार्मिक संवेदनशीलता'}
                 </li>
               </ul>
             </motion.div>

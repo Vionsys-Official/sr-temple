@@ -4,11 +4,11 @@ interface ChooseUs {
   description: string;
 }
 
-const choose:ChooseUs[] = [
+export const choose:ChooseUs[] = [
   {
     id: 1,
     title: 'Expertise and Experience',
-    description: 'With decades of industry leadership, SRTemple Construction Company offers seasoned insights and proven strategies for every project.',
+    description: 'With decade of industry leadership, SRTemple Construction Company offers seasoned insights and proven strategies for every project.',
   },
   {
     id: 2,
@@ -47,4 +47,45 @@ const choose:ChooseUs[] = [
   },
 ];
 
-export default choose;
+export const chooseMarathi:ChooseUs[] = [
+  {
+    id: 1,
+    title: 'विशेषज्ञता आणि अनुभव',
+    description: 'दशकाच्या उद्योग नेतृत्वासह, SR Temple Construction कंपनी प्रत्येक प्रकल्पासाठी अनुभवी अंतर्दृष्टी आणि सिद्ध धोरणे पुरवते.',
+  },
+  {
+    id: 2,
+    title: 'गुणवत्ता आणि शिल्पकला',
+    description: 'आमच्या सूक्ष्म शिल्पकलेचा आणि उत्कृष्टतेच्या साठवण्याच्या प्रतिबद्धतेने प्रीमियम सामग्री आणि अचूक तंत्रांसह उत्कृष्ट परिणाम सुनिश्चित करते.',
+  },
+  {
+    id: 3,
+    title: 'परंपरेचा आदर',
+    description: 'आधुनिक नवोपक्रमासह सन्मानित तंत्रांचा समतोल साधून, आम्ही अशा रचना तयार करतो ज्या त्या वातावरणात अखंडपणे मिसळतात.',
+  },
+  {
+    id: 4,
+    title: 'कस्टमायझेशन आणि वैयक्तिकीकरण',
+    description: 'वैयक्तिकृत बांधकाम अनुभव सुनिश्चित करण्यासाठी आम्ही प्रत्येक प्रकल्पाला तुमच्या अद्वितीय दृष्टीनुसार तयार करतो.',
+  },
+  {
+    id: 5,
+    title: 'व्यापक प्रकल्प व्यवस्थापन',
+    description: 'नियोजनपासून करण्यात अमूर्त अंदाजात, आमच्या संवेदनशील प्रकल्प व्यवस्थापनाने सुनिश्चित करते की, गतिशील समन्वय, वेळेवर वितरण आणि किफायतशीर उपाय सुनिश्चित करते.',
+  },
+  {
+    id: 6,
+    title: 'ग्राहक संतोष आणि स्पष्ट बजेटिंग',
+    description: 'पारदर्शक आर्थिक नियोजनासह स्पष्ट संवाद आणि प्रामाणिक बजेट ग्राहकांच्या अपेक्षां अधिक परिपूर्ण करतात.',
+  },
+  {
+    id: 7,
+    title: 'प्रमाणित ट्रॅक रेकॉर्ड',
+    description: 'विविध क्षेत्रातील यशस्वी प्रकल्पांचा आमचा इतिहास निष्ठांची आणि उत्कृष्टता दर्शवतो.',
+  },
+  {
+    id: 8,
+    title: 'वारसा, नावीन्य आणि टिकाऊपणा',
+    description: 'आम्ही वास्तुशिल्पाची अखंडता टिकवून ठेवणाऱ्या पर्यावरणपूरक योजनेसह टिकाऊ पद्धतींसोबत विरासताचा आदर ठेवतो.',
+  },
+];

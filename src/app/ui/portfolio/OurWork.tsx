@@ -4,11 +4,15 @@
 'use client';
 
 import { ParallaxScrollSecond } from '@/components/ui/parallax-scroll-2';
+import { useLanguage } from '@/lib/languageContext';
 
 export function OurWork() {
+  const { language } = useLanguage() || { language: 'english' };
   return (
     <main className="overflow-hidden py-8">
-      <h1 className="text-MainHeading font-MainHeading text-center pb-6">Check Our Portfolio</h1>
+      <h1 className="text-MainHeading font-MainHeading text-center pb-6">
+        {language === 'english' ? 'Check Our Portfolio' : 'आमचे पोर्टफोलिओ तपासा'}
+      </h1>
       <ParallaxScrollSecond images={images} />
       ;
     </main>

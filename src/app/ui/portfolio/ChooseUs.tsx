@@ -7,8 +7,10 @@ import { motion } from 'framer-motion';
 import fadein from '@/utils/variants';
 import { FaPencilRuler, FaHardHat } from 'react-icons/fa';
 import { BiTask } from 'react-icons/bi';
+import { useLanguage } from '@/lib/languageContext';
 
 function ChooseUs() {
+  const { language } = useLanguage() || { language: 'english' };
   return (
     <div className="pt-8 px-4">
       <motion.h1
@@ -18,7 +20,7 @@ function ChooseUs() {
         viewport={{ once: false, amount: 0.2 }}
         className="text-MainHeading font-MainHeading pb-4 text-center capitalize"
       >
-        Key Advantages of Choosing Us
+        {language === 'english' ? 'Key Advantages of Choosing Us' : 'आमच्या निवडण्याच्या मुख्य फायदे '}
       </motion.h1>
 
       <div className="flex flex-col md:flex-row gap-4 md:gap-6 justify-evenly items-center py-6">
@@ -27,10 +29,9 @@ function ChooseUs() {
             <span>
               <FaPencilRuler size={30} className="font-extrabold" />
             </span>
-            <span className="font-CardHeading text-CardHeading">Design</span>
+            <span className="font-CardHeading text-CardHeading">{language === 'english' ? 'Design' : 'रचना'}</span>
             <p className="text-Paragraph font-Paragraph">
-              Our team of experienced architects and designers create visually
-              stunning and structurally sound temple designs.
+              {language === 'english' ? 'Our team of experienced architects and designers create visually stunning and structurally sound temple designs.' : 'आमची अनुभवी वास्तुविशारद आणि डिझायनर्सची टीम विचाराशील आश्चर्यकारक आणि संरचनात्मकदृष्ट्या सुदृढ मंदिर डिझाइन तयार करते.'}
             </p>
           </div>
         </div>
@@ -40,10 +41,11 @@ function ChooseUs() {
             <span>
               <BiTask size={30} className="font-extrabold" />
             </span>
-            <span className="font-CardHeading text-CardHeading">Planning</span>
+            <span className="font-CardHeading text-CardHeading">
+              {language === 'english' ? 'Planning' : 'नियोजन'}
+            </span>
             <p className="text-Paragraph font-Paragraph">
-              We handle all the logistical and regulatory aspects of temple
-              construction, ensuring a smooth and efficient process.
+              {language === 'english' ? 'We handle all the logistical and regulatory aspects of temple construction ensuring a smooth and efficient process.' : 'आम्ही मंदिर बांधणीच्या सर्व लॉजिस्टिक आणि नियामक बाबी हाताळतो, प्रक्रिया सुरळीत आणि कार्यक्षमतेची खात्री करून घेतो.'}
             </p>
           </div>
         </div>
@@ -54,11 +56,10 @@ function ChooseUs() {
               <FaHardHat size={30} className="font-extrabold" />
             </span>
             <span className="font-CardHeading text-CardHeading">
-              Construction
+              {language === 'english' ? 'Construction' : 'बांधकाम'}
             </span>
             <p className="text-Paragraph font-Paragraph">
-              Our skilled craftsmen bring your temple design to life, using
-              traditional techniques and high-quality materials.
+              {language === 'english' ? 'Our skilled craftsmen bring your temple design to life, using traditional techniques and high-quality materials.' : 'आमचे कुशल कारागीर पारंपारिक तंत्रे आणि उच्च-गुणवत्तेची सामग्री वापरून तुमच्या मंदिराची रचना उदयास आणतो.'}
             </p>
           </div>
         </div>

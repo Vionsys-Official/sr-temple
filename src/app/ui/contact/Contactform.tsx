@@ -10,6 +10,7 @@ import { z } from 'zod';
 import { motion } from 'framer-motion';
 import { Toaster, toast } from 'react-hot-toast';
 import axios from 'axios';
+import { useLanguage } from '@/lib/languageContext';
 import fadein from '../../../utils/variants';
 import Input from '../../../components/ui/input';
 import Label from '../../../components/ui/label';
@@ -89,6 +90,8 @@ export default function SignupFormDemo() {
     }
   };
 
+  const { language } = useLanguage() || { language: 'english' };
+
   return (
   // main section
     <>
@@ -102,21 +105,23 @@ export default function SignupFormDemo() {
           viewport={{ once: false, amount: 0.5 }}
           className="flex justify-center text-MainHeading font-MainHeading py-2 "
         >
-          Connect Here
+          {language === 'english' ? 'Connect Here' : 'येथे संपर्क साधा'}
         </motion.h1>
         {/* Form Heading */}
         <div className="md:max-w-[50vw] w-full px-5 mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white ">
           <h2 className="font-CardHeading text-CardHeading text-center">
-            Let Us Know
+            {language === 'english' ? 'Let Us Know' : ''}
           </h2>
           <p className="text-Paragraph font-Paragraph text-center">
-            We truly appreciate your interest and look forward to assisting you
+            {language === 'english' ? 'We truly appreciate your interest and look forward to assisting you' : 'आपल्याला मदत करण्याच्या संधीची आपली वाट पाहतोय.'}
           </p>
           {/* Contact Form */}
           <form className="py-5" onSubmit={handleSubmit}>
             <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
               <LabelInputContainer>
-                <Label htmlFor="firstname">First name</Label>
+                <Label htmlFor="firstname">
+                  {language === 'english' ? 'First name' : 'पहिलं नाव'}
+                </Label>
                 <Input
                   id="firstname"
                   type="text"
@@ -126,7 +131,9 @@ export default function SignupFormDemo() {
                 {errors.firstname && <ErrorText>{errors.firstname}</ErrorText>}
               </LabelInputContainer>
               <LabelInputContainer>
-                <Label htmlFor="lastname">Last name</Label>
+                <Label htmlFor="lastname">
+                  {language === 'english' ? 'Last name' : 'शेवटचं नाव'}
+                </Label>
                 <Input
                   id="lastname"
                   type="text"
@@ -137,7 +144,9 @@ export default function SignupFormDemo() {
               </LabelInputContainer>
             </div>
             <LabelInputContainer className="mb-4 mt-2">
-              <Label htmlFor="email">Email Address</Label>
+              <Label htmlFor="email">
+                {language === 'english' ? 'Email Address' : 'ईमेल पत्ता'}
+              </Label>
               <Input
                 id="email"
                 type="email"
@@ -147,7 +156,9 @@ export default function SignupFormDemo() {
               {errors.email && <ErrorText>{errors.email}</ErrorText>}
             </LabelInputContainer>
             <LabelInputContainer className="mb-4 mt-2">
-              <Label htmlFor="mobile">Mobile Number</Label>
+              <Label htmlFor="mobile">
+                {language === 'english' ? 'Mobile Number' : 'मोबाइल नंबर'}
+              </Label>
               <div className="">
                 <Input
                   id="mobile"
@@ -163,7 +174,9 @@ export default function SignupFormDemo() {
               {errors.mobile && <ErrorText>{errors.mobile}</ErrorText>}
             </LabelInputContainer>
             <LabelInputContainer className="mb-8">
-              <Label htmlFor="subject">Subject</Label>
+              <Label htmlFor="subject">
+                {language === 'english' ? 'Subject' : 'विषय'}
+              </Label>
               <Input
                 id="subject"
                 type="text"
@@ -173,7 +186,9 @@ export default function SignupFormDemo() {
               {errors.subject && <ErrorText>{errors.subject}</ErrorText>}
             </LabelInputContainer>
             <LabelInputContainer className="mb-8">
-              <Label htmlFor="message">Message</Label>
+              <Label htmlFor="message">
+                {language === 'english' ? 'Message' : 'संदेश'}
+              </Label>
               <textarea
                 className="border border-slate-300 rounded-md"
                 id="message"
@@ -195,11 +210,13 @@ export default function SignupFormDemo() {
               {loading ? (
                 <>
                   <span className="loading loading-spinner loading-sm mr-2" />
-                  Submitting...
+                  {language === 'english' ? 'Submitting...' : 'सबमिट होत आहे...'}
                 </>
               ) : (
                 <>
-                  Submit &rarr;
+                  {language === 'english' ? 'Submit' : 'सबमिट करा'}
+                  {' '}
+                  &rarr;
                   <BottomGradient />
                 </>
               )}

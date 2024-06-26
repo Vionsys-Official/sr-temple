@@ -3,9 +3,11 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/lib/languageContext';
 import TeamHero from '../../../../public/assets/team/TeamHero.jpg';
 
 function TeamHeroSection() {
+  const { language } = useLanguage() || { language: 'english' };
   return (
     <div className="overflow-hidden">
       <div className="w-full">
@@ -28,11 +30,11 @@ function TeamHeroSection() {
             className="absolute inset-0 flex flex-col justify-center items-center text-center px-6 md:px-16 lg:px-32 xl:px-48"
           >
             <h1 className="text-yellow md:text-5xl text-3xl font-bold mb-4 capitalize">
-              Specialist Team in Temple Construction
+              {language === 'english' ? 'Specialist Team in Temple Construction' : 'मंदिराच्या निर्मितीसाठी टीम'}
             </h1>
             <p className="lg:text-xl text-Paragraph text-white max-w-3xl">
               {/* eslint-disable-next-line max-len */}
-              At SR Temple Construction, a team of expert architects, skilled artisans, and meticulous project managers ensures that every temple we construct is a masterpiece of design, devotion, and durability.
+              {language === 'english' ? 'At SR Temple Construction, a team of expert architects, skilled artisans, and meticulous project managers ensures that every temple we construct is a masterpiece of design, devotion and durability.' : 'SR Temple Construction निर्माणातील तांत्रिक वास्तुकारांची, कुशल कारिगरांची आणि सूक्ष्म योजना व्यवस्थापकांची टीम खात्री देते की आम्ही बांधत असलेले प्रत्येक मंदिर हे डिझाइन, भक्ती आणि टिकाऊपणाचा उत्कृष्ट नमुना असेल.'}
             </p>
           </motion.div>
         </div>

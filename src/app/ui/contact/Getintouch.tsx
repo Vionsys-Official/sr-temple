@@ -3,12 +3,14 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/lib/languageContext';
 import fadein from '../../../utils/variants';
 import call from '../../../../public/assets/contact/call-service.gif';
 import email from '../../../../public/assets/contact/email-file.gif';
 import location from '../../../../public/assets/contact/location-pin.gif';
 
 function GetInTouch() {
+  const { language } = useLanguage() || { language: 'english' };
   return (
 
     <div className="w-screen">
@@ -23,7 +25,7 @@ function GetInTouch() {
               viewport={{ once: false, amount: 0.5 }}
               className="text-MainHeading font-MainHeading"
             >
-              Contact Our Office
+              {language === 'english' ? 'Contact Our Office' : 'आमच्या कार्यालयाशी संपर्क साधा'}
             </motion.h1>
           </div>
           {/* cards */}
@@ -33,10 +35,10 @@ function GetInTouch() {
               <div className="flex flex-col justify-center items-center text-center w-full">
                 <Image src={location} alt="icon" className="w-12 h-12 mb-4" />
                 <span className="font-CardHeading text-CardHeading">
-                  Address
+                  {language === 'english' ? 'Address' : 'पत्ता'}
                 </span>
                 <p className="line-clamp-3 text-Paragraph font-Paragraph mt-2">
-                  Shivaji Chowk Loha, Nanded Maharashtra, Pincode-431708.
+                  {language === 'english' ? 'Shivaji Chowk Loha, Nanded Maharashtra, Pincode-431708.' : 'शिवाजी चौक, लोहा, नांदेड, महाराष्ट्र, पिनकोड-431708'}
                 </p>
               </div>
             </div>
@@ -45,7 +47,7 @@ function GetInTouch() {
             <div className="cursor-default overflow-hidden relative transition-all duration-500 hover:translate-y-2 md:w-[27vw] md:h-[50vh] bg-neutral-50 rounded-lg shadow-md shadow-slate-500 flex items-center justify-center gap-2 p-10 before:absolute before:w-full hover:before:top-0 before:duration-500 before:-top-1 before:h-1 before:bg-amber-400">
               <div className="flex flex-col justify-center items-center text-center w-full">
                 <Image src={email} alt="icon" className="w-12 h-12 mb-4" />
-                <span className="font-CardHeading text-CardHeading">Email</span>
+                <span className="font-CardHeading text-CardHeading">{language === 'english' ? 'Email' : 'ईमेल'}</span>
                 <p className="line-clamp-4 text-Paragraph font-Paragraph mt-2">
                   sunil.rathod@srtempleconstructions.com
                   govind.rathodsae@gmail.com
@@ -57,7 +59,7 @@ function GetInTouch() {
               <div className="flex flex-col justify-center items-center text-center w-full">
                 <Image src={call} alt="icon" className="w-12 h-12 mb-4" />
                 <span className="font-CardHeading text-CardHeading">
-                  Make A Call
+                  {language === 'english' ? 'Make A Call' : 'कॉल करा'}
                 </span>
                 <p className="line-clamp-3 text-Paragraph font-Paragraph mt-2">
                   9834632900 / 9765938370
