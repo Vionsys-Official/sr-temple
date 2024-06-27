@@ -25,10 +25,10 @@ function Hero() {
             className="absolute"
           >
             <h1 className="text-yellow md:text-5xl font-extrabold text-3xl text-center ">
-              {language === 'english' ? 'Schedule A Service' : 'संपर्क साधा'}
+              {language === 'english' ? 'Schedule A Service' : language === 'marathi' ? 'संपर्क साधा' : 'संपर्क करें'}
             </h1>
             <p className="md:text-xl text-base font-SubHeading text-white text-center px-2 py-2">
-              {language === 'english' ? 'Contact us today and lets build something extraordinary together.' : 'आजच आमच्याशी संपर्क साधा आणि चला आपण एकत्र काहीतरी अद्वितीय तयार करूया. '}
+              {language === 'english' ? 'Contact us today and lets build something extraordinary together.' : language === 'marathi' ? 'आजच आमच्याशी संपर्क साधा आणि चला आपण एकत्र काहीतरी अद्वितीय तयार करूया.' : 'आज ही हमसे संपर्क करें और चलिए हम मिलकर कुछ अनोखा बनाते हैं।'}
             </p>
           </motion.div>
         </div>

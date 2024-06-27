@@ -105,7 +105,7 @@ export default function SignupFormDemo() {
           viewport={{ once: false, amount: 0.5 }}
           className="flex justify-center text-MainHeading font-MainHeading py-2 "
         >
-          {language === 'english' ? 'Connect Here' : 'येथे संपर्क साधा'}
+          {language === 'english' ? 'Connect Here' : language === 'marathi' ? 'येथे संपर्क साधा' : 'यहाँ संपर्क करें'}
         </motion.h1>
         {/* Form Heading */}
         <div className="md:max-w-[50vw] w-full px-5 mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white ">
@@ -113,14 +113,14 @@ export default function SignupFormDemo() {
             {language === 'english' ? 'Let Us Know' : ''}
           </h2>
           <p className="text-Paragraph font-Paragraph text-center">
-            {language === 'english' ? 'We truly appreciate your interest and look forward to assisting you' : 'आपल्याला मदत करण्याच्या संधीची आपली वाट पाहतोय.'}
+            {language === 'english' ? 'We truly appreciate your interest and look forward to assisting you' : language === 'marathi' ? 'आपल्याला मदत करण्याच्या संधीची आपली वाट पाहतोय.' : 'आपकी सहाय्यता करने के मौके का इंतजार कर रहे हैं।'}
           </p>
           {/* Contact Form */}
           <form className="py-5" onSubmit={handleSubmit}>
             <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
               <LabelInputContainer>
                 <Label htmlFor="firstname">
-                  {language === 'english' ? 'First name' : 'पहिलं नाव'}
+                  {language === 'english' ? 'First name' : language === 'marathi' ? 'पहिलं नाव' : 'पहला नाम'}
                 </Label>
                 <Input
                   id="firstname"
@@ -132,7 +132,7 @@ export default function SignupFormDemo() {
               </LabelInputContainer>
               <LabelInputContainer>
                 <Label htmlFor="lastname">
-                  {language === 'english' ? 'Last name' : 'शेवटचं नाव'}
+                  {language === 'english' ? 'Last name' : language === 'marathi' ? 'शेवटचं नाव' : 'अंतिम नाम'}
                 </Label>
                 <Input
                   id="lastname"
@@ -145,7 +145,7 @@ export default function SignupFormDemo() {
             </div>
             <LabelInputContainer className="mb-4 mt-2">
               <Label htmlFor="email">
-                {language === 'english' ? 'Email Address' : 'ईमेल पत्ता'}
+                {language === 'english' ? 'Email Address' : language === 'marathi' ? 'ईमेल पत्ता' : 'ईमेल पता'}
               </Label>
               <Input
                 id="email"
@@ -210,11 +210,11 @@ export default function SignupFormDemo() {
               {loading ? (
                 <>
                   <span className="loading loading-spinner loading-sm mr-2" />
-                  {language === 'english' ? 'Submitting...' : 'सबमिट होत आहे...'}
+                  {language === 'english' ? 'Submitting...' : language === 'marathi' ? 'सबमिट होत आहे...' : 'सबमिट किया जा रहा है...'}
                 </>
               ) : (
                 <>
-                  {language === 'english' ? 'Submit' : 'सबमिट करा'}
+                  {language === 'english' ? 'Submit' : language === 'marathi' ? 'सबमिट करा' : 'सबमिट करें'}
                   {' '}
                   &rarr;
                   <BottomGradient />

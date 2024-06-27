@@ -72,7 +72,7 @@ function SocialProofCounter() {
     },
   ];
 
-  const arr1: Item[] = [
+  const arrMarathi: Item[] = [
     {
       id: 1,
       icon: <FaBriefcase size={35} />,
@@ -90,6 +90,27 @@ function SocialProofCounter() {
       icon: <FaProjectDiagram size={35} />,
       count: 450,
       heading: 'पूर्ण केलेले प्रकल्प',
+    },
+  ];
+
+  const arrHindi: Item[] = [
+    {
+      id: 1,
+      icon: <FaBriefcase size={35} />,
+      count: 10,
+      heading: 'वर्षों का अनुभव',
+    },
+    {
+      id: 2,
+      icon: <AiOutlineUsergroupAdd size={35} />,
+      count: 150,
+      heading: 'प्रशिक्षित कर्मचारी',
+    },
+    {
+      id: 3,
+      icon: <FaProjectDiagram size={35} />,
+      count: 450,
+      heading: 'पूर्ण किए गए प्रोजेक्ट्स',
     },
   ];
 
@@ -133,8 +154,7 @@ function SocialProofCounter() {
           }}
           className="max-w-lg md:text-MainHeading md:font-MainHeading text-MainHeading_sm font-MainHeading_sm tracking-tight md:mx-auto text-center"
         >
-          {language === 'english' ? 'Who We Are' : 'आमच्याबद्दल'}
-
+          {language === 'english' ? 'Who We Are' : language === 'marathi' ? 'आमच्याबद्दल' : 'हमारे बारे में'}
         </motion.h2>
         <motion.h6
           initial={{ opacity: 0, x: 100 }} // X:100
@@ -148,7 +168,7 @@ function SocialProofCounter() {
           className="md:text-SubHeading text-SubHeading_sm md:font-SubHeading font-SubHeading_sm text-center"
         >
           {' '}
-          {language === 'english' ? 'SR Temple Construction Company: Crafting Sacred Spaces Since 2011' : 'SR Temple Construction कंपनी: 2011 पासून पवित्र स्थान तयार करित आहे'}
+          {language === 'english' ? 'SR Temple Construction Company: Crafting Sacred Spaces Since 2011' : language === 'marathi' ? 'SR Temple Construction कंपनी: 2011 पासून पवित्र स्थान तयार करित आहे' : 'SR Temple Construction कंपनी: 2011 से पवित्र स्थान का निर्माण कर रही हैं।'}
         </motion.h6>
         <motion.p
           initial={{ opacity: 0, x: -100 }} // X:100
@@ -161,7 +181,7 @@ function SocialProofCounter() {
           }}
           className="md:text-Paragraph md:font-Paragraph font-Paragraph_sm py-3 text-center"
         >
-          {language === 'english' ? 'At SR Temple Construction Company, we specialize in designing and building temples that blend architectural brilliance with spiritual sanctity. Since our establishment in 2011, we have been dedicated to providing the best temple construction solutions across India.' : 'SR Temple Construction कंपनीत, आम्ही धार्मिक आणि वास्तुशिल्पात्मक दोन्ही देखील सुंदर व मंदिरांचं डिझाइन करण्यात सक्षम आहोत. 2011 साली आमच्या स्थापनेच्या नंतर, आम्ही संपूर्ण भारतात मंदिर निर्माणाचे उत्तम समाधान पुरवत आहोत.'}
+          {language === 'english' ? 'At SR Temple Construction Company, we specialize in designing and building temples that blend architectural brilliance with spiritual sanctity. Since our establishment in 2011, we have been dedicated to providing the best temple construction solutions across India.' : language === 'marathi' ? 'SR Temple Construction कंपनीत, आम्ही धार्मिक आणि वास्तुशिल्पात्मक दोन्ही देखील सुंदर व मंदिरांचं डिझाइन करण्यात सक्षम आहोत. 2011 साली आमच्या स्थापनेच्या नंतर, आम्ही संपूर्ण भारतात मंदिर निर्माणाचे उत्तम समाधान पुरवत आहोत.' : 'SR Temple Construction कंपनी में, हम धार्मिक और स्थापत्य दोनों तरह के सुंदर मंदिर डिजाइन करने में सक्षम हैं। वर्ष 2011 में अपनी स्थापना के बाद से, हम पूरे भारत में सर्वोत्तम मंदिर निर्माण समाधान प्रदान कर रहे हैं।'}
         </motion.p>
       </div>
       <div className="">
@@ -171,7 +191,7 @@ function SocialProofCounter() {
         >
           {/* 2nd section */}
           <div className="flex md:flex-row flex-col gap-6 justify-center items-center w-full">
-            {(language === 'english' ? arr : arr1).map((item) => (
+            {(language === 'english' ? arr : language === 'marathi' ? arrMarathi : arrHindi).map((item) => (
               <div
                 key={item.id}
                 className="relative bg-white flex flex-col gap-4 justify-center items-center border rounded-md shadow-xl shadow-gray2 overflow-hidden group  md:w-75 lg:w-80 w-full h-40 align-content-center transform border-l-4 border-[#f7c100] hover:-translate-y-6 duration-300"

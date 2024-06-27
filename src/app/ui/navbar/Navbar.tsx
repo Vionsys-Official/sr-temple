@@ -114,7 +114,7 @@ function Navbar() {
               <NavigationMenuItem>
                 <Link href="/" legacyBehavior passHref>
                   <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-2xl hover:bg-slate-100`} onClick={closeMenu}>
-                    {language === 'english' ? 'Home' : 'होम'}
+                    {language === 'english' ? 'Home' : language === 'marathi' ? 'होम' : 'होम'}
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -123,7 +123,7 @@ function Navbar() {
               <NavigationMenuItem>
                 <Link href="/about" legacyBehavior passHref>
                   <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-Paragraph_sm  hover:bg-slate-100`} onClick={closeMenu}>
-                    {language === 'english' ? 'About Us' : 'आमच्याबद्दल'}
+                    {language === 'english' ? 'About Us' : language === 'marathi' ? 'आमच्याबद्दल' : 'हमारे बारे में'}
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -132,7 +132,7 @@ function Navbar() {
               <NavigationMenuItem>
                 <Link href="/services" legacyBehavior passHref>
                   <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-Paragraph_sm hover:bg-slate-100`} onClick={closeMenu}>
-                    {language === 'english' ? 'Services' : 'सेवा'}
+                    {language === 'english' ? 'Services' : language === 'marathi' ? 'सेवा' : 'सेवाएँ'}
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -141,7 +141,7 @@ function Navbar() {
               <NavigationMenuItem>
                 <Link href="/portfolio" legacyBehavior passHref>
                   <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-Paragraph_sm  hover:bg-slate-100`} onClick={closeMenu}>
-                    {language === 'english' ? 'Portfolio' : 'पोर्टफोलिओ'}
+                    {language === 'english' ? 'Portfolio' : language === 'marathi' ? 'पोर्टफोलिओ' : 'पोर्टफोलिओ'}
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -150,7 +150,7 @@ function Navbar() {
               <NavigationMenuItem>
                 <Link href="/team" legacyBehavior passHref>
                   <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-Paragraph_sm hover:bg-slate-100`} onClick={closeMenu}>
-                    {language === 'english' ? 'Team' : 'टीम'}
+                    {language === 'english' ? 'Team' : language === 'marathi' ? 'टीम' : 'टीम'}
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -159,26 +159,30 @@ function Navbar() {
               <NavigationMenuItem>
                 <Link href="/contact" legacyBehavior passHref>
                   <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-Paragraph_sm  hover:bg-slate-100`} onClick={closeMenu}>
-                    {language === 'english' ? 'Contact Us' : 'संपर्क साधा'}
+                    {language === 'english' ? 'Contact Us' : language === 'marathi' ? 'संपर्क साधा' : 'संपर्क करे'}
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
 
               {/* Language */}
               <NavigationMenuItem>
-                <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-Paragraph_sm  hover:bg-slate-100 block w-full p-2 bg-slate-100 border rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm`} onClick={closeMenu}>
+                <NavigationMenuLink
+                  className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-Paragraph_sm hover:bg-slate-100 block w-full p-2 bg-slate-100 border rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm`}
+                  onClick={closeMenu}
+                >
                   <select
                     id="language"
                     name="language"
-                    className=""
-                    value={language} // Use value instead of defaultValue
+                    value={language}
                     onChange={handleLanguageChange}
+                    className="appearance-none bg-transparent outline-none border-none focus:ring-0 focus:border-0 p-2"
                   >
                     <option value="english">{language === 'english' ? 'English' : 'इंग्लिश'}</option>
                     <option value="marathi">{language === 'english' ? 'Marathi' : 'मराठी'}</option>
                     <option value="hindi">{language === 'english' ? 'Hindi' : 'हिंदी'}</option>
                   </select>
                 </NavigationMenuLink>
+
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>

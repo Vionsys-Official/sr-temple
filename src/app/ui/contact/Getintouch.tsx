@@ -25,7 +25,7 @@ function GetInTouch() {
               viewport={{ once: false, amount: 0.5 }}
               className="text-MainHeading font-MainHeading"
             >
-              {language === 'english' ? 'Contact Our Office' : 'आमच्या कार्यालयाशी संपर्क साधा'}
+              {language === 'english' ? 'Contact Our Office' : language === 'marathi' ? 'आमच्या कार्यालयाशी संपर्क साधा' : 'हमारे कार्यालय से संपर्क करें'}
             </motion.h1>
           </div>
           {/* cards */}
@@ -35,7 +35,7 @@ function GetInTouch() {
               <div className="flex flex-col justify-center items-center text-center w-full">
                 <Image src={location} alt="icon" className="w-12 h-12 mb-4" />
                 <span className="font-CardHeading text-CardHeading">
-                  {language === 'english' ? 'Address' : 'पत्ता'}
+                  {language === 'english' ? 'Address' : language === 'marathi' ? 'पत्ता' : 'पता'}
                 </span>
                 <p className="line-clamp-3 text-Paragraph font-Paragraph mt-2">
                   {language === 'english' ? 'Shivaji Chowk Loha, Nanded Maharashtra, Pincode-431708.' : 'शिवाजी चौक, लोहा, नांदेड, महाराष्ट्र, पिनकोड-431708'}
@@ -59,7 +59,7 @@ function GetInTouch() {
               <div className="flex flex-col justify-center items-center text-center w-full">
                 <Image src={call} alt="icon" className="w-12 h-12 mb-4" />
                 <span className="font-CardHeading text-CardHeading">
-                  {language === 'english' ? 'Make A Call' : 'कॉल करा'}
+                  {language === 'english' ? 'Make A Call' : language === 'marathi' ? 'कॉल करा' : 'कॉल करें'}
                 </span>
                 <p className="line-clamp-3 text-Paragraph font-Paragraph mt-2">
                   9834632900 / 9765938370

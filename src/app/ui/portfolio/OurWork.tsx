@@ -11,7 +11,7 @@ export function OurWork() {
   return (
     <main className="overflow-hidden py-8">
       <h1 className="text-MainHeading font-MainHeading text-center pb-6">
-        {language === 'english' ? 'Check Our Portfolio' : 'आमचे पोर्टफोलिओ तपासा'}
+        {language === 'english' ? 'Check Our Portfolio' : language === 'marathi' ? 'आमचे पोर्टफोलिओ तपासा' : 'हमारा पोर्टफोलियो देखें'}
       </h1>
       <ParallaxScrollSecond images={images} />
       ;
@@ -22,16 +22,16 @@ export function OurWork() {
 export default OurWork;
 
 const images = [
-  '/assets/portfolio/temple1.jpg',
-  '/assets/portfolio/temple2.jpg',
-  '/assets/portfolio/temple3.jpg',
-  '/assets/portfolio/temple4.jpg',
-  '/assets/portfolio/temple5.jpg',
-  '/assets/portfolio/temple6.jpg',
-  '/assets/portfolio/temple7.jpg',
-  '/assets/portfolio/temple8.jpg',
-  '/assets/portfolio/temple9.jpg',
-  '/assets/portfolio/temple10.jpg',
-  '/assets/portfolio/temple11.jpg',
-  '/assets/portfolio/temple12.jpg',
+  '/assets/portfolio/templee1.jpeg',
+  '/assets/portfolio/templee2.jpeg',
+  '/assets/portfolio/templee3.jpeg',
+  '/assets/portfolio/templee4.jpeg',
+  '/assets/portfolio/templee5.jpeg',
+  '/assets/portfolio/templee6.jpeg',
+  '/assets/portfolio/templee7.jpg',
+  '/assets/portfolio/templee8.jpeg',
+  '/assets/portfolio/templee9.jpeg',
+  '/assets/portfolio/templee10.jpg',
+  '/assets/portfolio/templee11.jpeg',
+  '/assets/portfolio/templee12.jpg',
 ];

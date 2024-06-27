@@ -4,10 +4,10 @@ import Image from 'next/image';
 import React from 'react';
 import { BiSend } from 'react-icons/bi';
 import { motion } from 'framer-motion';
-import { choose, chooseMarathi } from '@/data/HomeChooseUs';
+import { choose, chooseHindi, chooseMarathi } from '@/data/HomeChooseUs';
 import { useLanguage } from '@/lib/languageContext';
 import c2 from '../../../../public/assets/home/c2.jpg';
-import c3 from '../../../../public/assets/home/Choose1.jpg';
+import c3 from '../../../../public/assets/home/Choose1.jpeg';
 
 export default function Choose() {
   const { language } = useLanguage() || { language: 'english' };
@@ -25,15 +25,15 @@ export default function Choose() {
         className="max-w-2xl mb-4 md:mx-auto lg:max-w-4xl md:mb-6"
       >
         <h2 className="md:text-MainHeading text-MainHeading_sm md:font-MainHeading_sm font-MainHeading leading-none tracking-tight md:mx-auto text-center">
-          {language === 'english' ? 'Why Choose Us?' : 'आम्हाला का निवडाल?'}
+          {language === 'english' ? 'Why Choose Us?' : language === 'marathi' ? 'आम्हाला का निवडाल?' : 'हमें क्यों चुनें?'}
         </h2>
         <h6 className="md:text-SubHeading text-SubHeading_sm md:font-SubHeading font-SubHeading_sm text-center mb-3 py-3">
-          {language === 'english' ? 'Bringing your spiritual vision to life with care and quality' : 'तुमची आध्यात्मिक दृष्टी काळजीपूर्वक आणि गुणवत्तेने साकार करण्याचा प्रयत्न'}
+          {language === 'english' ? 'Bringing your spiritual vision to life with care and quality' : language === 'marathi' ? 'तुमची आध्यात्मिक दृष्टी काळजीपूर्वक आणि गुणवत्तेने साकार करण्याचा प्रयत्न' : 'आपके आध्यात्मिक दृष्टिकोण को सावधानी और गुणवत्ता के साथ साकार करने का प्रयास करते है।'}
         </h6>
       </motion.div>
       <div className="grid gap-10 lg:grid-cols-2 sm:mx-auto">
         <div className="flex flex-col justify-center">
-          {(language === 'english' ? choose : chooseMarathi).map((item) => (
+          {(language === 'english' ? choose : language === 'marathi' ? chooseMarathi : chooseHindi).map((item) => (
             <div key={item.id} className="flex mb-4">
               <div className="mr-4">
                 <div className="flex items-center text-black justify-center w-10 h-10 mb-3 rounded-full bg-yellow-50">

@@ -13,7 +13,7 @@ function Hero() {
     <main className="md:h-[100vh] h-auto md:w-[100vw] pb-10 bg-yellow overflow-x-hidden flex flex-col md:flex-row justify-evenly items-center">
       <div className="relative  md:w-[45vw] py-10 p-4 pb-4 md:p-0 md:space-y-3 space-y-1">
         <p className="text-white bg-slate-800 md:w-32 px-3 py-2 rounded-2xl text-center mx-auto md:mx-0">
-          {language === 'english' ? 'Our Projects' : 'आमचे प्रकल्प'}
+          {language === 'english' ? 'Our Projects' : language === 'marathi' ? 'आमचे प्रकल्प' : 'हमारे प्रकल्प'}
         </p>
         <motion.h1
           variants={fadein('right', 0.2)}
@@ -22,8 +22,8 @@ function Hero() {
           viewport={{ once: false, amount: 0.2 }}
           className="md:text-5xl text-3xl leading-none font-MainHeading text-black py-4 text-center md:text-left"
         >
-          {language === 'english' ? 'Majestic Temples' : 'भव्य मंदिरे'}
-          <span className="block">{language === 'english' ? 'Built With Devotion' : 'भक्तीने बांधले'}</span>
+          {language === 'english' ? 'Majestic Temples' : language === 'marathi' ? 'भव्य मंदिरे' : 'भव्य मंदिर'}
+          <span className="block md:leading-loose">{language === 'english' ? 'Built With Devotion' : language === 'marathi' ? 'भक्तीने बांधले' : 'भक्तिभाव से निर्मित'}</span>
         </motion.h1>
         <motion.h3
           variants={fadein('left', 0.3)}
@@ -32,7 +32,7 @@ function Hero() {
           viewport={{ once: false, amount: 0.2 }}
           className="md:text-xl text-base text-white text-center md:text-left"
         >
-          {language === 'english' ? 'Constructing the Heart of Worship signifies building a dedicated space that nurtures spiritual connection, creating a reverent environment for both communal and personal worship.' : 'विभावनाच्या हृदयाचे निर्माण हा म्हणजे एक विशेष स्थान तयार करणे ज्या ठिकाणी आपल्याला आपल्या आत्म्याच्या संबंधात वाढ झाली जाते आणि समाजाच्या आणि व्यक्तिच्या पूजेच्या उपस्थितीसाठी उत्कृष्ट परिसर तयार करणे.'}
+          {language === 'english' ? 'Constructing the Heart of Worship signifies building a dedicated space that nurtures spiritual connection, creating a reverent environment for both communal and personal worship.' : language === 'marathi' ? 'विभावनाच्या हृदयाचे निर्माण हा म्हणजे एक विशेष स्थान तयार करणे ज्या ठिकाणी आपल्याला आपल्या आत्म्याच्या संबंधात वाढ झाली जाते आणि समाजाच्या आणि व्यक्तिच्या पूजेच्या उपस्थितीसाठी उत्कृष्ट परिसर तयार करणे.' : 'विभावना का निर्माण यह मतलब है एक विशेष स्थान बनाना जहां आपके आत्मा के संबंधों में वृद्धि होती है और समाज और व्यक्ति की पूजा के लिए उत्कृष्ट परिसर तैयार किया जाता है।'}
         </motion.h3>
       </div>
 

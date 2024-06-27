@@ -16,7 +16,7 @@ function TemplePlanning() {
           <div className="p-6 m-4 flex justify-center mx-auto -mt-16 space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md bg-white shadow-inner">
             <div className="">
               <h1 className="max-w-full flex justify-center text-MainHeading_sm font-bold tracking-tight text-gray-900 sm:text-MainHeading sm:leading-none">
-                {language === 'english' ? 'Temple Construction Services' : 'मंदिर निर्माण सेवा'}
+                {language === 'english' ? 'Temple Construction Services' : language === 'marathi' ? 'मंदिर निर्माण सेवा' : 'मंदिर निर्माण सेवाएँ'}
               </h1>
             </div>
           </div>
@@ -38,7 +38,7 @@ function TemplePlanning() {
                 }}
                 className="max-w-full mb-4 text-MainHeading_sm font-bold tracking-tight text-gray-900 sm:text-MainHeading sm:leading-none"
               >
-                {language === 'english' ? 'Temple Planning and Measurement Services' : 'नियोजन आणि मापन सेवा'}
+                {language === 'english' ? 'Temple Planning and Measurement Services' : language === 'marathi' ? 'नियोजन आणि मापन सेवा' : 'योजना और माप सेवाएँ'}
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, x: 100 }}
@@ -51,11 +51,11 @@ function TemplePlanning() {
                 }}
                 className="text-Paragraph_sm md:text-Paragraph"
               >
-                {language === 'english' ? 'Our team of experts provides meticulous planning and measurement services tailored to the unique needs of temple construction. We understand the importance of accurate measurements in creating harmonious and aesthetically pleasing structures. Our planning services ensure that every detail, from site selection to spatial organization, is in perfect alignment with your vision and religious requirements.' : 'आमची तज्ज्ञांची टीम मंदिर बांधणीच्या अनन्य गरजांनुसार सूक्ष्म नियोजन आणि मोजमाप सेवा प्रदान करते. सुसंवादी आणि सौंदर्यदृष्ट्या सुखकारक रचना तयार करण्यासाठी अचूक मोजमापांचे महत्त्व आम्हाला समजते. आमच्या नियोजन सेवा हे सुनिश्चित करतात की प्रत्येक तपशील, स्थान निवडीपासून ते स्थानिक संस्थेपर्यंत, तुमची दृष्टी आणि धार्मिक आवश्यकतांशी संपूर्ण अनुकूल असते.'}
+                {language === 'english' ? 'Our team of experts provides meticulous planning and measurement services tailored to the unique needs of temple construction. We understand the importance of accurate measurements in creating harmonious and aesthetically pleasing structures. Our planning services ensure that every detail, from site selection to spatial organization, is in perfect alignment with your vision and religious requirements.' : language === 'marathi' ? 'आमची तज्ज्ञांची टीम मंदिर बांधणीच्या अनन्य गरजांनुसार सूक्ष्म नियोजन आणि मोजमाप सेवा प्रदान करते. सुसंवादी आणि सौंदर्यदृष्ट्या सुखकारक रचना तयार करण्यासाठी अचूक मोजमापांचे महत्त्व आम्हाला समजते. आमच्या नियोजन सेवा हे सुनिश्चित करतात की प्रत्येक तपशील, स्थान निवडीपासून ते स्थानिक संस्थेपर्यंत, तुमची दृष्टी आणि धार्मिक आवश्यकतांशी संपूर्ण अनुकूल असते.' : 'हमारे विशेषज्ञों की टीम मंदिर निर्माण की विशिष्ट आवश्यकताओं के अनुसार सावधानीपूर्वक योजना और माप सेवाएं प्रदान करती है। हम एक सामंजस्यपूर्ण और सौंदर्यपूर्ण रूप से डिज़ाइन बनाने के लिए सटीक माप के महत्व को समझते हैं। हमारी नियोजन सेवाएँ सुनिश्चित करती हैं कि स्थान चयन से लेकर स्थानीय संगठन तक हर विवरण, आपके दृष्टिकोण और धार्मिक आवश्यकताओं के साथ पूरी तरह से समर्थ है।'}
               </motion.p>
             </div>
             <p className="mb-4 text-sm font-bold text-gray tracking-widest uppercase">
-              {language === 'english' ? 'Features' : 'वैशिष्ट्ये'}
+              {language === 'english' ? 'Features' : language === 'marathi' ? 'वैशिष्ट्ये' : 'विशेषताएँ'}
             </p>
             <motion.div
               initial={{ opacity: 0, x: -100 }}
@@ -85,7 +85,7 @@ function TemplePlanning() {
                       />
                     </svg>
                   </span>
-                  {language === 'english' ? 'Spatial Design and Layout' : 'स्थानिक रचना आणि मांडणी'}
+                  {language === 'english' ? 'Spatial Design and Layout' : language === 'marathi' ? 'स्थानिक रचना आणि मांडणी' : 'स्थानीय निर्माण और व्यवस्थापन'}
                 </li>
                 <li className="flex">
                   <span className="mr-1">
@@ -103,7 +103,7 @@ function TemplePlanning() {
                       />
                     </svg>
                   </span>
-                  {language === 'english' ? 'Construction Planning' : 'बांधकाम नियोजन'}
+                  {language === 'english' ? 'Construction Planning' : language === 'marathi' ? 'बांधकाम नियोजन' : 'निर्माण योजना'}
                 </li>
                 <li className="flex">
                   <span className="mr-1">
@@ -121,7 +121,7 @@ function TemplePlanning() {
                       />
                     </svg>
                   </span>
-                  {language === 'english' ? 'Regulatory Compliance' : 'नियामक अनुपालन'}
+                  {language === 'english' ? 'Regulatory Compliance' : language === 'marathi' ? 'नियामक अनुपालन' : 'नियामक अनुपालन'}
                 </li>
               </ul>
               <ul className="space-y-3">
@@ -141,7 +141,7 @@ function TemplePlanning() {
                       />
                     </svg>
                   </span>
-                  {language === 'english' ? 'Project Management' : 'प्रकल्प व्यवस्थापन'}
+                  {language === 'english' ? 'Project Management' : language === 'marathi' ? 'प्रकल्प व्यवस्थापन' : 'प्रकल्प प्रबंधन'}
                 </li>
                 <li className="flex">
                   <span className="mr-1">
@@ -159,7 +159,7 @@ function TemplePlanning() {
                       />
                     </svg>
                   </span>
-                  {language === 'english' ? 'Measurement Services' : 'मापन सेवा'}
+                  {language === 'english' ? 'Measurement Services' : language === 'marathi' ? 'मापन सेवा' : 'मापन सेवाएँ'}
                 </li>
                 <li className="flex">
                   <span className="mr-1">
@@ -177,7 +177,7 @@ function TemplePlanning() {
                       />
                     </svg>
                   </span>
-                  {language === 'english' ? 'Cultural and Religious Sensitivity' : 'सांस्कृतिक आणि धार्मिक संवेदनशीलता'}
+                  {language === 'english' ? 'Cultural and Religious Sensitivity' : language === 'marathi' ? 'सांस्कृतिक आणि धार्मिक संवेदनशीलता' : 'सांस्कृतिक एवं धार्मिक संवेदनशीलता'}
                 </li>
               </ul>
             </motion.div>

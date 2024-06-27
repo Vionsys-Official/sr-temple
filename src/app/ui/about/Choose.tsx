@@ -21,7 +21,7 @@ const Choose: React.FC = () => {
             opacity: { duration: 0.6 },
             ease: 'easeInOut',
           }}
-          className="max-w-lg mb-6 font-MainHeading_sm md:font-MainHeading text-MainHeading_sm md:text-MainHeading md:text-gray leading-none tracking-tight text-gray md:mx-auto capitalize"
+          className="max-w-lg mb-6 font-MainHeading_sm md:font-MainHeading text-MainHeading_sm md:text-MainHeading md:text-gray leading-none md:leading-normal tracking-tight text-gray md:mx-auto capitalize"
         >
           <span className="relative inline-block">
             <svg
@@ -47,11 +47,11 @@ const Choose: React.FC = () => {
               />
             </svg>
             <span className="relative">
-              {language === 'english' ? 'Get' : 'आम्हाला'}
+              {language === 'english' ? 'Get' : language === 'marathi' ? 'आम्हाला' : 'हमें'}
             </span>
           </span>
           {' '}
-          {language === 'english' ? 'to Know the Reasons You Should Choose Us!' : 'का निवडावे याची कारणे जाणून घ्या!'}
+          {language === 'english' ? 'to Know the Reasons You Should Choose Us!' : language === 'marathi' ? 'का निवडावे याची कारणे जाणून घ्या!' : 'क्यों चुनें? जानिए इसके कारण!'}
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 100 }} // X:100
@@ -64,7 +64,7 @@ const Choose: React.FC = () => {
           }}
           className=" text-gray md:text-Paragraph text-Paragraph_sm font-Paragraph_sm md:font-Paragraph"
         >
-          {language === 'english' ? 'Our innovative solutions and attention to detail ensure that every project exceeds our clients expectations, building trust and lasting relationships.' : 'आमचे नाविन्यपूर्ण उपाय आणि तपशीलाकडे लक्ष देणे हे सुनिश्चित करते की प्रत्येक प्रकल्प आमच्या ग्राहकांच्या अपेक्षां पेक्षा जास्त आहे, विश्वास निर्माण करतो आणि चिरस्थायी नातेसंबंध निर्माण करतो.'}
+          {language === 'english' ? 'Our innovative solutions and attention to detail ensure that every project exceeds our clients expectations, building trust and lasting relationships.' : language === 'marathi' ? 'आमचे नाविन्यपूर्ण उपाय आणि तपशीलाकडे लक्ष देणे हे सुनिश्चित करते की प्रत्येक प्रकल्प आमच्या ग्राहकांच्या अपेक्षां पेक्षा जास्त आहे, विश्वास निर्माण करतो आणि चिरस्थायी नातेसंबंध निर्माण करतो.' : 'हमारे प्रवर्तनीय समाधान और विवरण पर ध्यान देना यह सुनिश्चित करता है कि प्रत्येक परियोजना हमारे ग्राहकों की अपेक्षाओं से अधिक है, विश्वास बनाता है और दीर्घकालिक संबंधों का निर्माण करता है।'}
         </motion.p>
       </div>
       <div className="grid gap-8 row-gap-5 mb-8 md:row-gap-8 lg:grid-cols-4 sm:grid-cols-2 md:mb-0">
@@ -81,10 +81,10 @@ const Choose: React.FC = () => {
         >
           <div className="h-full p-5 border border-l-0 rounded-r shadow-sm bg-gray">
             <h6 className="mb-2 font-CardHeading text-CardHeading md:font-MainHeading md:text-CardHeading text-white">
-              {language === 'english' ? 'Innovative Design' : 'नाविन्यपूर्ण डिझाइन'}
+              {language === 'english' ? 'Innovative Design' : language === 'marathi' ? 'नाविन्यपूर्ण डिझाइन' : 'नवाचारात्मक डिज़ाइन'}
             </h6>
             <p className="mb-2 text-Paragraph_sm font-Paragraph_sm md:text-Paragraph md:font-Paragraph text-white">
-              {language === 'english' ? 'We prioritize customer satisfaction, which is consistently achieved through our innovative designs, meticulous attention to detail and adherence to top-tier construction standards.' : 'आम्ही ग्राहकांच्या समाधानाला प्राधान्य देतो, जे आमच्या नाविन्यपूर्ण डिझाइन, तपशीलांकडे बारकाईने लक्ष देऊन आणि उच्च-स्तरीय बांधकाम मानकांचे पालन करून सातत्याने प्राप्त केले जाते.'}
+              {language === 'english' ? 'We prioritize customer satisfaction, which is consistently achieved through our innovative designs, meticulous attention to detail and adherence to top-tier construction standards.' : language === 'marathi' ? 'आम्ही ग्राहकांच्या समाधानाला प्राधान्य देतो, जे आमच्या नाविन्यपूर्ण डिझाइन, तपशीलांकडे बारकाईने लक्ष देऊन आणि उच्च-स्तरीय बांधकाम मानकांचे पालन करून सातत्याने प्राप्त केले जाते.' : 'हम ग्राहक संतोष को प्राथमिकता देते हैं, जो हमारे नवाचारात्मक डिजाइन, विवरण पर बारीकी से ध्यान देने और उच्च-स्तरीय निर्माण मानकों का पालन करने के माध्यम से लगातार प्राप्त किया जाता है।'}
             </p>
           </div>
         </motion.div>
@@ -101,10 +101,10 @@ const Choose: React.FC = () => {
         >
           <div className="h-full p-5 border border-l-0 rounded-r shadow-sm bg-gray">
             <h6 className="mb-2 font-CardHeading text-CardHeading md:font-MainHeading md:text-CardHeading text-white">
-              {language === 'english' ? 'Cost Estimation' : 'खर्चाचा अंदाज'}
+              {language === 'english' ? 'Cost Estimation' : language === 'marathi' ? 'खर्चाचा अंदाज' : 'लागत अनुमान'}
             </h6>
             <p className=" mb-2 text-Paragraph_sm font-Paragraph_sm md:text-Paragraph md:font-Paragraph text-white">
-              {language === 'english' ? 'While constructing masterpieces, cost is a crucial factor. Our commitment to delivering exceptional value means we offer comprehensive temple construction services at affordable prices.' : 'बांधकाम करताना खर्च एक महत्त्वाचा घटक असतो. आमची वचनबद्धता अपवादात्मक मूल्य देण्याची आहे, त्यामुळे आम्ही परवडणाऱ्या किमतीत सर्वसमावेशक मंदिर बांधणी सेवा देतो.'}
+              {language === 'english' ? 'While constructing masterpieces, cost is a crucial factor. Our commitment to delivering exceptional value means we offer comprehensive temple construction services at affordable prices.' : language === 'marathi' ? 'बांधकाम करताना खर्च एक महत्त्वाचा घटक असतो. आमची वचनबद्धता अपवादात्मक मूल्य देण्याची आहे, त्यामुळे आम्ही परवडणाऱ्या किमतीत सर्वसमावेशक मंदिर बांधणी सेवा देतो.' : 'निर्माण के दौरान लागत एक महत्वपूर्ण तत्व होता है। हमारी प्रतिबद्धता असाधारण मूल्य देने की है, इसलिए हम किफायती कीमतों पर व्यापक मंदिर निर्माण सेवाएं प्रदान करते हैं।'}
             </p>
           </div>
         </motion.div>
@@ -121,10 +121,10 @@ const Choose: React.FC = () => {
         >
           <div className="h-full p-5 border border-l-0 rounded-r shadow-sm bg-gray">
             <h6 className="mb-2 font-CardHeading text-CardHeading md:font-MainHeading md:text-CardHeading text-white">
-              {language === 'english' ? 'Skilled Workforce' : 'कुशल कामगार मिळवा'}
+              {language === 'english' ? 'Skilled Workforce' : language === 'marathi' ? 'कुशल कामगार मिळवा' : 'कुशल कार्यबल प्राप्त करें'}
             </h6>
             <p className="mb-2 text-Paragraph_sm font-Paragraph_sm md:text-Paragraph md:font-Paragraph text-white">
-              {language === 'english' ? 'Experience is paramount in the construction industry and our seasoned workforce exemplifies this principle. With years of expertise and a deep understanding of the intricacies involved in each project.' : 'बांधकाम उद्योगात अनुभव खूप महत्त्वाचा असतो आणि आमचे अनुभवी कामगार हे तत्व स्पष्ट करतात. अनेक वर्षांचा अनुभव आणि प्रत्येक प्रकल्पातील तपशीलांची खोल समज आमच्या कामगिरीतून दिसून येते.'}
+              {language === 'english' ? 'Experience is paramount in the construction industry and our seasoned workforce exemplifies this principle. With years of expertise and a deep understanding of the intricacies involved in each project.' : language === 'marathi' ? 'बांधकाम उद्योगात अनुभव खूप महत्त्वाचा असतो आणि आमचे अनुभवी कामगार हे तत्व स्पष्ट करतात. अनेक वर्षांचा अनुभव आणि प्रत्येक प्रकल्पातील तपशीलांची खोल समज आमच्या कामगिरीतून दिसून येते.' : 'निर्माण उद्योग में अनुभव बहुत महत्वपूर्ण होता है और हमारे अनुभवी श्रमिक इस सिद्धांत को स्पष्ट करते हैं। कई वर्षों का अनुभव और प्रत्येक परियोजना के विवरण की गहरी समझ हमारे प्रदर्शन में झलकती है।'}
             </p>
           </div>
         </motion.div>
@@ -141,10 +141,10 @@ const Choose: React.FC = () => {
         >
           <div className="h-full p-5 border border-l-0 rounded-r shadow-sm bg-gray">
             <h6 className="mb-2 font-CardHeading text-CardHeading md:font-MainHeading md:text-CardHeading text-white">
-              {language === 'english' ? 'Sustainable Practices' : 'शाश्वत पद्धती'}
+              {language === 'english' ? 'Sustainable Practices' : language === 'marathi' ? 'शाश्वत पद्धती' : 'शाश्वत पद्धतियाँ'}
             </h6>
             <p className="text-Paragraph_sm font-Paragraph_sm md:text-Paragraph md:font-Paragraph text-white">
-              {language === 'english' ? 'We incorporate eco-friendly practices and sustainable materials to minimize environmental impact and promote long-term sustainability ensuring a healthier planet.' : 'आम्ही पर्यावरणावर होणारा परिणाम कमी करण्यासाठी आणि दीर्घकालीन शाश्वतता वाढवण्यासाठी पर्यावरणपूरक पद्धती आणि शाश्वत सामग्रींचा वापर करतो.'}
+              {language === 'english' ? 'We incorporate eco-friendly practices and sustainable materials to minimize environmental impact and promote long-term sustainability ensuring a healthier planet.' : language === 'marathi' ? 'आम्ही पर्यावरणावर होणारा परिणाम कमी करण्यासाठी आणि दीर्घकालीन शाश्वतता वाढवण्यासाठी पर्यावरणपूरक पद्धती आणि शाश्वत सामग्रींचा वापर करतो.' : 'हम पर्यावरण पर प्रभाव को कम करने और दीर्घकालिक स्थायित्व बढ़ाने के लिए पर्यावरण-अनुकूल पद्धतियाँ और सतत सामग्रियों का उपयोग करते हैं।'}
             </p>
           </div>
         </motion.div>

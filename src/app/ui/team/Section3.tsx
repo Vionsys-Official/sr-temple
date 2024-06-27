@@ -5,7 +5,7 @@ import { IoMdCheckmarkCircleOutline } from 'react-icons/io';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/lib/languageContext';
-import TempleImage from '../../../../public/assets/team/TempleImage.jpg';
+import TempleImage from '../../../../public/assets/team/TempleImage.jpeg';
 
 function Section3() {
   const { language } = useLanguage() || { language: 'english' };
@@ -16,9 +16,9 @@ function Section3() {
         <div className="w-full lg:w-1/2">
           <div className="p-4">
             <h1 className="text-[#254736] md:text-4xl text-3xl font-extrabold tracking-wide">
-              {language === 'english' ? 'Expert Team In' : 'मंदिर बांधकामातील'}
+              {language === 'english' ? 'Expert Team In' : language === 'marathi' ? 'मंदिर बांधकामातील' : 'मंदिर निर्माण के'}
               <span className="mx-1 text-MainHeading_sm font-extrabold relative inline-block stroke-current">
-                {language === 'english' ? 'Temple' : ' तज्ञांची '}
+                {language === 'english' ? 'Temple' : language === 'marathi' ? ' तज्ञांची ' : 'विशेषज्ञों'}
                 <svg
                   className="absolute -bottom-0.5 w-full max-h-1.5  text-gray"
                   viewBox="0 0 55 5"
@@ -28,11 +28,11 @@ function Section3() {
                   <path d="M0.652466 4.00002C15.8925 2.66668 48.0351 0.400018 54.6853 2.00002" stroke-width="3" />
                 </svg>
               </span>
-              {language === 'english' ? 'Construction' : 'टीम'}
+              {language === 'english' ? 'Construction' : language === 'marathi' ? 'टीम' : 'की टीम'}
             </h1>
             <p className="mt-4 text-gray-600 text-Paragraph">
               {/* eslint-disable-next-line max-len */}
-              {language === 'english' ? 'Our expert team in temple construction brings together unparalleled craftsmanship and deep-rooted tradition. Each structure we build is a testament to our commitment to excellence, creating sacred spaces that inspire devotion and reverence.' : ' मंदिर बांधणीतील आमची तज्ञ टीम अतुलनीय कारागिरी आणि खोलवर रुजलेली परंपरा एकत्र आणते. आम्ही तयार केलेली प्रत्येक रचना ही भक्ती आणि आदराची प्रेरणा देणारी पवित्र जागा निर्माण करून उत्कृष्टतेच्या आमच्या वचनबद्धतेचा दाखला आहे. '}
+              {language === 'english' ? 'Our expert team in temple construction brings together unparalleled craftsmanship and deep-rooted tradition. Each structure we build is a testament to our commitment to excellence, creating sacred spaces that inspire devotion and reverence.' : language === 'marathi' ? ' मंदिर बांधणीतील आमची तज्ञ टीम अतुलनीय कारागिरी आणि खोलवर रुजलेली परंपरा एकत्र आणते. आम्ही तयार केलेली प्रत्येक रचना ही भक्ती आणि आदराची प्रेरणा देणारी पवित्र जागा निर्माण करून उत्कृष्टतेच्या आमच्या वचनबद्धतेचा दाखला आहे.' : 'मंदिर निर्माण में हमारी विशेषज्ञ टीम अनोखी कार्यशीलता और परंपराओं को संग्रहित करती है। हमने प्रत्येक संरचना को भक्ति और सम्मान की प्रेरणा देने वाले पवित्र स्थल का निर्माण करके अपने वचनबद्धता का प्रमाण दिया है।'}
             </p>
 
             <div className="grid gap-6 mt-8 sm:grid-cols-2">
@@ -49,7 +49,7 @@ function Section3() {
                 className="flex items-center text-gray-800"
               >
                 <IoMdCheckmarkCircleOutline className="text-gray" />
-                <span className="mx-3">{language === 'english' ? 'Over a Decade of Experience' : 'एक दशकाहून अधिक अनुभव'}</span>
+                <span className="mx-3">{language === 'english' ? 'Over a Decade of Experience' : language === 'marathi' ? 'एक दशकाहून अधिक अनुभव' : 'दस साल से अधिक का अनुभव'}</span>
               </motion.div>
 
               <motion.div
@@ -65,7 +65,7 @@ function Section3() {
               >
                 <IoMdCheckmarkCircleOutline className="text-gray" />
                 <span className="mx-3">
-                  {language === 'english' ? 'Nationwide Reach and Service' : 'राष्ट्रव्यापी पोहोच आणि सेवा'}
+                  {language === 'english' ? 'Nationwide Reach and Service' : language === 'marathi' ? 'राष्ट्रव्यापी पोहोच आणि सेवा' : 'राष्ट्रीय स्तर पर पहुँच और सेवा'}
                 </span>
               </motion.div>
 
@@ -82,7 +82,7 @@ function Section3() {
               >
                 <IoMdCheckmarkCircleOutline className="text-gray" />
                 <span className="mx-3">
-                  {language === 'english' ? 'Innovative Temple Designs' : 'नाविन्यपूर्ण मंदिर डिझाइन'}
+                  {language === 'english' ? 'Innovative Temple Designs' : language === 'marathi' ? 'नाविन्यपूर्ण मंदिर डिझाइन' : 'नवीनतम मंदिर डिज़ाइन'}
                 </span>
               </motion.div>
 
@@ -99,7 +99,7 @@ function Section3() {
               >
                 <IoMdCheckmarkCircleOutline className="text-gray" />
                 <span className="mx-3">
-                  {language === 'english' ? 'High-Quality Craftsmanship' : 'उच्च-गुणवत्ताची कलाकृती'}
+                  {language === 'english' ? 'High-Quality Craftsmanship' : language === 'marathi' ? 'उच्च-गुणवत्ताची कलाकृती' : 'उच्च गुणवत्ता की कला'}
                 </span>
               </motion.div>
 
@@ -116,7 +116,7 @@ function Section3() {
               >
                 <IoMdCheckmarkCircleOutline className="text-gray" />
                 <span className="mx-3">
-                  {language === 'english' ? 'Blend of Tradition and Modernity' : 'परंपरा आणि आधुनिकता यांचे मिश्रण'}
+                  {language === 'english' ? 'Blend of Tradition and Modernity' : language === 'marathi' ? 'परंपरा आणि आधुनिकता यांचे मिश्रण' : 'परंपरा और आधुनिकता का मिश्रण'}
                 </span>
               </motion.div>
 
@@ -133,7 +133,7 @@ function Section3() {
               >
                 <IoMdCheckmarkCircleOutline className="text-gray" />
                 <span className="mx-3">
-                  {language === 'english' ? 'Dedicated Project Managers' : 'समर्पित प्रकल्प व्यवस्थापक'}
+                  {language === 'english' ? 'Dedicated Project Managers' : language === 'marathi' ? 'समर्पित प्रकल्प व्यवस्थापक' : 'समर्पित प्रकल्प व्यवस्थापक'}
                 </span>
               </motion.div>
             </div>

@@ -20,7 +20,7 @@ function ChooseUs() {
         viewport={{ once: false, amount: 0.2 }}
         className="text-MainHeading font-MainHeading pb-4 text-center capitalize"
       >
-        {language === 'english' ? 'Key Advantages of Choosing Us' : 'आमच्या निवडण्याच्या मुख्य फायदे '}
+        {language === 'english' ? 'Key Advantages of Choosing Us' : language === 'marathi' ? 'आमच्या निवडण्याच्या मुख्य फायदे' : 'हमें चुनने के मुख्य लाभ'}
       </motion.h1>
 
       <div className="flex flex-col md:flex-row gap-4 md:gap-6 justify-evenly items-center py-6">
@@ -29,9 +29,9 @@ function ChooseUs() {
             <span>
               <FaPencilRuler size={30} className="font-extrabold" />
             </span>
-            <span className="font-CardHeading text-CardHeading">{language === 'english' ? 'Design' : 'रचना'}</span>
+            <span className="font-CardHeading text-CardHeading">{language === 'english' ? 'Design' : language === 'marathi' ? 'रचना' : 'संरचना'}</span>
             <p className="text-Paragraph font-Paragraph">
-              {language === 'english' ? 'Our team of experienced architects and designers create visually stunning and structurally sound temple designs.' : 'आमची अनुभवी वास्तुविशारद आणि डिझायनर्सची टीम विचाराशील आश्चर्यकारक आणि संरचनात्मकदृष्ट्या सुदृढ मंदिर डिझाइन तयार करते.'}
+              {language === 'english' ? 'Our team of experienced architects and designers create visually stunning and structurally sound temple designs.' : language === 'marathi' ? 'आमची अनुभवी वास्तुविशारद आणि डिझायनर्सची टीम विचाराशील आश्चर्यकारक आणि संरचनात्मकदृष्ट्या सुदृढ मंदिर डिझाइन तयार करते.' : 'अनुभवी वास्तुकारों और डिजाइनरों की हमारी टीम सोच-समझकर आश्चर्यजनक और संरचनात्मक रूप से सुदृढ़ मंदिर डिजाइन तैयार करते है।'}
             </p>
           </div>
         </div>
@@ -42,10 +42,10 @@ function ChooseUs() {
               <BiTask size={30} className="font-extrabold" />
             </span>
             <span className="font-CardHeading text-CardHeading">
-              {language === 'english' ? 'Planning' : 'नियोजन'}
+              {language === 'english' ? 'Planning' : language === 'marathi' ? 'नियोजन' : 'योजना'}
             </span>
             <p className="text-Paragraph font-Paragraph">
-              {language === 'english' ? 'We handle all the logistical and regulatory aspects of temple construction ensuring a smooth and efficient process.' : 'आम्ही मंदिर बांधणीच्या सर्व लॉजिस्टिक आणि नियामक बाबी हाताळतो, प्रक्रिया सुरळीत आणि कार्यक्षमतेची खात्री करून घेतो.'}
+              {language === 'english' ? 'We handle all the logistical and regulatory aspects of temple construction ensuring a smooth and efficient process.' : language === 'marathi' ? 'आम्ही मंदिर बांधणीच्या सर्व लॉजिस्टिक, नियामक आणि तंत्रज्ञान बाबी हाताळतो, प्रक्रिया सुरळीत आणि कार्यक्षमतेची खात्री करून घेतो.' : 'हम एक सुचारू और कुशल प्रक्रिया सुनिश्चित करते हुए, मंदिर निर्माण के सभी तार्किक, नियामक और तकनीकी पहलुओं को संभालते हैं।'}
             </p>
           </div>
         </div>
@@ -56,10 +56,10 @@ function ChooseUs() {
               <FaHardHat size={30} className="font-extrabold" />
             </span>
             <span className="font-CardHeading text-CardHeading">
-              {language === 'english' ? 'Construction' : 'बांधकाम'}
+              {language === 'english' ? 'Construction' : language === 'marathi' ? 'बांधकाम' : 'निर्माण'}
             </span>
             <p className="text-Paragraph font-Paragraph">
-              {language === 'english' ? 'Our skilled craftsmen bring your temple design to life, using traditional techniques and high-quality materials.' : 'आमचे कुशल कारागीर पारंपारिक तंत्रे आणि उच्च-गुणवत्तेची सामग्री वापरून तुमच्या मंदिराची रचना उदयास आणतो.'}
+              {language === 'english' ? 'Our skilled craftsmen bring your temple design to life, using traditional techniques and high-quality materials.' : language === 'marathi' ? 'आमचे कुशल कारागीर पारंपारिक तंत्रे आणि उच्च-गुणवत्तेची सामग्री वापरून तुमच्या मंदिराची रचना उदयास आणून सुंदर बनवतो.' : 'हमारे कुशल कारीगर पारंपरिक तकनीक और उच्च गुणवत्ता के सामग्री का उपयोग करके आपके मंदिर की रचना को उत्कृष्टता देते हैं।'}
             </p>
           </div>
         </div>

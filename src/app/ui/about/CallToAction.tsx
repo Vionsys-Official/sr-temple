@@ -25,7 +25,7 @@ const CallToAction: React.FC = () => {
           className="md:w-10/12 w-full text-Paragraph_sm md:text-Paragraph font-Paragraph_sm md:font-Paragraph"
         >
           <span className="flex">
-            {language === 'english' ? 'Partner with us to create a temple that seamlessly blends architectural innovation with cultural heritage, integrating cutting-edge eco-friendly practices and inspiring deep spiritual devotion and community connection.' : 'सांस्कृतिक वारसा आणि अत्याधुनिक पर्यावरणानुकूल पद्धती एकत्रित करणारे आणि खोल आध्यात्मिक भक्ती आणि समुदाय संबंधाला प्रेरणा देणारे मंदिर निर्माण करण्यासाठी आमच्यासोबत भागीदारी करा.'}
+            {language === 'english' ? 'Partner with us to create a temple that seamlessly blends architectural innovation with cultural heritage, integrating cutting-edge eco-friendly practices and inspiring deep spiritual devotion and community connection.' : language === 'marathi' ? 'सांस्कृतिक वारसा आणि अत्याधुनिक पर्यावरणानुकूल पद्धती एकत्रित करणारे आणि खोल आध्यात्मिक भक्ती आणि समुदाय संबंधाला प्रेरणा देणारे मंदिर निर्माण करण्यासाठी आमच्यासोबत भागीदारी करा.' : 'सांस्कृतिक वारसा और आधुनिक पर्यावरण को सम्मिलित करने वाले, खोलने वाले आध्यात्मिक भक्ति और समुदाय संबंधों को प्रेरित करने वाले मंदिर की निर्मिति के लिए हमारे साथ भागीदारी करें।'}
           </span>
         </motion.div>
         <div className="flex justify-center items-center mt-3 mb-3">
@@ -35,7 +35,7 @@ const CallToAction: React.FC = () => {
               variant="outline"
               className="px-8 py-1 bg-yellow hover:bg-yellow text-[#000] rounded-md text-buttonText_sm md:text-buttonText md:font-buttonText font-buttonText_sm"
             >
-              {language === 'english' ? 'Get in Touch' : 'संपर्क साधा'}
+              {language === 'english' ? 'Get in Touch' : language === 'marathi' ? 'संपर्क साधा' : 'संपर्क करें'}
             </Button>
           </Link>
         </div>
