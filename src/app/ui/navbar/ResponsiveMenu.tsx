@@ -15,6 +15,7 @@ import {
     NavigationMenuList,
     navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
+import { Language, useLanguage } from '@/lib/languageContext';
 
 interface Props {
     showMenu: boolean;
@@ -26,8 +27,16 @@ const ResponsiveMenu: React.FC<Props> = ({ showMenu, closeMenu }) => {
         closeMenu();
     };
 
+    const { language, setLanguage } = useLanguage() || { language: 'english', setLanguage: () => {} };
+
+    const handleLanguageChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        if (setLanguage) {
+          setLanguage(event.target.value as Language);
+        }
+      };
+
     return (
-        <div className={`${showMenu ? 'top-14 md:hidden' : 'hidden'} fixed w-full overflow-hidden z-50 bg-white h-[20rem] flex md:items-center items-start md:justify-center justify-start md:pl-0 pl-4 py-8 border-b shadow-md`}>
+        <div className={`${showMenu ? 'top-14 md:hidden' : 'hidden'} fixed w-full overflow-hidden z-50 bg-white h-auto flex md:items-center items-start md:justify-center justify-start md:pl-0 pl-4 py-8 border-b shadow-md`}>
 
             <NavigationMenu>
                 <NavigationMenuList className="flex flex-col gap-2">
@@ -36,7 +45,7 @@ const ResponsiveMenu: React.FC<Props> = ({ showMenu, closeMenu }) => {
                         <Link href="/" passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()} onClick={handleClick}>
                                 <IoHomeOutline className="mr-1 w-4 h-4 " />
-                                Home
+                                {language === 'english' ? 'Home' : language === 'marathi' ? 'होम' : 'होम'}
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
@@ -46,7 +55,7 @@ const ResponsiveMenu: React.FC<Props> = ({ showMenu, closeMenu }) => {
                         <Link href="/about" passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()} onClick={handleClick}>
                                 <PiInfoLight className="mr-1 w-4 h-4" />
-                                About Us
+                                {language === 'english' ? 'About Us' : language === 'marathi' ? 'आमच्याबद्दल' : 'हमारे बारे में'}
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
@@ -56,7 +65,7 @@ const ResponsiveMenu: React.FC<Props> = ({ showMenu, closeMenu }) => {
                         <Link href="/services" passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()} onClick={handleClick}>
                                 <MdOutlineMiscellaneousServices className="mr-1 w-4 h-4" />
-                                Services
+                                {language === 'english' ? 'Services' : language === 'marathi' ? 'सेवा' : 'सेवाएँ'}
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
@@ -66,7 +75,7 @@ const ResponsiveMenu: React.FC<Props> = ({ showMenu, closeMenu }) => {
                         <Link href="/portfolio" passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()} onClick={handleClick}>
                                 <MdOutlineContactPage className="mr-1 w-4 h-4" />
-                                Portfolio
+                                {language === 'english' ? 'Portfolio' : language === 'marathi' ? 'पोर्टफोलिओ' : 'पोर्टफोलिओ'}
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
@@ -76,7 +85,7 @@ const ResponsiveMenu: React.FC<Props> = ({ showMenu, closeMenu }) => {
                         <Link href="/team" passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()} onClick={handleClick}>
                                 <RiTeamLine className="mr-1 w-4 h-4" />
-                                Team
+                                {language === 'english' ? 'Team' : language === 'marathi' ? 'टीम' : 'टीम'}
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
@@ -87,9 +96,25 @@ const ResponsiveMenu: React.FC<Props> = ({ showMenu, closeMenu }) => {
                             <NavigationMenuLink className={navigationMenuTriggerStyle()} onClick={handleClick}>
                                 {' '}
                                 <RiContactsLine className="mr-1" />
-                                Contact
+                                {language === 'english' ? 'Contact Us' : language === 'marathi' ? 'संपर्क साधा' : 'संपर्क करे'}
                             </NavigationMenuLink>
                         </Link>
+                    </NavigationMenuItem>
+
+                    {/* Language */}
+                    <NavigationMenuItem className="w-full flex">
+                <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-Paragraph_sm  hover:bg-slate-100 block w-full p-2 bg-slate-100 border rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm`}>
+                  <select
+                    id="language"
+                    name="language"
+                    value={language} // Use value instead of defaultValue
+                    onChange={handleLanguageChange}
+                  >
+                    <option value="english">{language === 'english' ? 'English' : 'इंग्लिश'}</option>
+                    <option value="marathi">{language === 'english' ? 'Marathi' : 'मराठी'}</option>
+                    <option value="hindi">{language === 'english' ? 'Hindi' : 'हिंदी'}</option>
+                  </select>
+                </NavigationMenuLink>
                     </NavigationMenuItem>
                 </NavigationMenuList>
             </NavigationMenu>

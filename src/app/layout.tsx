@@ -1,7 +1,8 @@
+import React from 'react';
 import type { Metadata } from 'next';
 import { GeistSans } from 'geist/font/sans';
+import { LanguageProvider } from '../lib/languageContext';
 import './globals.css';
-import React from 'react';
 
 const BaseUrl = process.env.domain;
 export const metadata: Metadata = {
@@ -28,7 +29,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={GeistSans.className}>
-        {children}
+
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
+
       </body>
     </html>
   );

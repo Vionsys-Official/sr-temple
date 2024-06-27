@@ -4,27 +4,12 @@ import React from 'react';
 import Image from 'next/image';
 import { AiFillSafetyCertificate } from 'react-icons/ai';
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/lib/languageContext';
+import { features, featuresHindi, featuresMarathi } from '@/data/HomeSafety';
 import s1 from '../../../../public/assets/home/S1.jpg';
 
-const features = [
-  {
-    title: 'Safety Standards & Protocols',
-    content: 'We strictly adhere to local, state, and federal safety regulations, implementing rigorous protocols across all projects to ensure compliance and a safe work environment.',
-  },
-  {
-    title: 'Safety Certifications & Training',
-    content: 'Our team maintains certified safety standards such as OSHA regulations, complemented by ongoing training to stay updated on the latest practices.',
-  },
-  {
-    title: 'Interactive Safety Tools',
-    content: 'Clients benefit from interactive safety tools including checklists to assess project risks, empowering proactive safety management.',
-  },
-  {
-    title: 'Communication and Reporting',
-    content: 'We offer an easy-to-use system for clients to report safety concerns promptly, alongside readily accessible emergency contact details.',
-  },
-];
 export default function Safety() {
+  const { language } = useLanguage() || { language: 'english' };
   return (
     <motion.div
       initial={{ opacity: 0, y: 100 }}
@@ -48,7 +33,7 @@ export default function Safety() {
         }}
         className="md:text-MainHeading text-MainHeading_sm md:font-MainHeading_sm font-MainHeading leading-none tracking-tight md:mx-auto text-center"
       >
-        Our Safety Excellence
+        {language === 'english' ? 'Our Safety Excellence' : language === 'marathi' ? 'आमची सुरक्षा उत्कृष्टता' : 'हमारी सुरक्षा उत्कृष्टता'}
       </motion.h2>
       <motion.h6
         initial={{ opacity: 0, y: 100 }} // X:100
@@ -61,7 +46,7 @@ export default function Safety() {
         }}
         className="md:text-SubHeading text-SubHeading_sm md:font-SubHeading font-SubHeading_sm text-center mb-3 py-3"
       >
-        Integrated Safety and Client Engagement
+        {language === 'english' ? 'Integrated Safety and Client Engagement' : language === 'marathi' ? 'एकात्मिक सुरक्षा आणि ग्राहक प्रतिबद्धता' : 'एकीकृत सुरक्षा और ग्राहक सहभागिता'}
       </motion.h6>
       <div className="mx-auto max-w-7xl md:px-6 px-2 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-none lg:grid lg:grid-cols-2">
@@ -75,7 +60,7 @@ export default function Safety() {
           </div>
           <div className="mt-4 md:mr-4 lg:mt-0 lg:max-w-lg lg:ml-8">
             <dl className="mt-4 space-y-6 leading-5">
-              {features.map((feature) => (
+              {(language === 'english' ? features : language === 'marathi' ? featuresMarathi : featuresHindi).map((feature) => (
                 <div key={feature.title} className="md:pl-9">
                   <motion.div
                     initial={{ opacity: 0, x: -70 }}

@@ -3,8 +3,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaBullseye } from 'react-icons/fa6';
+import { useLanguage } from '@/lib/languageContext';
 
 function Vision() {
+  const { language } = useLanguage() || { language: 'english' };
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="px-4 mx-auto md:px-24 lg:px-8 sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
@@ -28,7 +30,7 @@ function Vision() {
             <h3
               className="md:text-4xl text-3xl font-extrabold text-[#254736]"
             >
-              Vision
+              {language === 'english' ? 'Vision' : language === 'marathi' ? 'दृष्टिकोण' : 'दृष्टिकोण'}
             </h3>
           </motion.div>
           <motion.div
@@ -43,9 +45,7 @@ function Vision() {
             className="lg:w-2/3"
           >
             <p className="md:text-Paragraph md:font-Paragraph font-Paragraph_sm mb-3 text-justify">
-              To be the leading temple construction company in India, recognized for our dedication
-              to quality, customer satisfaction and innovative designs that reflect the rich
-              cultural heritage of our country.
+              {language === 'english' ? 'To be the leading temple construction company in India, recognized for our dedicationto quality, cu stomer satisfaction and innovative designs that reflect the rich cultural heritage of our country.' : language === 'marathi' ? 'भारतातील मंदिर निर्मिती कंपनी असून आमच्या गुणवत्तेच्या, ग्राहक संतोषाच्या आणि आमच्या देशाच्या समृद्ध सांस्कृतिक धरोहराचा प्रतिष्ठान ठेवण्यासाठी मान्यता प्राप्त करणारे आणि आविष्कारशील डिझायन्सवर विशेष लक्ष्य आहे.' : 'भारत में मंदिर निर्माण कंपनी के रूप में, हमारे देश की समृद्ध सांस्कृतिक विरासत की नींव को बनाए रखने के लिए गुणवत्ता, ग्राहक संतुष्टि और मान्यता प्राप्त और आविष्कारशील डिजाइनों पर हमारा विशेष ध्यान है।'}
             </p>
           </motion.div>
         </div>
