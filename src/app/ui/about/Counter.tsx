@@ -5,6 +5,7 @@ import { GiByzantinTemple } from 'react-icons/gi';
 import { IoMdHappy } from 'react-icons/io';
 import { FaUserClock, FaPeopleCarry } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/lib/languageContext';
 
 interface CountUpProps {
   endProp: number; // Rename end to endProp
@@ -67,14 +68,66 @@ function SocialProofCounter() {
     {
       id: 3,
       icon: <FaUserClock size={35} />,
-      count: 1460,
-      heading: 'Hours Of Support',
+      count: 10,
+      heading: 'Years Of Experience',
     },
     {
       id: 4,
       icon: <FaPeopleCarry size={35} />,
       count: 150,
       heading: 'Workers',
+    },
+  ];
+  const arrMarathi: Item[] = [
+    {
+      id: 1,
+      icon: <IoMdHappy size={35} />,
+      count: 530,
+      heading: 'आनंदी ग्राहक',
+    },
+    {
+      id: 2,
+      icon: <GiByzantinTemple size={35} />,
+      count: 450,
+      heading: 'पूर्ण केलेले प्रकल्प',
+    },
+    {
+      id: 3,
+      icon: <FaUserClock size={35} />,
+      count: 10,
+      heading: 'अनुभवाचे वर्ष',
+    },
+    {
+      id: 4,
+      icon: <FaPeopleCarry size={35} />,
+      count: 150,
+      heading: 'कामगार',
+    },
+  ];
+  const arrHindi: Item[] = [
+    {
+      id: 1,
+      icon: <IoMdHappy size={35} />,
+      count: 530,
+      heading: 'खुशहाल ग्राहक',
+    },
+    {
+      id: 2,
+      icon: <GiByzantinTemple size={35} />,
+      count: 450,
+      heading: 'पूर्ण किए गए प्रकल्प',
+    },
+    {
+      id: 3,
+      icon: <FaUserClock size={35} />,
+      count: 10,
+      heading: 'अनुभव साल',
+    },
+    {
+      id: 4,
+      icon: <FaPeopleCarry size={35} />,
+      count: 150,
+      heading: 'कामगार',
     },
   ];
 
@@ -102,6 +155,8 @@ function SocialProofCounter() {
     };
   }, []);
 
+  const { language } = useLanguage() || { language: 'english' };
+
   return (
     <div className="px-4 py-2 mx-auto sm:max-w-full md:max-w-full md:px-4">
       {/* first section */}
@@ -117,7 +172,7 @@ function SocialProofCounter() {
         className="max-w-xl md:mx-auto sm:text-center md:my-2"
       >
         <h2 className="text-gray pb-2 text-center text-MainHeading_sm font-MainHeading_sm md:text-MainHeading md:text-gray md:font-MainHeading tracking-tight md:mx-auto md:pb-2 capitalize">
-          All about Clients, Projects, Support and Workers!
+          {language === 'english' ? 'All about Clients, Projects, Support and Workers!' : language === 'marathi' ? 'ग्राहक, प्रकल्प, सहाय्य आणि कामगारांबद्दल सर्व माहिती!' : 'ग्राहक, प्रकल्प, सहाय्य और कामगारों के बारे में सभी जानकारी!'}
         </h2>
       </motion.div>
       <div className="">
@@ -127,7 +182,7 @@ function SocialProofCounter() {
         >
           {/* 2nd section */}
           <div className="flex w-full md:flex-row flex-col gap-6 justify-center items-center md:pt-6">
-            {arr.map((item) => (
+            {(language === 'english' ? arr : language === 'marathi' ? arrMarathi : arrHindi).map((item) => (
               <div
                 key={item.id}
                 className="relative bg-white flex flex-col gap-4 justify-center items-center border rounded-md shadow-xl shadow-gray2 overflow-hidden group  md:w-56 lg:w-64 w-full h-40 align-content-center transform border-l-4 border-pink hover:-translate-y-6 duration-300"

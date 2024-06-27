@@ -1,57 +1,9 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable react/button-has-type */
-/* eslint-disable max-len */
-
 'use client';
 
+import { useLanguage } from '@/lib/languageContext';
+import { testimonials } from '@/data/AboutTestimonial';
 import { motion } from 'framer-motion';
 import React, { useState, useEffect } from 'react';
-
-interface Testimonial {
-  id: number;
-  quote: string;
-  name: string;
-  title: string;
-  initials: string;
-}
-
-const testimonials: Testimonial[] = [
-  {
-    id: 1,
-    quote: 'I wanted to construct one temple in my village and I contacted lots of company but I got best response and service from SR temple construction.',
-    name: 'Mr. Machindra Pansare,',
-    title: 'Yeola, Nashik',
-    initials: '1',
-  },
-  {
-    id: 2,
-    quote: 'One of the best temple construction companies in India and also highly reliable, innovative and cost-effective.',
-    name: 'Mr. Sambhaji Jadhav,',
-    title: 'Kolhapur',
-    initials: '2',
-  },
-  {
-    id: 3,
-    quote: 'The SR temple construction project will have the best and most experienced workers, engineers and designers.',
-    name: 'Sagar Kapadnis,',
-    title: 'Pune',
-    initials: '3',
-  },
-  {
-    id: 4,
-    quote: 'You are at the right place. Here, your all requirements will get fulfilled promptly in regard to temple construction.',
-    name: 'Shubham Kanchar,',
-    title: 'Hatnoor',
-    initials: '4',
-  },
-  {
-    id: 5,
-    quote: 'The SR temple construction is the best service provider in temple construction. I am super happy with their service.',
-    name: 'Mr. Sanjay Enamdar,',
-    title: 'Hyderabad',
-    initials: '5',
-  },
-];
 
 // eslint-disable-next-line react/function-component-definition
 const Testimonials: React.FC = () => {
@@ -59,11 +11,24 @@ const Testimonials: React.FC = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setTestimonialActive((prevActive) => (prevActive >= testimonials.length ? 1 : prevActive + 1));
+      setTestimonialActive((prevActive) => (prevActive
+        >= testimonials.length ? 1 : prevActive + 1));
     }, 3000); // Change testimonials every 5 seconds
 
     return () => clearInterval(interval); // Clear interval on component unmount
   }, []);
+
+  const { language } = useLanguage() || { language: 'english' };
+
+  const totalTestimonials = testimonials.length;
+
+  const handlePrevTestimonial = () => {
+    setTestimonialActive((prevActive) => (prevActive === 1 ? totalTestimonials : prevActive - 1));
+  };
+
+  const handleNextTestimonial = () => {
+    setTestimonialActive((prevActive) => (prevActive === totalTestimonials ? 1 : prevActive + 1));
+  };
 
   return (
     <>
@@ -79,7 +44,7 @@ const Testimonials: React.FC = () => {
           }}
           className="font-MainHeading_sm md:font-MainHeading text-MainHeading_sm md:text-MainHeading text-center text-gray md:text-gray md:mt-16 md:py-5 mt-4 mb-4"
         >
-          Testimonials
+          {language === 'english' ? 'Testimonials' : language === 'marathi' ? 'अभिप्राय' : 'प्रतिक्रिया'}
         </motion.h1>
       </div>
       <div className="my-6 container mx-auto flex flex-col md:flex-row shadow-sm overflow-hidden">
@@ -97,19 +62,21 @@ const Testimonials: React.FC = () => {
             }}
             className="text-gray relative text-center text-MainHeading_sm font-MainHeading_sm md:font-MainHeading md:text-MainHeading py-2 px-6 md:py-6 md:w-full md:text-gray tracking-tight mb-0"
           >
-            <span className="md:block">What Our Customers Are Saying!</span>
+            <span className="md:block">{language === 'english' ? 'What Our Customers Are Saying!' : language === 'marathi' ? 'आमचे ग्राहक काय म्हणत आहेत!' : 'हमारे ग्राहक क्या कह रहे हैं!'}</span>
           </motion.div>
 
           <div className="absolute right-0 bottom-0 mr-4 mb-4 hidden md:block">
             <button
+              type="submit"
               className="rounded-l-full border-r bg-yellow text-gray focus:outline-none hover:text-gray font-bold w-12 h-10"
-              onClick={() => setTestimonialActive(testimonialActive === 1 ? testimonials.length : testimonialActive - 1)}
+              onClick={handlePrevTestimonial}
             >
               &#8592;
             </button>
             <button
+              type="submit"
               className="rounded-r-full bg-yellow text-gray-500 focus:outline-none hover:text-gray font-bold w-12 h-10"
-              onClick={() => setTestimonialActive(testimonialActive >= testimonials.length ? 1 : testimonialActive + 1)}
+              onClick={handleNextTestimonial}
             >
               &#8594;
             </button>
@@ -131,29 +98,34 @@ const Testimonials: React.FC = () => {
             >
               {testimonialActive === 1 && (
               <p className="text-gray font-Paragraph_sm md:font-Paragraph text-Paragraph_sm md:text-Paragraph px-6 py-6 md:px-16 md:py-10">
-                ' I contacted lots of company but I got best response and service from SR temple construction.'
+                I contacted lots of company but I got best response and
+                service from SR temple construction.
               </p>
               )}
 
               {testimonialActive === 2 && (
               <p className="text-gray px-6 py-6 md:px-16 md:py-10 font-Paragraph_sm md:font-Paragraph text-Paragraph_sm md:text-Paragraph">
-                'One of the best temple construction companies in India and also highly reliable and cost-effective.'
+                One of the best temple construction companies in India
+                and also highly reliable and cost-effective.
               </p>
               )}
 
               {testimonialActive === 3 && (
               <p className="text-gray px-6 py-6 md:px-16 md:py-10 font-Paragraph_sm md:font-Paragraph text-Paragraph_sm md:text-Paragraph">
-                'The SR temple construction project will have the best and most experienced workers and engineers.'
+                The SR temple construction project will have the
+                best and most experienced workers and engineers.
               </p>
               )}
               {testimonialActive === 4 && (
               <p className="text-gray px-6 py-6 md:px-16 md:py-10 font-Paragraph_sm md:font-Paragraph text-Paragraph_sm md:text-Paragraph">
-                'You are at the right place. Here, your all requirements will get fulfilled promptly in regard to temple construction.'
+                You are at the right place. Here, your all requirements
+                will get fulfilled promptly in regard to temple construction.
               </p>
               )}
               {testimonialActive === 5 && (
               <p className="text-gray px-6 py-6 md:px-16 md:py-10 font-Paragraph_sm md:font-Paragraph text-Paragraph_sm md:text-Paragraph">
-                'The SR temple construction is the best service provider in temple construction. I am super happy with their service.'
+                The SR temple construction is the best service provider in
+                temple construction. I am super happy with their service.
               </p>
               )}
             </motion.div>
@@ -161,6 +133,7 @@ const Testimonials: React.FC = () => {
             <div className="flex my-4 justify-center items-center">
               {testimonials.map((testimonial) => (
                 <button
+                  type="submit"
                   key={testimonial.id}
                   onClick={() => setTestimonialActive(testimonial.id)}
                   className={`text-center font-bold shadow-xs focus:outline-none focus:shadow-outline inline-block rounded-full mx-2 ${testimonialActive === testimonial.id

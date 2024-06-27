@@ -1,10 +1,10 @@
-interface Testimonial {
+export interface Testimonial {
   quote: string;
   name: string;
   title: string;
 }
 
-const testimonials:Testimonial[] = [
+export const testimonials:Testimonial[] = [
   {
     quote:
         'I wanted to construct one temple in my village and I contacted lots of company but I got best response and service from SR temple construction.',
@@ -35,5 +35,3 @@ const testimonials:Testimonial[] = [
     title: 'Hyderabad',
   },
 ];
-
-export default testimonials;

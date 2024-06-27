@@ -6,10 +6,12 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { LuConstruction } from 'react-icons/lu';
-import service from '@/data/HomeService';
-import Service from '../../../../public/assets/home/Service.jpg';
+import { service, serviceHindi, serviceMarathi } from '@/data/HomeService';
+import { useLanguage } from '@/lib/languageContext';
+import Service from '../../../../public/assets/home/Service.jpeg';
 
 function Services() {
+  const { language } = useLanguage() || { language: 'english' };
   return (
     <div>
       <div className="px-4 py-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-6">
@@ -27,7 +29,7 @@ function Services() {
                 }}
                 className="tracking-tight md:text-MainHeading md:font-MainHeading text-MainHeading_sm font-MainHeading_sm text-center"
               >
-                Services We Deliver
+                {language === 'english' ? 'Services We Deliver' : language === 'marathi' ? 'सुविधा' : 'सेवाएँ'}
               </motion.h2>
               <motion.h6
                 initial={{ opacity: 0, x: -100 }} // X:100
@@ -40,7 +42,7 @@ function Services() {
                 }}
                 className="md:text-SubHeading text-SubHeading_sm md:font-SubHeading font-SubHeading_sm text-center"
               >
-                Building temples, fostering spirituality
+                {language === 'english' ? 'Building temples, fostering spirituality' : language === 'marathi' ? 'मंदिर बांधणे म्हणजे आध्यात्मिकतेची वातावरणे विकसित करणे' : 'मंदिर निर्माण का अर्थ है आध्यात्मिकता का वातावरण विकसित करना'}
               </motion.h6>
               <motion.p
                 initial={{ opacity: 0, x: 100 }} // X:100
@@ -53,11 +55,7 @@ function Services() {
                 }}
                 className="md:text-Paragraph md:font-Paragraph font-Paragraph_sm flex flex-col text-center py-3 mb-5"
               >
-                We offer a range of services highlighted on our homepage. From building and
-                restoring temples with care and precision to managing everything from design to
-                construction ensuring each temple honors its spiritual and cultural significance,
-                we are committed to quality and respect in every project. Here are some of our
-                services; to learn more, visit:
+                {language === 'english' ? 'We offer a range of services highlighted below. From building and restoring temples with care and precision to managing everything from design to construction ensuring each temple honors its spiritual and cultural significance, we are committed to quality and respect in every project. Here are some of our services; to learn more, visit:' : language === 'marathi' ? 'आपल्याला खास अद्यावत केलेल्या सेवा त्यात सुंदरता आणि सुसंगतीने मंदिरे निर्माण करणे आणि पुनर्स्थापन करणे, त्यांची देखरेख करणे आणि निर्माणाच्या डिझायनपासून सुरुवात ते मंदिर पूर्ण करणे ह्या सर्व प्रकल्पांमध्ये आम्ही विशेषत: प्रत्येक मंदिराला आध्यात्मिक आणि सांस्कृतिक महत्त्व देण्याचा प्रयत्न करतो. आमच्या कार्यांची अधिक माहिती मिळवण्यासाठी खालील सुविधांच्या लिस्टमध्ये पाहा; अधिक माहितीसाठी, भेट द्या:' : 'आपके लिए विशेष रूप से अद्यतन सेवाएं जिनमें सुंदरता और सद्भाव के साथ मंदिरों का निर्माण और पुनर्स्थापन करना, उनका रखरखाव करना और निर्माण डिजाइन से लेकर मंदिर के पूरा होने तक सभी परियोजनाओं में हम विशेष रूप से प्रत्येक मंदिर को आध्यात्मिक और सांस्कृतिक महत्व देने का प्रयास करते हैं। हमारे कार्यों के बारे में अधिक जानकारी प्राप्त करने के लिए, नीचे दी गई सुविधाओं की सूची देखें।'}
               </motion.p>
 
               <motion.div
@@ -72,7 +70,7 @@ function Services() {
                 className="flex flex-col justify-center items-center"
               >
                 <Link href="/services">
-                  <Button type="submit" variant="outline" className="px-4 py-1 bg-yellow hover:bg-[#deb01d] text-black rounded-md text-buttonText font-buttonText">Explore Services</Button>
+                  <Button type="submit" variant="outline" className="px-4 py-1 bg-yellow hover:bg-[#deb01d] text-black rounded-md text-buttonText font-buttonText">{language === 'english' ? 'Explore Services' : language === 'marathi' ? 'सुविधांची संपूर्ण माहितीसाठी' : 'सुविधाओं की पूरी जानकारी के लिए'}</Button>
                 </Link>
               </motion.div>
             </div>
@@ -83,7 +81,7 @@ function Services() {
         </div>
         <div className="py-10 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-10">
           <div className="grid md:gap-8 gap-3 row-gap-5 lg:grid-cols-3">
-            {service.map((item) => (
+            {(language === 'english' ? service : language === 'marathi' ? serviceMarathi : serviceHindi).map((item) => (
               <div key={item.id} className="relative p-px overflow-hidden transition duration-300 transform border rounded shadow-sm hover:scale-105 group hover:shadow-xl">
                 <div className="absolute bottom-0 left-0 w-full h-1 duration-300 origin-left transform scale-x-0 bg-[#f7c100]  group-hover:scale-x-100" />
                 <div className="absolute bottom-0 left-0 w-1 h-full duration-300 origin-bottom transform scale-y-0 bg-[#f7c100]  group-hover:scale-y-100" />
