@@ -7,10 +7,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import fadein from '@/utils/variants';
-import temple1 from '@/../public/assets/portfolio/temple1.jpg';
-import temple2 from '@/../public/assets/portfolio/temple2.jpg';
-import temple3 from '@/../public/assets/portfolio/temple3.jpg';
-import temple4 from '@/../public/assets/portfolio/temple4.jpg';
+import temple1 from '@/../public/assets/portfolio/templee1.jpeg';
+import temple2 from '@/../public/assets/portfolio/templee2.jpeg';
+import temple3 from '@/../public/assets/portfolio/templee3.jpeg';
+import temple4 from '@/../public/assets/portfolio/templee4.jpeg';
 
 const images = [temple1, temple2, temple3, temple4];
 
@@ -76,7 +76,7 @@ function PortfolioSection() {
 
         {/* Right Section */}
         <div className="relative w-full md:w-[40%]">
-          <div className="relative h-56 overflow-hidden shadow-xl shadow-slate-400 rounded-lg md:h-80 lg:h-72 ">
+          <div className="relative h-56 overflow-hidden shadow-xl shadow-slate-400 rounded-lg md:h-96 lg:h-96 ">
             {images.map((image, index) => (
               <div
                 key={index}
