@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 
-const BaseUrl = process.env.DOMAIN;
+const BaseUrl = process.env.domain;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
