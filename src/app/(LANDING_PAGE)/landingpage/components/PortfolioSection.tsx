@@ -108,7 +108,7 @@ function PortfolioSection() {
 
           <button
             type="button"
-            className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4  group focus:outline-none"
             onClick={handlePrev}
           >
             <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#000]/60  group-hover:bg-[#000]/50  group-focus:outline-none">
@@ -132,7 +132,7 @@ function PortfolioSection() {
           </button>
           <button
             type="button"
-            className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4  group focus:outline-none"
             onClick={handleNext}
           >
             <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#000]/60  group-hover:bg-[#000]/50  group-focus:outline-none">

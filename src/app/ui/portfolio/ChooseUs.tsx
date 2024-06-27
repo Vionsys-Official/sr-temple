@@ -16,7 +16,7 @@ function ChooseUs() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.2 }}
-        className="text-MainHeading font-MainHeading pb-4 text-center"
+        className="text-MainHeading font-MainHeading pb-4 text-center capitalize"
       >
         Key Advantages of Choosing Us
       </motion.h1>

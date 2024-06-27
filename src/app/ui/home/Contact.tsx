@@ -19,7 +19,7 @@ function Contact() {
               opacity: { duration: 0.6 },
               ease: 'easeInOut',
             }}
-            className="md:text-MainHeading md:font-MainHeading text-MainHeading_sm font-MainHeading_sm text-center md:mx-auto md:py-3"
+            className="md:text-MainHeading md:font-MainHeading text-MainHeading_sm font-MainHeading_sm text-center md:mx-auto md:py-3 capitalize"
           >
             Interested in Collaborating with Us?
           </motion.h2>

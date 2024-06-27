@@ -23,7 +23,7 @@ function Hero() {
             className="absolute"
           >
             <h1 className="text-yellow md:text-5xl font-extrabold text-3xl text-center ">
-              Schedule a Service
+              Schedule A Service
             </h1>
             <p className="md:text-xl text-base font-SubHeading text-white text-center px-2 py-2">
               Contact us today and lets build something extraordinary together.
