@@ -37,7 +37,7 @@ export function ParallaxScrollSecond({
       ref={gridRef}
     >
       <div
-        className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 items-start  md:max-w-7xl w-full mx-auto gap-5 md:py-20 py-4 md:px-10 px-2"
+        className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 items-start  md:max-w-6xl w-full mx-auto gap-5 md:py-20 py-4 md:px-10 px-2"
         ref={gridRef}
       >
         <div className="grid md:gap-10 gap-4">
