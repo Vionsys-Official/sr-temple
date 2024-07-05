@@ -14,7 +14,7 @@ function Commitment() {
   const { language } = useLanguage() || { language: 'english' };
   return (
     <div className="bg-gray-100 pt-4">
-      <div className="container mx-auto">
+      <div className="mx-auto">
         <h2 className="text-MainHeading font-bold text-center mb-4">{language === 'english' ? 'Our Commitment' : language === 'marathi' ? 'आमची बांधिलकी' : 'हमारी प्रतिबद्धता'}</h2>
         <motion.div
           initial={{ opacity: 0, scale: 1.3 }}
@@ -25,9 +25,9 @@ function Commitment() {
             opacity: { duration: 0.5 },
             ease: 'easeInOut',
           }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-2"
         >
-          <div className="bg-white p-6 rounded-lg shadow-xl text-center transition-transform transform hover:scale-105 hover:bg-amber-50">
+          <div className="bg-white md:p-6 p-3 rounded-lg shadow-xl text-center transition-transform transform hover:scale-105 hover:bg-slate-100">
             <FaCheckCircle className="h-6 w-6 text-SubHeading mx-auto mb-3" />
             <h3 className="text-SubHeading font-CardHeading mb-2">
               {language === 'english' ? 'Reliability' : language === 'marathi' ? 'विश्वसनीयता' : 'विश्वसनीयता'}
@@ -37,7 +37,8 @@ function Commitment() {
               {language === 'english' ? 'We are committed to delivering trustworthy services with consistent quality, dependable service, and timely delivery.' : language === 'marathi' ? 'आम्ही विश्वसनीय सेवा पुरवण्यात समर्थ आहोत, त्यांच्यात सातत्यपूर्ण गुणवत्ता, विश्वसनीय सेवा आणि समयानुसार सेवा पुरवणे.' : 'हम प्रतिष्ठात्मक सेवा प्रदान करने में सक्षम हैं, जिसमें स्थिर गुणवत्ता, विश्वसनीय सेवा और समय पर सेवा शामिल हैं।'}
             </p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-xl text-center transition-transform transform hover:scale-105 hover:bg-amber-50">
+
+          <div className="bg-white md:p-6 p-3 rounded-lg shadow-xl text-center transition-transform transform hover:scale-105 hover:bg-slate-100">
             <FaMoneyBillAlt className="h-6 w-6 text-SubHeading mx-auto mb-3" />
 
             <h3 className="text-SubHeading font-CardHeading mb-2">
@@ -47,7 +48,8 @@ function Commitment() {
               {language === 'english' ? 'Our solutions prioritize affordability without compromising on quality, offering transparent pricing and exceptional value.' : language === 'marathi' ? 'आमचे समाधान गुणवत्तेशी तडजोड न करता परवडण्याला प्राधान्य देतात, पारदर्शक किंमत आणि अद्वितीय मूल्य देतात.' : 'हम आपके समाधान की गुणवत्ता को महत्व देते हैं, बिना तड़फोड़ के सामर्थ्य को प्रमुखता देते हैं, पारदर्शी कीमत और अद्वितीय मूल्य प्रदान करते हैं।'}
             </p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-xl text-center transition-transform transform hover:scale-105 hover:bg-amber-50">
+
+          <div className="bg-white md:p-6 p-3 rounded-lg shadow-xl text-center transition-transform transform hover:scale-105 hover:bg-slate-100">
             <FaUserFriends className="h-6 w-6 text-SubHeading mx-auto mb-3" />
             <h3 className="text-SubHeading font-CardHeading mb-2">
               {language === 'english' ? 'Customer Focus' : language === 'marathi' ? 'ग्राहक केंद्रित' : 'ग्राहक केंद्रित'}
@@ -56,7 +58,8 @@ function Commitment() {
               {language === 'english' ? 'Putting you first, we provide personalized service, dedicated support, and responsive communication to meet your needs.' : language === 'marathi' ? 'तुम्हाला प्रथम स्थान देऊन, आम्ही तुमच्या गरजा पूर्ण करण्यासाठी वैयक्तिकृत सेवा, समर्पित समर्थन आणि प्रतिसादात्मक संप्रेषण प्रदान करतो.' : 'आपको सबसे पहले रखते हुए, हम आपकी आवश्यकताओं को पूरा करने के लिए व्यक्तिगत सेवा, समर्पित समर्थन और उत्तरदायी संचार प्रदान करते हैं।'}
             </p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-xl text-center transition-transform transform hover:scale-105 hover:bg-amber-50">
+
+          <div className="bg-white md:p-6 p-3 rounded-lg shadow-xl text-center transition-transform transform hover:scale-105 hover:bg-slate-100">
             <FaPaintRoller className="h-6 w-6 text-SubHeading mx-auto mb-3" />
             <h3 className="text-SubHeading mb-2 font-CardHeading">
               {language === 'english' ? 'Excellent Finishing' : language === 'marathi' ? 'उत्कृष्ट फिनिशिंग' : 'बेहतरीन फ़िनिशिंग'}

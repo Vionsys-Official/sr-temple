@@ -1,12 +1,15 @@
 import Commitment from '@/app/ui/services/Commitment';
-import ExecutionSection from '@/app/ui/services/ExecutionSection';
 import Herosection from '@/app/ui/services/Herosection';
-import TemplePlanning from '@/app/ui/services/TemplePlanning';
-import ValuationSection from '@/app/ui/services/ValuationSection';
 import ContactUs from '@/app/ui/portfolio/ContactUs';
 import React from 'react';
 import Maintenance from '@/app/ui/services/Maintenance';
 import { Metadata } from 'next';
+import PlanningMeasurement from '@/app/ui/services/PlanningMeasurement';
+import Estimation from '@/app/ui/services/Estimation';
+import PlanDrawing from '@/app/ui/services/PlanDrawing';
+import Execution from '@/app/ui/services/Execution';
+import PaintingArt from '@/app/ui/services/PaintingArt';
+import Consultancy from '@/app/ui/services/Consultancy';
 
 export const metadata: Metadata = {
   title: 'Services',
@@ -16,10 +19,13 @@ export const metadata: Metadata = {
 const page = () => (
   <main className="pt-12 md:pt-16 overflow-hidden">
     <Herosection />
-    <TemplePlanning />
-    <ValuationSection />
-    <ExecutionSection />
+    <PlanningMeasurement /> 
+    <Estimation />
+    <PlanDrawing />
+    <Execution />
+    <PaintingArt />
     <Maintenance />
+    <Consultancy />
     <Commitment />
     <section className="pt-6 md:pt-0">
       <ContactUs />
