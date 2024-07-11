@@ -7,10 +7,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import fadein from '@/utils/variants';
-import temple1 from '@/../public/assets/portfolio/templee1.jpeg';
-import temple2 from '@/../public/assets/portfolio/templee2.jpeg';
-import temple3 from '@/../public/assets/portfolio/templee3.jpeg';
-import temple4 from '@/../public/assets/portfolio/templee4.jpeg';
+import temple1 from '@/../public/assets/portfolio/temple24.jpg';
+import temple2 from '@/../public/assets/portfolio/temple25.jpg';
+import temple3 from '@/../public/assets/portfolio/temple26.jpg';
+import temple4 from '@/../public/assets/portfolio/temple27.jpg';
 
 const images = [temple1, temple2, temple3, temple4];
 
@@ -88,6 +88,7 @@ function PortfolioSection() {
                   layout="fill"
                   objectFit="cover"
                   alt={`Slide ${index + 1}`}
+                  className='object-cover'
                 />
               </div>
             ))}
