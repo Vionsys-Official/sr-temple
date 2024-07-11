@@ -11,7 +11,7 @@ function ContactUs() {
   const { language } = useLanguage() || { language: 'english' };
   return (
     <section className="max-w-full md:py-10 pb-6 pt-0 flex justify-center px-4 ">
-      <div className="bg-[#254736] md:w-[70%] flex flex-col rounded-2xl justify-between py-4 px-8">
+      <div className="bg-[#254736] md:w-[70%] flex flex-col rounded-2xl justify-between py-4 md:px-8 px-4">
         <div>
           <motion.h2
             variants={fadein('right', 0.3)}

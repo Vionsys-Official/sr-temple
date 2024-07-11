@@ -7,14 +7,14 @@ import { FaTools, FaHammer, FaWrench } from 'react-icons/fa';
 function Maintenance() {
   const { language } = useLanguage() || { language: 'english' };
   return (
-    <div className="bg-amber-50 py-4">
-      <div className="container mx-auto text-center">
+    <div className="py-4">
+      <div className="p-3 mx-auto text-center">
         <h2 className="text-MainHeading_sm md:text-MainHeading font-bold text-center mb-4">
           {language === 'english' ? 'Maintenance & Renovation' : language === 'marathi' ? 'देखभाल आणि नूतनीकरण' : 'देखभाल आणि नूतनीकरण'}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4">
-          <div className="flex flex-col items-center p-3 transition-transform transform hover:scale-105">
-            <FaTools className="h-12 w-12 text-yellow mb-2" />
+          <div className="flex flex-col items-center md:p-3 transition-transform transform hover:scale-105">
+            <FaTools className="md:h-12 h-8 md:w-12 w-8 text-yellow mb-2" />
             <h3 className="text-SubHeading font-CardHeading mb-2">
               {language === 'english' ? 'General Maintenance' : language === 'marathi' ? 'सामान्य देखभाल' : 'सामान्य देखभाल'}
             </h3>
@@ -23,8 +23,9 @@ function Maintenance() {
             </p>
             <hr className="border-t-0 border-dotted border-amber-500 my-4 w-10 border-4" />
           </div>
-          <div className="flex flex-col items-center p-3 transition-transform transform hover:scale-105">
-            <FaHammer className="h-12 w-12 text-yellow mb-2" />
+
+          <div className="flex flex-col items-center md:p-3 transition-transform transform hover:scale-105">
+            <FaHammer className="md:h-12 h-8 md:w-12 w-8 text-yellow mb-2" />
             <h3 className="text-SubHeading font-CardHeading mb-2">
               {language === 'english' ? 'Renovation Services' : language === 'marathi' ? 'नूतनीकरण सेवा' : 'नूतनीकरण सेवाएँ'}
             </h3>
@@ -33,8 +34,9 @@ function Maintenance() {
             </p>
             <hr className="border-t-0 border-dotted border-amber-500 my-4 w-10 border-4" />
           </div>
-          <div className="flex flex-col items-center p-3 transition-transform transform hover:scale-105">
-            <FaWrench className="h-12 w-12 text-yellow mb-2" />
+          
+          <div className="flex flex-col items-center md:p-3 transition-transform transform hover:scale-105">
+            <FaWrench className="md:h-12 h-8 md:w-12 w-8 text-yellow mb-2" />
             <h3 className="text-SubHeading font-CardHeading mb-2">
               {language === 'english' ? 'Repairs & Fixes' : language === 'marathi' ? 'दुरुस्ती आणि निराकरणे' : 'मरम्मत और सुधार'}
             </h3>

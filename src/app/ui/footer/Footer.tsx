@@ -106,10 +106,12 @@ function Footer() {
               </h3>
               <div className="grid grid-cols-1 gap-2 md:text-Paragraph text-Paragraph_sm">
                 <p>{language === 'english' ? 'Planning & Measurement Services' : language === 'marathi' ? 'नियोजन व मापन सेवा' : 'योजना और पैरामीटर सेवाएँ'}</p>
-                <p>{language === 'english' ? 'Valuation & Estimation Services' : language === 'marathi' ? 'मूल्यांकन आणि अंदाज सेवा' : 'मूल्यांकन और आकलन सेवाएँ'}</p>
-                <p>{language === 'english' ? '2D, 3D & Vastu Shastra Plan Drawing' : language === 'marathi' ? '2D, 3D आणि वास्तुशास्त्र योजना नकाशा' : '2D, 3D और वास्तु शास्त्र योजना नकाशे'}</p>
+                <p>{language === 'english' ? 'Valuation & Estimation Services' : language === 'marathi' ? 'अंदाज सेवा' : 'आकलन सेवाएँ'}</p>
+                <p>{language === 'english' ? '2D, 3D & Vastu Shastra Plan Drawing' : language === 'marathi' ? 'वास्तूसह 2D आणि 3D रेखाचित्र/ नकाशे' : 'वास्तुकला के साथ 2D और 3D ड्राइंग'}</p>
                 <p>{language === 'english' ? 'Temple Construction Services' : language === 'marathi' ? 'मंदिर बांधकाम सेवा' : 'मंदिर निर्माण सेवाएँ'}</p>
-                <p>{language === 'english' ? 'Consultancy Sevices' : language === 'marathi' ? 'सल्लागार सेवा' : 'सलाहकार सेवाएं'}</p>
+                <p>{language === 'english' ? 'Art and Sculpturing Services' : language === 'marathi' ? 'कला आणि शिल्पकला सेवा' : 'कला आणि शिल्पकला सेवाएँ'}</p>
+                <p>{language === 'english' ? 'Painting Services' : language === 'marathi' ? 'कलर सेवा' : 'कलर सेवाएँ'}</p>
+                <p>{language === 'english' ? 'Consultancy Sevices' : language === 'marathi' ? 'सल्लागार सेवा' : 'सलाहकार सेवाएँ'}</p>
                 <p>{language === 'english' ? 'Maintenance & Renovation Services' : language === 'marathi' ? 'देखभाल आणि नूतनीकरण सेवा' : 'रखरखाव एवं नवीकरण सेवाएँ'}</p>
               </div>
             </div>
