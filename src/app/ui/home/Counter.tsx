@@ -156,7 +156,7 @@ function SocialProofCounter() {
         >
           {language === 'english' ? 'Who We Are' : language === 'marathi' ? 'आमच्याबद्दल' : 'हमारे बारे में'}
         </motion.h2>
-        <motion.h6
+        <motion.h5
           initial={{ opacity: 0, x: 100 }} // X:100
           whileInView={{ opacity: 1, x: 1 }} // y:100
           transition={{
@@ -169,7 +169,7 @@ function SocialProofCounter() {
         >
           {' '}
           {language === 'english' ? 'SR Temple Construction Company: Crafting Sacred Spaces Since 2011' : language === 'marathi' ? 'SR Temple Construction कंपनी: 2011 पासून पवित्र स्थान तयार करित आहे' : 'SR Temple Construction कंपनी: 2011 से पवित्र स्थान का निर्माण कर रही हैं।'}
-        </motion.h6>
+        </motion.h5>
         <motion.p
           initial={{ opacity: 0, x: -100 }} // X:100
           whileInView={{ opacity: 1, x: 1 }} // y:100

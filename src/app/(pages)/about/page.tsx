@@ -1,11 +1,31 @@
 import React from 'react';
 import { Metadata } from 'next';
-import Hero from '@/app/ui/about/hero';
-import Features from '@/app/ui/about/features';
-import Choose from '@/app/ui/about/Choose';
-import Counter from '@/app/ui/about/Counter';
-import Testimonials from '@/app/ui/about/AboutTestimonials';
-import CallToAction from '@/app/ui/about/CallToAction';
+import dynamic from "next/dynamic";
+import DynamicLoader from "@/components/ui/DynamicLoader";
+
+const Hero = dynamic(() => import('@/app/ui/about/hero'), {
+  loading: () => <DynamicLoader />,
+});
+
+const Features = dynamic(() => import('@/app/ui/about/features'), {
+  loading: () => <DynamicLoader />, 
+});
+
+const Choose = dynamic(() => import('@/app/ui/about/Choose'), {
+  loading: () => <DynamicLoader />,
+});
+
+const Counter = dynamic(() => import('@/app/ui/about/Counter'), {
+  loading: () => <DynamicLoader />,
+});
+
+const Testimonials = dynamic(() => import('@/app/ui/about/AboutTestimonials'), {
+  loading: () => <DynamicLoader />,
+});
+
+const CallToAction = dynamic(() => import('@/app/ui/about/CallToAction'), {
+  loading: () => <DynamicLoader />,
+});
 
 export const metadata: Metadata = {
   title: 'About Us',

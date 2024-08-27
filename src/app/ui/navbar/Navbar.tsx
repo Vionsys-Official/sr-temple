@@ -20,7 +20,7 @@ import { VscClose } from 'react-icons/vsc';
 import { HiMenuAlt1 } from 'react-icons/hi';
 import { useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
-import LogoImage from '../../../../public/assets/logo/srlogo.png';
+import LogoImage from '../../../../public/assets/logo/srlogo.jpg';
 import ResponsiveMenu from './ResponsiveMenu';
 import { useLanguage, Language } from '../../../lib/languageContext';
 
@@ -102,7 +102,7 @@ function Navbar() {
           <Link href="/">
             <Image
               src={LogoImage}
-              alt=""
+              alt="Logo"
               className="md:w-16 md:h-16 w-14 h-14 top-0 absolute"
             />
           </Link>
@@ -112,9 +112,9 @@ function Navbar() {
             <NavigationMenuList>
               {/* Home Page */}
               <NavigationMenuItem>
-                <Link href="/" legacyBehavior passHref>
-                  <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-2xl hover:bg-slate-100`} onClick={closeMenu}>
-                    {language === 'english' ? 'Home' : language === 'marathi' ? 'होम' : 'होम'}
+                <Link href="/" legacyBehavior passHref >
+                  <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-2xl hover:bg-slate-100`} onClick={closeMenu} aria-label='Home'>
+                  {language === 'english' ? 'Home' : language === 'marathi' ? 'होम' : 'होम'} 
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -122,7 +122,7 @@ function Navbar() {
               {/* about Page */}
               <NavigationMenuItem>
                 <Link href="/about" legacyBehavior passHref>
-                  <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-Paragraph_sm  hover:bg-slate-100`} onClick={closeMenu}>
+                  <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-Paragraph_sm  hover:bg-slate-100`} onClick={closeMenu} aria-label='About Us'>
                     {language === 'english' ? 'About Us' : language === 'marathi' ? 'आमच्याबद्दल' : 'हमारे बारे में'}
                   </NavigationMenuLink>
                 </Link>
@@ -131,7 +131,7 @@ function Navbar() {
               {/* Services */}
               <NavigationMenuItem>
                 <Link href="/services" legacyBehavior passHref>
-                  <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-Paragraph_sm hover:bg-slate-100`} onClick={closeMenu}>
+                  <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-Paragraph_sm hover:bg-slate-100`} onClick={closeMenu}aria-label='Services'>
                     {language === 'english' ? 'Services' : language === 'marathi' ? 'सेवा' : 'सेवाएँ'}
                   </NavigationMenuLink>
                 </Link>
@@ -140,7 +140,7 @@ function Navbar() {
               {/* portfolio */}
               <NavigationMenuItem>
                 <Link href="/portfolio" legacyBehavior passHref>
-                  <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-Paragraph_sm  hover:bg-slate-100`} onClick={closeMenu}>
+                  <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-Paragraph_sm  hover:bg-slate-100`} onClick={closeMenu} aria-label='Portfolio'>
                     {language === 'english' ? 'Portfolio' : language === 'marathi' ? 'पोर्टफोलिओ' : 'पोर्टफोलिओ'}
                   </NavigationMenuLink>
                 </Link>
@@ -149,7 +149,7 @@ function Navbar() {
               {/* Team */}
               <NavigationMenuItem>
                 <Link href="/team" legacyBehavior passHref>
-                  <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-Paragraph_sm hover:bg-slate-100`} onClick={closeMenu}>
+                  <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-Paragraph_sm hover:bg-slate-100`} onClick={closeMenu}aria-label='Team'>
                     {language === 'english' ? 'Team' : language === 'marathi' ? 'टीम' : 'टीम'}
                   </NavigationMenuLink>
                 </Link>
@@ -158,7 +158,7 @@ function Navbar() {
               {/* Contact us */}
               <NavigationMenuItem>
                 <Link href="/contact" legacyBehavior passHref>
-                  <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-Paragraph_sm  hover:bg-slate-100`} onClick={closeMenu}>
+                  <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-black md:text-Paragraph text-Paragraph_sm  hover:bg-slate-100`} onClick={closeMenu} aria-label='Contact Us'>
                     {language === 'english' ? 'Contact Us' : language === 'marathi' ? 'संपर्क साधा' : 'संपर्क करे'}
                   </NavigationMenuLink>
                 </Link>
@@ -175,6 +175,7 @@ function Navbar() {
                     name="language"
                     value={language}
                     onChange={handleLanguageChange}
+                    aria-label="Select language"
                     className="appearance-none bg-transparent outline-none border-none focus:ring-0 focus:border-0 p-2"
                   >
                     <option value="english">{language === 'english' ? 'English' : 'इंग्लिश'}</option>
