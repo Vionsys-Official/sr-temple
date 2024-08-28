@@ -42,9 +42,9 @@ function section2() {
             <h1 className="text-SubHeading font-semibold text-center mt-4 bg-my-team rounded-md">
               {language === 'english' ? 'Sunil Ulhas Rathod' : 'सुनील उल्हास राठोड'}
             </h1>
-            <h6 className="text-gray-500 text-center bg-my-team rounded-md">
+            <h1 className="text-gray-500 text-center bg-my-team rounded-md">
               {language === 'english' ? 'Owner' : language === 'marathi' ? 'मालक' : 'मालिक'}
-            </h6>
+            </h1>
             <h1 className="text-gray-500 flex items-center justify-center m-2 bg-my-team rounded-md">
               <FaSquarePhone className="mt-[1px] mr-2" />
               9834632900

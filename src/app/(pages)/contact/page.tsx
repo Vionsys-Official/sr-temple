@@ -1,9 +1,20 @@
 import React from 'react';
 import { Metadata } from 'next';
-import Hero from '../../ui/contact/Hero';
-import Getintouch from '../../ui/contact/Getintouch';
-import Addressmap from '../../ui/contact/Addressmap';
-import Contactform from '../../ui/contact/Contactform';
+import dynamic from "next/dynamic";
+import DynamicLoader from "@/components/ui/DynamicLoader";
+
+const Hero = dynamic(() => import('../../ui/contact/Hero'), {
+  loading: () => <DynamicLoader />,
+});
+const Getintouch = dynamic(() => import('../../ui/contact/Getintouch'), {
+  loading: () => <DynamicLoader />,
+});
+const Addressmap = dynamic(() => import('../../ui/contact/Addressmap'), {
+  loading: () => <DynamicLoader />,
+});
+const Contactform = dynamic(() => import('../../ui/contact/Contactform'), {
+  loading: () => <DynamicLoader />,
+});
 
 export const metadata: Metadata = {
   title: 'Contact Us',

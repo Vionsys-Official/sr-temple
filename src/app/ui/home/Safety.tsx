@@ -59,7 +59,7 @@ export default function Safety() {
             />
           </div>
           <div className="mt-4 md:mr-4 lg:mt-0 lg:max-w-lg lg:ml-8">
-            <dl className="mt-4 space-y-6 leading-5">
+            <div className="mt-4 space-y-6 leading-5">
               {(language === 'english' ? features : language === 'marathi' ? featuresMarathi : featuresHindi).map((feature) => (
                 <div key={feature.title} className="md:pl-9">
                   <motion.div
@@ -82,7 +82,7 @@ export default function Safety() {
                   </motion.div>
                 </div>
               ))}
-            </dl>
+            </div>
           </div>
         </div>
       </div>
