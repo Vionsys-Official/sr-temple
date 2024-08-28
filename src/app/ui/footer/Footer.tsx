@@ -117,9 +117,9 @@ function Footer() {
             </div>
             {/* quick links */}
             <div className="flex-3 text-start md:w-[30%] w-full md:pl-0 pl-4">
-              <h3 className="md:text-SubHeading text-SubHeading_sm text-gray font-bold mb-2">
+              <h5 className="md:text-SubHeading text-SubHeading_sm text-gray font-bold mb-2">
                 {language === 'english' ? 'Quick Links' : language === 'marathi' ? 'जलद दुवे' : 'त्वरित संपर्क'}
-              </h3>
+              </h5>
               <div className="grid grid-cols-1 gap-2 md:text-Paragraph text-Paragraph_sm ">
                 <Link href="/services" className="hover:text-blue-700 hover-font-bold">{language === 'english' ? 'Services' : language === 'marathi' ? 'सेवा' : 'सेवाएँ'}</Link>
                 <Link href="/about" className="hover:text-blue-700 hover-font-bold">

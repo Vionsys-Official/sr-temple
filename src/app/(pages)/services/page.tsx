@@ -1,15 +1,48 @@
-import Commitment from '@/app/ui/services/Commitment';
-import Herosection from '@/app/ui/services/Herosection';
-import ContactUs from '@/app/ui/portfolio/ContactUs';
 import React from 'react';
-import Maintenance from '@/app/ui/services/Maintenance';
 import { Metadata } from 'next';
-import PlanningMeasurement from '@/app/ui/services/PlanningMeasurement';
-import Estimation from '@/app/ui/services/Estimation';
-import PlanDrawing from '@/app/ui/services/PlanDrawing';
-import Execution from '@/app/ui/services/Execution';
-import PaintingArt from '@/app/ui/services/PaintingArt';
-import Consultancy from '@/app/ui/services/Consultancy';
+import dynamic from "next/dynamic";
+import DynamicLoader from "@/components/ui/DynamicLoader";
+
+const Herosection = dynamic(() => import('@/app/ui/services/Herosection'), {
+  loading: () => <DynamicLoader />,
+});
+
+const PlanningMeasurement = dynamic(() => import('@/app/ui/services/PlanningMeasurement'), {
+  loading: () => <DynamicLoader />,
+});
+
+const Estimation = dynamic(() => import('@/app/ui/services/Estimation'), {
+  loading: () => <DynamicLoader />,
+});
+
+const PlanDrawing = dynamic(() => import('@/app/ui/services/PlanDrawing'), {
+  loading: () => <DynamicLoader />,
+});
+
+const Execution = dynamic(() => import('@/app/ui/services/Execution'), {
+  loading: () => <DynamicLoader />,
+});
+
+const PaintingArt = dynamic(() => import('@/app/ui/services/PaintingArt'), {
+  loading: () => <DynamicLoader />,
+});
+
+const Maintenance = dynamic(() => import('@/app/ui/services/Maintenance'), {
+  loading: () => <DynamicLoader />,
+});
+
+const Consultancy = dynamic(() => import('@/app/ui/services/Consultancy'), {
+  loading: () => <DynamicLoader />,
+});
+
+const Commitment = dynamic(() => import('@/app/ui/services/Commitment'), {
+  loading: () => <DynamicLoader />,
+});
+
+const ContactUs = dynamic(() => import('@/app/ui/portfolio/ContactUs'), {
+  loading: () => <DynamicLoader />,
+});
+
 
 export const metadata: Metadata = {
   title: 'Services',
