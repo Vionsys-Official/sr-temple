@@ -44,7 +44,7 @@ function Section4() {
                 Complementing this,
                 our experienced architects blend traditional styles with modern engineering to
                 create timeless structures guaranteeing a harmonious blend of aesthetic
-                beauty and architectural integrity. It give the spiritual as well as modern wibe.
+                beauty and architectural integrity. It give the spiritual as well as modern vibe.
               </p>
             </motion.div>
 
