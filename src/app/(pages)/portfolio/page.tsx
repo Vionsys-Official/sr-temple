@@ -1,10 +1,27 @@
-import ChooseUs from '@/app/ui/portfolio/ChooseUs';
-import ContactUs from '@/app/ui/portfolio/ContactUs';
-import { Features } from '@/app/ui/portfolio/Features';
-import Hero from '@/app/ui/portfolio/Hero';
-import { OurWork } from '@/app/ui/portfolio/OurWork';
 import React from 'react';
 import { Metadata } from 'next';
+import dynamic from "next/dynamic";
+import DynamicLoader from "@/components/ui/DynamicLoader";
+
+const Hero = dynamic(() => import('@/app/ui/portfolio/Hero'), {
+  loading: () => <DynamicLoader />,
+});
+
+const ChooseUs = dynamic(() => import('@/app/ui/portfolio/ChooseUs'), {
+  loading: () => <DynamicLoader />,
+});
+
+const Features = dynamic(() => import('@/app/ui/portfolio/Features'), {
+  loading: () => <DynamicLoader />,
+});
+
+const OurWork = dynamic(() => import('@/app/ui/portfolio/OurWork'), {
+  loading: () => <DynamicLoader />,
+});
+
+const ContactUs = dynamic(() => import('@/app/ui/portfolio/ContactUs'), {
+  loading: () => <DynamicLoader />,
+});
 
 export const metadata: Metadata = {
   title: 'Portfolio',

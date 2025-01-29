@@ -1,12 +1,48 @@
-import Commitment from '@/app/ui/services/Commitment';
-import ExecutionSection from '@/app/ui/services/ExecutionSection';
-import Herosection from '@/app/ui/services/Herosection';
-import TemplePlanning from '@/app/ui/services/TemplePlanning';
-import ValuationSection from '@/app/ui/services/ValuationSection';
-import ContactUs from '@/app/ui/portfolio/ContactUs';
 import React from 'react';
-import Maintenance from '@/app/ui/services/Maintenance';
 import { Metadata } from 'next';
+import dynamic from "next/dynamic";
+import DynamicLoader from "@/components/ui/DynamicLoader";
+
+const Herosection = dynamic(() => import('@/app/ui/services/Herosection'), {
+  loading: () => <DynamicLoader />,
+});
+
+const PlanningMeasurement = dynamic(() => import('@/app/ui/services/PlanningMeasurement'), {
+  loading: () => <DynamicLoader />,
+});
+
+const Estimation = dynamic(() => import('@/app/ui/services/Estimation'), {
+  loading: () => <DynamicLoader />,
+});
+
+const PlanDrawing = dynamic(() => import('@/app/ui/services/PlanDrawing'), {
+  loading: () => <DynamicLoader />,
+});
+
+const Execution = dynamic(() => import('@/app/ui/services/Execution'), {
+  loading: () => <DynamicLoader />,
+});
+
+const PaintingArt = dynamic(() => import('@/app/ui/services/PaintingArt'), {
+  loading: () => <DynamicLoader />,
+});
+
+const Maintenance = dynamic(() => import('@/app/ui/services/Maintenance'), {
+  loading: () => <DynamicLoader />,
+});
+
+const Consultancy = dynamic(() => import('@/app/ui/services/Consultancy'), {
+  loading: () => <DynamicLoader />,
+});
+
+const Commitment = dynamic(() => import('@/app/ui/services/Commitment'), {
+  loading: () => <DynamicLoader />,
+});
+
+const ContactUs = dynamic(() => import('@/app/ui/portfolio/ContactUs'), {
+  loading: () => <DynamicLoader />,
+});
+
 
 export const metadata: Metadata = {
   title: 'Services',
@@ -16,10 +52,13 @@ export const metadata: Metadata = {
 const page = () => (
   <main className="pt-12 md:pt-16 overflow-hidden">
     <Herosection />
-    <TemplePlanning />
-    <ValuationSection />
-    <ExecutionSection />
+    <PlanningMeasurement /> 
+    <Estimation />
+    <PlanDrawing />
+    <Execution />
+    <PaintingArt />
     <Maintenance />
+    <Consultancy />
     <Commitment />
     <section className="pt-6 md:pt-0">
       <ContactUs />

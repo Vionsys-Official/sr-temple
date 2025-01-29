@@ -1,9 +1,23 @@
 import React from 'react';
-import Section2 from '@/app/ui/team/Section2';
-import TeamHeroSetion from '@/app/ui/team/TeamHeroSetion';
-import Section3 from '@/app/ui/team/Section3';
-import Section4 from '@/app/ui/team/Section4';
 import { Metadata } from 'next';
+import dynamic from "next/dynamic";
+import DynamicLoader from "@/components/ui/DynamicLoader";
+
+const TeamHeroSetion = dynamic(() => import("@/app/ui/team/TeamHeroSetion"), {
+  loading: () => <DynamicLoader />,
+});
+
+const Section2 = dynamic(() => import("@/app/ui/team/Section2"), {
+  loading: () => <DynamicLoader />,
+});
+
+const Section3 = dynamic(() => import("@/app/ui/team/Section3"), {
+  loading: () => <DynamicLoader />,
+});
+
+const Section4 = dynamic(() => import("@/app/ui/team/Section4"), {
+  loading: () => <DynamicLoader />,
+});
 
 export const metadata: Metadata = {
   title: 'Teams',

@@ -1,16 +1,18 @@
 'use client';
 
+import { useLanguage } from '@/lib/languageContext';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
 
 function Herosection() {
+  const { language } = useLanguage() || { language: 'english' };
   return (
     <section className="relative">
       <div className="relative h-[60vh] md:h-[90vh] overflow-x-hidden bg-slate-950">
         <Image
           src="/assets/services/hero1.jpg"
-          className="absolute inset-0 object-cover w-full h-full opacity-60"
+          className="absolute inset-0 object-cover w-full h-full opacity-50"
           alt="services"
           width={1000}
           height={1000}
@@ -30,13 +32,10 @@ function Herosection() {
               className="max-w-5xl md:p-6 rounded-lg bg-black bg-opacity-70"
             >
               <h2 className="mb-4 md:text-5xl text-3xl font-extrabold text-yellow">
-                Our Services
+                {language === 'english' ? 'Our Services' : language === 'marathi' ? 'आमच्या सेवा' : 'हमारी सेवाएँ'}
               </h2>
               <p className="text-white md:text-xl text-base leading-relaxed">
-                We offer a comprehensive range of services to ensure your temple
-                construction project is a success from start to finish. Our expert
-                team is dedicated to providing high-quality, reliable, and cost-effective
-                solutions tailored to your needs.
+                {language === 'english' ? 'We offer a comprehensive range of services to ensure your temple construction project is a success from start to finish. Our expert team is dedicated to providing high-quality, reliable, and cost-effective solutions tailored to your needs.' : language === 'marathi' ? 'आपल्या मंदिर निर्माण प्रकल्पाची सुरुवात ते शेवट यशस्वी ठरवण्यासाठी आम्ही विविध सेवा तुमच्या प्रतिक्रियांच्या आधारावर प्रस्तुत करतो. आमची तज्ज्ञ संघ उच्च गुणवत्तेची, विश्वसनीय आणि किफायतशीर समाधाने प्रदान करण्यासाठी समर्पित आहे.' : 'हम विभिन्न सेवाओं को आपकी प्रतिक्रियाओं के आधार पर आपके मंदिर निर्माण प्रोजेक्ट को सफलतापूर्वक पूरा करने के लिए समर्पित हैं। हमारा विशेषज्ञ संघ उच्च गुणवत्ता, विश्वसनीय और लागत प्रभावी समाधान प्रदान करने के लिए समर्पित है।'}
               </p>
             </motion.div>
           </div>

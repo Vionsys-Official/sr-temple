@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import lanhero from '../lanhero.jpg';
-import srlogo from '../../../../../public/assets/logo/srlogo.png';
+import srlogo from '../../../../../public/assets/logo/srlogo.jpg';
 
 function HeroSection() {
   return (

@@ -1,13 +1,42 @@
 import React, { FC } from 'react';
-import Counter from '../ui/home/Counter';
-import Vision from '../ui/home/Vision';
-import Contact from '../ui/home/Contact';
-import Services from '../ui/home/Services';
-import Testimonial from '../ui/home/Testimonial';
-import WeWork from '../ui/home/WeWork';
-import Choose from '../ui/home/Choose';
-import Hero from '../ui/home/Hero';
-import Safety from '../ui/home/Safety';
+import dynamic from "next/dynamic";
+import DynamicLoader from "@/components/ui/DynamicLoader";
+
+const Hero = dynamic(() => import("../ui/home/Hero"), {
+  loading: () => <DynamicLoader />,
+});
+
+const Counter = dynamic(() => import("../ui/home/Counter"), {
+  loading: () => <DynamicLoader />,
+});
+
+const Vision = dynamic(() => import("../ui/home/Vision"), {
+  loading: () => <DynamicLoader />,
+});
+
+const Contact = dynamic(() => import("../ui/home/Contact"), {
+  loading: () => <DynamicLoader />,
+});
+
+const Services = dynamic(() => import("../ui/home/Services"), {
+  loading: () => <DynamicLoader />,
+});
+
+const Testimonial = dynamic(() => import("../ui/home/Testimonial"), {
+  loading: () => <DynamicLoader />,
+});
+
+const WeWork = dynamic(() => import("../ui/home/WeWork"), {
+  loading: () => <DynamicLoader />,
+});
+
+const Choose = dynamic(() => import("../ui/home/Choose"), {
+  loading: () => <DynamicLoader />,
+});
+
+const Safety = dynamic(() => import("../ui/home/Safety"), {
+  loading: () => <DynamicLoader />,
+});
 
 const page: FC = () => (
   <div className="overflow-hidden">
