@@ -41,13 +41,6 @@ function Section4() {
                 {language === 'english' ? 'Expertise and Experience' : language === 'marathi' ? 'विशेषज्ञता आणि अनुभव' : 'विशेषज्ञता और अनुभव'}
               </h2>
               <p className="text-Paragraph_sm md:text-Paragraph">
-
-                Our team of master artisans and craftsmen with skills perfected over generations
-                ensures temples that are artistically and structurally exceptional.
-                Complementing this,
-                our experienced architects blend traditional styles with modern engineering to
-                create timeless structures guaranteeing a harmonious blend of aesthetic
-                beauty and architectural integrity. It give the spiritual as well as modern vibe.
                 {language === 'english' ? 'Our team of master artisans and craftsmen with skills perfected over generations ensures temples that are artistically and structurally exceptional. Complementing this, our experienced architects blend traditional styles with modern engineering to create timeless structures guaranteeing a harmonious blend of aesthetic beauty and architectural integrity. It give the spiritual as well as modern wibe.' : language === 'marathi' ? 'आमच्या टीममध्ये कुशल कारागीर आणि शिल्पकार पिढ्यानपिढ्या असलेले कुशलतेने त्यांची योग्यता आणि दक्षता सुनिश्चित करतात की आपल्याला कलात्मक आणि संरचनात्मक अद्वितीय मंदिरे बांधतात. ह्याच्याशिवाय, आमच्या अनुभवी वास्तुकलावेधांनी पारंपारिक शैलींस आधारित आणि समकालीन ईंजिनीअरिंगसह वेगवेगळ्या संरचना बनविण्यासाठी वापरतात, ज्याच्यामुळे आध्यात्मिक सौंदर्य आणि वास्तुशिल्पाच्या सामंजस्याची खास जोड सुनिश्चित केली जाते. त्यानिमित्ताने ह्या मंदिरांना आध्यात्मिक सोड व समकालीन माहिती मिळते.' : 'हमारी टीम में कुशल कारीगर और कलाकारी पीढ़ियों द्वारा उनकी क्षमता और कुशलता सुनिश्चित की जाती है, ताकि आपको कलात्मक और संरचनात्मक अद्वितीय मंदिर बनाए जा सकें। इसके अलावा, हमारे अनुभवी वास्तुकलावेध द्वारा पारंपारिक शैलियों और समकालीन इंजीनियरिंग के साथ विभिन्न संरचनाओं का निर्माण किया जाता है, जिससे आध्यात्मिक सौंदर्य और वास्तुकला का विशेष सम्मिलन सुनिश्चित होता है। इसके फलस्वरूप, ये मंदिर आध्यात्मिक और समकालीन ज्ञान का संयोजन करते हैं।'}
               </p>
             </motion.div>
