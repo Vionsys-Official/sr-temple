@@ -14,7 +14,7 @@ const PORTFOLIO_VIDEO =
 function Hero() {
   const { language } = useLanguage() || { language: "english" };
   const [isPlaying, setIsPlaying] = useState(false);
-  const videoRef = useRef(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   const handlePlay = () => {
     setIsPlaying(true);
