@@ -1,15 +1,14 @@
-import transporter from '@/lib/transporter';
+import transporter from "@/lib/transporter";
 
 export async function POST(request: Request) {
   try {
-    const {
-      firstname, lastname, email, mobile, subject, message,
-    } = await request.json();
+    const { firstname, lastname, email, mobile, subject, message } =
+      await request.json();
     // Setup email data
     const mailOptions = {
       from: process.env.GMAIL_USER,
-      to: 'sunil.rathod@srtempleconstructions.com',
-      subject: 'SR temple website contact query',
+      to: "enquirysrtempleconstructions@gmail.com",
+      subject: "SR temple website contact query",
       html: `
         <h2 style="font-weight: bold;">Hello, you have a new contact query from SR-Temple Construction</h2>
         <h3><span style="font-weight: bold;">First Name:</span> <span style="font-weight: lighter;">${firstname}</span></h3>
@@ -23,8 +22,18 @@ export async function POST(request: Request) {
     // Send mail
     await transporter.sendMail(mailOptions);
 
-    return Response.json({ message: 'Email sent successfully', success: true }, { status: 200 });
+    return Response.json(
+      { message: "Email sent successfully", success: true },
+      { status: 200 }
+    );
   } catch (error: any) {
-    return Response.json({ message: 'Something went wrong!', success: false, error: error.message }, { status: 500 });
+    return Response.json(
+      {
+        message: "Something went wrong!",
+        success: false,
+        error: error.message,
+      },
+      { status: 500 }
+    );
   }
 }
