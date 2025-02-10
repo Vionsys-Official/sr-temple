@@ -7,7 +7,7 @@ export async function POST(request: Request) {
     // Setup email data
     const mailOptions = {
       from: process.env.GMAIL_USER,
-      to: "enquirysrtempleconstructions@gmail.com",
+      to: "enquirysrtemple@gmail.com",
       subject: "SR temple website contact query",
       html: `
         <h2 style="font-weight: bold;">Hello, you have a new contact query from SR-Temple Construction</h2>
